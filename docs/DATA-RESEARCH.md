@@ -1,0 +1,31 @@
+# 来源、覆盖及不可得资料
+
+研究时间：2026-10-18，北京时间。开发和下载运行于用户 Mac。下表记录已访问资料，不将搜索摘要当作已取得的数据。
+
+| 来源 | 获取结果 | 用途及限制 |
+| --- | --- | --- |
+| [NYU Damodaran 年度历史回报](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html) | 已下载、解析 1958-2025 | 含股息年度数据；网页标题仍可能写 1928-2024，实际末行为 2025；以解析行验证而非标题推断 |
+| [NYU 使用规则](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/guide.html) | 已阅读 | 允许研究/职业使用并要求注明来源，不可转售数据；本项目为非商业研究展示 |
+| [FRED NASDAQCOM](https://fred.stlouisfed.org/series/NASDAQCOM) | 已下载日收盘，派生完整年度回报 | 序列从 1971-02-05 开始，完整年度从 1972 开始。不是 Nasdaq-100，也不是含股息指数 |
+| [FRED 使用条款](https://fred.stlouisfed.org/legal/terms/) | 已阅读 | NASDAQCOM 当前标为 Copyrighted: Pre-Approval Required，例外允许非商业教育/个人使用；保留 Nasdaq 与 FRED 署名。仅发布年度派生研究数值，不公开原始日频下载或转售；商用前须取得权利人同意 |
+| [WRDS S&P 500 课堂说明](https://wrds-www.wharton.upenn.edu/pages/classroom/the-sp-500/) | 已访问 | 说明可查询 1958 起任一天真实成分；完整查询重定向登录，未登录、未调用任何他人账号 |
+| [WRDS 历史变更教学页面](https://wrds-www.wharton.upenn.edu/classroom/sp500-introduction/over-time/) | 取得部分教学表，去重 1,889 个区间 | 区间端点最晚 2022-12-30；这些是变化线索，不是完整成员历史。不公开其证券记录，仅保留本机解析缓存与公开覆盖摘要 |
+| [CRSP 历史指数指南](https://www.crsp.org/crsp_pdf/crsp-historical-indexes-guide/) | 已查阅方法说明 | 明确退市回报对持有期的重要性；没有取得受许可的历史个股回报 |
+| [S&P 官方 2023 年回顾](https://www.indexologyblog.com/2024/01/22/2023-market-review-for-asian-investors/) | 已阅读 | NVDA 约 239% 的文章线索，只证明其在文章所说七大科技股中的比较，不能作为完整指数总回报排名 |
+| S&P Market Attributes 2023/2024 年 12 月英文 PDF | 请求失败（HTTP 403 / 不可访问） | 不推断其中数字，不使用未读到的表格 |
+| Slickcharts 历史年度表现页 | 请求失败（HTTP 403） | 未抓取数据，也未用今天成分表替代 |
+| Yahoo chart API 测试 | HTTP 429 | 未取得个股年度记录；即使取得也不能独自证明当时母集、退市处理和再分发许可 |
+
+## 1958 年起缺口
+
+- 1957 年信号 + 1958-2025 年完整真实母集与逐股回报尚未取得。
+- 退市、收购、破产、分拆、永久证券标识、现金结算及可交易性必须同时处理。
+- 不采用今天的标普成分回算过去，不用现存股票做幸存者替代，不将报道价格涨幅冒充含股息总回报。
+- 2026 年尚未结束，不制作全年成绩。
+- 不借助外部页面缓存中可能出现的账户信息进行登录；完整教学 HTML 不进入仓库。
+
+## 当前可复算与不可复算
+
+可以复算公开指数年度路径、终值、CAGR 和年末回撤，可以用独立合成测试验证策略引擎。不能据此声称真实 Top 1/3/5/10 策略已经在 1958-2025 被验证。后者需要完整且有合法使用权的数据。
+
+来源 SHA-256、抓取时间和使用条件保存在 `public/data/public.json`。金融内容版本号与抓取时间分离；同样的金融数值不因每次抓取而制造新版本。旧版本保留以重现分享链接。

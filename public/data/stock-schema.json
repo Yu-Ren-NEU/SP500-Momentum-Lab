@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Momentum Lab annual stock data (format only; not market data)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "redistribution",
+    "licenseEvidence",
+    "rankings",
+    "returns"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "redistribution": { "enum": ["permitted", "local-only"] },
+    "licenseEvidence": { "type": "string", "minLength": 1 },
+    "rankings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status", "asOf", "universe", "source", "count", "rows"],
+        "properties": {
+          "status": { "const": "reviewed" },
+          "asOf": { "type": "string", "pattern": "^[0-9]{4}-12-31$" },
+          "universe": { "const": "year-end-sp500-full-year-total-return" },
+          "source": { "type": "string" },
+          "count": { "type": "integer", "minimum": 10 },
+          "rows": { "type": "array", "items": { "$ref": "#/$defs/stock" } }
+        }
+      }
+    },
+    "returns": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/stock" }
+      }
+    }
+  },
+  "$defs": {
+    "stock": {
+      "type": "object",
+      "required": ["id", "ticker", "name", "totalReturn", "source"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "ticker": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "totalReturn": { "type": "number", "minimum": -1 },
+        "source": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "$comment": "Keys of rankings/returns are calendar years. totalReturn is decimal, e.g. 0.10=10%. Rankings must include the full eligible point-in-time universe, not just ten winners. reviewed is an attestation by the data provider, not automated proof of CRSP accuracy. Local-only data must never be published."
+}
