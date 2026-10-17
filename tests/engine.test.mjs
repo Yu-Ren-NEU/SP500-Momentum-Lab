@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   strategy,
+  sampleStrategy,
   benchmark,
   metrics,
   readConfig,
@@ -166,4 +167,36 @@ test("Top 1 through 10 produce exactly N equal positions", () => {
       1,
     );
   }
+});
+test("default N is 1 and explicit shared N is preserved", () => {
+  assert.equal(readConfig("", 2025).n, 1);
+  assert.equal(readConfig("?n=7", 2025).n, 7);
+});
+test("exploratory public sample requires explicit opt-in and cannot pass strict review", () => {
+  const d = fixture();
+  d.quality = "exploratory";
+  for (const rank of Object.values(d.rankings)) {
+    rank.status = "provisional";
+    rank.universe = "historical-members-available-sample";
+  }
+  assert.match(strategy(d, c).error, /未核验/);
+  assert.equal(strategy(d, c, 1, true).final, 30000);
+  assert.throws(() => assertStockData(d));
+});
+
+test("exploratory series stops before missing holding year, never bridges gap", () => {
+  const d = fixture();
+  d.quality = "exploratory";
+  d.startYear = 2000;
+  d.endYear = 2002;
+  for (const rank of Object.values(d.rankings)) {
+    rank.status = "provisional";
+    rank.universe = "historical-members-available-sample";
+  }
+  d.returns[2002] = [];
+  const r = sampleStrategy(d, c);
+  assert.equal(r.end, 2001);
+  assert.equal(r.final, 15000);
+  assert.equal(r.annual.length, 1);
+  assert.match(r.coverageNote, /2002/);
 });

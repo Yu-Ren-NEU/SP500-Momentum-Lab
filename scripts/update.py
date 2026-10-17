@@ -61,10 +61,10 @@ def parse_wrds(raw):
    key=(r[1],r[4],r[5]); unique[key]={'permno':r[1],'name':r[2],'tickers':r[3],'start':r[4],'end':r[5]}
  return list(unique.values())
 
-def atomic_json(path, value):
+def atomic_json(path, value, compact=False):
  path.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.NamedTemporaryFile('w',dir=path.parent,delete=False) as f:
-  json.dump(value,f,ensure_ascii=False,indent=2,allow_nan=False); temp=f.name
+  json.dump(value,f,ensure_ascii=False,indent=None if compact else 2,separators=(',',':') if compact else None,allow_nan=False); temp=f.name
  os.replace(temp,path)
 
 def main():

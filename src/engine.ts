@@ -14,7 +14,7 @@ export type StockRow = {
   source: string;
 };
 export type Ranking = {
-  status: "reviewed";
+  status: "reviewed" | "provisional";
   asOf: string;
   universe: string;
   source: string;
@@ -23,6 +23,22 @@ export type Ranking = {
 };
 export type StockData = {
   schemaVersion: 1;
+  quality?: "exploratory";
+  version?: string;
+  updatedAt?: string;
+  startYear?: number;
+  endYear?: number;
+  coverage?: Record<
+    string,
+    { members: number; available: number; missing: string[] }
+  >;
+  sources?: {
+    name: string;
+    url: string;
+    license: string;
+    licenseUrl: string;
+    sha256: string;
+  }[];
   redistribution: "permitted" | "local-only";
   licenseEvidence: string;
   rankings: Record<string, Ranking>;
@@ -84,6 +100,7 @@ export type Result = {
   cagr: number | null;
   maxDrawdown: number | null;
   error?: string;
+  coverageNote?: string;
 };
 export const UNIVERSE = "year-end-sp500-full-year-total-return";
 function validReturn(r: unknown): r is number {
@@ -193,11 +210,21 @@ export function benchmark(
 export function rankingFor(
   data: StockData | undefined,
   year: number,
+  allowExploratory = false,
 ): StockRow[] {
   const rank = data?.rankings[year];
-  if (!rank || rank.status !== "reviewed")
+  const exploratory = allowExploratory && data?.quality === "exploratory";
+  if (
+    !rank ||
+    (rank.status !== "reviewed" &&
+      !(exploratory && rank.status === "provisional"))
+  )
     throw new Error(`${year} 年完整历史成分与总回报排名未核验`);
-  if (rank.universe !== UNIVERSE || rank.asOf !== `${year}-12-31`)
+  if (
+    rank.universe !==
+      (exploratory ? "historical-members-available-sample" : UNIVERSE) ||
+    rank.asOf !== `${year}-12-31`
+  )
     throw new Error(`${year} 年排名口径或时间点不匹配`);
   if (
     !rank.source ||
@@ -231,6 +258,7 @@ export function strategy(
   data: StockData | undefined,
   c: Config,
   n = c.n,
+  allowExploratory = false,
 ): Result {
   validateConfig({ ...c, n });
   return series(
@@ -240,7 +268,7 @@ export function strategy(
     c.end,
     c.initial,
     (year, value) => {
-      const picks = rankingFor(data, year - 1).slice(0, n);
+      const picks = rankingFor(data, year - 1, allowExploratory).slice(0, n);
       const returns = data?.returns[year];
       const holdings = picks.map((pick) => {
         const matched = returns?.filter((x) => x.id === pick.id);
@@ -255,6 +283,8 @@ export function strategy(
         const row = matched[0];
         return {
           ...row,
+          ticker: pick.ticker,
+          name: pick.name,
           weight: 1 / n,
           startValue: value / n,
           endValue: (value / n) * (1 + row.totalReturn),
@@ -274,7 +304,7 @@ export function readConfig(search: string, maxYear: number): Config {
     start: get("start", 1958),
     end: get("end", maxYear),
     initial: get("initial", 10000),
-    n: get("n", 3),
+    n: get("n", 1),
   };
   validateConfig(c);
   return c;
@@ -330,4 +360,37 @@ export function assertStockData(input: unknown): asserts input is StockData {
       seen.add(r.id);
     }
   }
+}
+
+// Exploratory samples show only a continuous, fully observed prefix. No gap is bridged.
+export function sampleStrategy(data: StockData | undefined, c: Config): Result {
+  validateConfig(c);
+  if (!data || data.quality !== "exploratory") return strategy(data, c);
+  const start = Math.max(c.start, (data.startYear ?? c.start - 1) + 1),
+    end = Math.min(c.end, data.endYear ?? c.end);
+  if (start > end)
+    return {
+      key: `top${c.n}`,
+      label: `Top ${c.n}`,
+      start: c.start,
+      end: c.end,
+      initial: c.initial,
+      annual: [],
+      final: null,
+      cagr: null,
+      maxDrawdown: null,
+      error: "No sample coverage in the selected period",
+    };
+  let through = start - 1;
+  for (let year = start; year <= end; year++) {
+    const one = strategy(data, { ...c, start: year, end: year }, c.n, true);
+    if (one.error) {
+      if (through < start) return one;
+      const result = strategy(data, { ...c, start, end: through }, c.n, true);
+      result.coverageNote = one.error;
+      return result;
+    }
+    through = year;
+  }
+  return strategy(data, { ...c, start, end }, c.n, true);
 }

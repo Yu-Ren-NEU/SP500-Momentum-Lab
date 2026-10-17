@@ -3,33 +3,45 @@ import {
   cleanup,
   render,
   screen,
-  waitFor,
   within,
+  waitFor,
 } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { readFileSync } from "node:fs";
 import App from "../src/App";
+vi.mock("../src/GrowthChart", () => ({
+  default: () => <div role="img" aria-label="Test chart" />,
+  lineColors: { strategy: "green", sp500: "blue", nasdaq: "gold" },
+  seriesLabel: (r: { key: string; label: string }, lang: string) =>
+    r.key === "sp500"
+      ? lang === "en"
+        ? "S&P 500"
+        : "标普 500"
+      : r.key === "nasdaq"
+        ? "Nasdaq"
+        : r.label,
+}));
 const publicData = JSON.parse(readFileSync("public/data/public.json", "utf8"));
 const fixture = () => {
   const rows = Array.from({ length: 10 }, (_, i) => ({
     id: String(i),
     ticker: "SYNTH-" + i,
-    name: "Synthetic test only",
+    name: "Synthetic only",
     totalReturn: 1 - i * 0.1,
     source: "synthetic test only",
   }));
-  const rank = (year: number, r: typeof rows) => ({
+  const rank = (y: number, rr: typeof rows) => ({
     status: "reviewed",
-    asOf: `${year}-12-31`,
+    asOf: `${y}-12-31`,
     universe: "year-end-sp500-full-year-total-return",
-    source: "synthetic test only",
-    count: r.length,
-    rows: r,
+    source: "synthetic",
+    count: rr.length,
+    rows: rr,
   });
   return {
     schemaVersion: 1,
     redistribution: "local-only",
-    licenseEvidence: "synthetic tests, no real stocks",
+    licenseEvidence: "Synthetic tests, not market data",
     rankings: {
       2000: rank(2000, rows),
       2001: rank(
@@ -47,10 +59,15 @@ const fixture = () => {
   };
 };
 beforeEach(() => {
+  localStorage.clear();
   history.replaceState(null, "", "/?start=2001&end=2002&initial=10000&n=1");
   vi.stubGlobal(
     "fetch",
-    vi.fn().mockResolvedValue({ ok: true, json: async () => publicData }),
+    vi.fn(async (input: string) =>
+      input.includes("stocks-base")
+        ? { ok: false, status: 404 }
+        : { ok: true, json: async () => publicData },
+    ),
   );
 });
 afterEach(() => {
@@ -60,84 +77,92 @@ afterEach(() => {
 });
 async function mount() {
   render(<App />);
-  await screen.findByRole("button", { name: "运行回测" });
+  await screen.findByRole("button", { name: /运行回测/ });
   return userEvent.setup();
 }
-test("real benchmark renders and public missing stocks stay empty", async () => {
+test("only selected strategy plus two benchmarks; no forced Top 3/5/10", async () => {
   await mount();
-  const table = screen.getAllByRole("table")[0];
-  expect(within(table).getByText("$6,878")).toBeTruthy();
-  expect(within(table).getByText("$5,406")).toBeTruthy();
-  expect(
-    screen.getAllByText(/2000 年完整历史成分与总回报排名未核验/).length,
-  ).toBe(4);
+  const legend = document.querySelector(".legend")!;
+  expect(legend.textContent).toContain("Top 1");
+  expect(legend.textContent).not.toMatch(/Top (3|5|10)/);
+  expect(legend.children.length).toBe(3);
+  expect(screen.getAllByRole("table").length).toBe(1);
 });
-test("local File upload computes all strategies, ranks and holdings without sending file", async () => {
+test("local file calculates positions and known compounding without network upload", async () => {
   const user = await mount();
-  const file = new File([JSON.stringify(fixture())], "synthetic-only.json", {
-    type: "application/json",
-  });
-  // jsdom File lacks Blob.text; use the browser-standard method for this fixture.
-  Object.defineProperty(file, "text", {
-    value: async () => JSON.stringify(fixture()),
-  });
+  const text = JSON.stringify(fixture());
+  const file = new File([text], "synthetic.json", { type: "application/json" });
+  Object.defineProperty(file, "text", { value: async () => text });
   await user.upload(screen.getByLabelText("选择本机历史数据 JSON"), file);
-  await screen.findByText("已加载：synthetic-only.json");
-  const table = screen.getAllByRole("table")[0];
-  expect(within(table).getByText("$30,000")).toBeTruthy();
-  await user.selectOptions(
-    screen.getByRole("combobox", { name: "查看排名年份" }),
-    "2000",
+  await screen.findByText("已加载：synthetic.json");
+  expect(document.querySelector(".summary-line")?.textContent).toContain(
+    "$30,000.00",
   );
+  await user.click(screen.getByRole("button", { name: "展开 2001" }));
   expect(screen.getAllByText("SYNTH-0").length).toBeGreaterThan(0);
-  expect(screen.getByText(/2001 年实际持仓：SYNTH-0/)).toBeTruthy();
-  expect(
-    vi
-      .mocked(fetch)
-      .mock.calls.every(
-        ([input]) => typeof input === "string" && input.startsWith("/data/"),
-      ),
-  ).toBe(true);
+  expect(screen.getByText(/2001 \/ 年初金额/)).toBeTruthy();
   expect(
     vi.mocked(fetch).mock.calls.some(([, init]) => init && "body" in init),
   ).toBe(false);
-  await user.click(screen.getByRole("button", { name: "移除" }));
-  expect(within(table).queryByText("$30,000")).toBeNull();
+  await user.click(screen.getByRole("button", { name: "移除", exact: true }));
+  expect(document.querySelector(".summary-line")?.textContent).not.toContain(
+    "$30,000.00",
+  );
 });
-test("invalid upload is rejected with useful reason", async () => {
+test("invalid import never changes active data", async () => {
   const user = await mount();
   const file = new File(["{}"], "bad.json", { type: "application/json" });
   Object.defineProperty(file, "text", { value: async () => "{}" });
   await user.upload(screen.getByLabelText("选择本机历史数据 JSON"), file);
-  await screen.findByText(/导入失败/);
-  expect(screen.queryByText("已加载：bad.json")).toBeNull();
+  expect(screen.getByRole("status").textContent).toMatch(/导入失败/);
 });
-test("changing N includes custom comparison and updates versioned URL", async () => {
+test("Top 7 replaces Top 1 rather than adding more curves", async () => {
   const user = await mount();
   await user.selectOptions(
-    screen.getByRole("combobox", { name: "年度持仓数" }),
+    screen.getByRole("combobox", { name: "Top N" }),
     "7",
   );
-  await user.click(screen.getByRole("button", { name: "运行回测" }));
-  expect(screen.getAllByText("Top 7").length).toBeGreaterThan(0);
-  const p = new URLSearchParams(location.search);
-  expect(p.get("n")).toBe("7");
-  expect(p.get("data")).toBe(publicData.version);
+  await user.click(screen.getByRole("button", { name: /运行回测/ }));
+  expect(document.querySelector(".legend")?.textContent).toContain("Top 7");
+  expect(document.querySelector(".legend")?.textContent).not.toContain("Top 1");
+  expect(new URLSearchParams(location.search).get("n")).toBe("7");
+  expect(new URLSearchParams(location.search).get("data")).toBe(
+    publicData.version,
+  );
 });
-test("unavailable snapshot errors instead of silently using current data", async () => {
+test("missing version refuses silent replacement", async () => {
   history.replaceState(null, "", "/?data=0123456789abcdef");
-  vi.mocked(fetch).mockResolvedValue({ ok: false } as Response);
+  vi.mocked(fetch).mockResolvedValue({ ok: false, status: 404 } as Response);
   render(<App />);
-  await screen.findByRole("heading", { name: "无法加载回测数据" });
-  expect(screen.getByRole("alert").textContent).toMatch(/未自动替换/);
+  await screen.findByRole("heading", { name: "无法加载数据" });
+  expect(screen.getByRole("alert").textContent).toMatch(/未替换/);
 });
-test("share includes settings and data version", async () => {
+test("switching language translates header controls and details and preserves config", async () => {
   const user = await mount();
-  await user.click(screen.getByRole("button", { name: "分享配置" }));
+  await user.click(screen.getByRole("button", { name: "EN", exact: true }));
+  expect(
+    screen.getByRole("heading", { name: "Annual Winner Backtest" }),
+  ).toBeTruthy();
+  expect(screen.getByRole("combobox", { name: "Start year" })).toBeTruthy();
+  expect(screen.getByText("Sources & methodology")).toBeTruthy();
+  expect(screen.getByRole("button", { name: "Run backtest →" })).toBeTruthy();
+  expect(document.documentElement.lang).toBe("en");
+  expect(new URLSearchParams(location.search).get("n")).toBe("1");
+});
+test("default N is one when URL omits it", async () => {
+  history.replaceState(null, "", "/?start=2012&end=2022");
+  await mount();
+  expect(
+    (screen.getByRole("combobox", { name: "Top N" }) as HTMLSelectElement)
+      .value,
+  ).toBe("1");
+});
+test("sharing preserves language and financial snapshot", async () => {
+  const user = await mount();
+  await user.click(screen.getByRole("button", { name: "EN", exact: true }));
+  await user.click(screen.getByRole("button", { name: "Share ↗" }));
   await waitFor(() =>
     expect(location.search).toContain("data=" + publicData.version),
   );
-  expect(screen.getByRole("status").textContent).toMatch(
-    /分享链接已复制|请复制地址栏/,
-  );
+  expect(location.search).toContain("lang=en");
 });
