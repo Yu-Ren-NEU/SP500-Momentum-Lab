@@ -26,7 +26,7 @@
 - [x] 禁止用今天成分股倒推，禁止缺失回报补零
 
 ## 功能完成后再做
-- [ ] 独立 GitHub repo（先检查全部待发布文件与数据许可）
+- [x] 独立 GitHub repo（已检查发布文件；原始及私有资料未提交）：https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab
 - [ ] GitHub Actions 定期更新静态 JSON，更新失败保留旧数据
 - [ ] Cloudflare Pages 免费 Git 集成与 pages.dev 地址
 - [ ] 实测代码合并自动部署及数据更新
