@@ -1,95 +1,91 @@
 # SP500 Momentum Lab
 
-React + Vite + TypeScript 纯静态网页，在用户自己的 Mac 上开发和测试。界面为极客风：简洁标题、右侧网络数据提示、ECharts 线性图和紧凑参数，滚动查看年度表。支持中英文、明暗主题、十字线读数、区间缩放和分享配置。
+A static React + Vite + TypeScript research app, developed and tested on the user's Mac. The interface supports English and Chinese, light and dark themes, Apache ECharts crosshairs, zoom, editable rank weights and annual position details. No backend or database is required.
 
-代码仓库：https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab
+Repository: https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab
 
-**当前可以直接使用静态网络样本跑策略。它不是经过 CRSP 全量验证的历史标普前十。**
+**Public stock records are exploratory available-sample data, not certified historical S&P 500 top-ten rankings.**
 
-## 本机运行
+## Run locally
 
-需要 Node >=22.18、Python >=3.9、curl。Python 无第三方依赖。
+Requirements: Node >=22.18, Python >=3.9 and curl. Python scripts use the standard library.
 
 ```sh
 npm ci
 npm run dev
-```
-
-访问 http://127.0.0.1:5173 。用户已要求保留本机开发服务运行，交付后不停止它。
-
-```sh
 npm run check
 npm run build
 npm run preview
 ```
 
-无需后端、数据库、金融数据库账号或付费 API。源码和小型年度 JSON 进入站点；原始下载、私有文件和测试样例不进入网站。
+Open http://127.0.0.1:5173. Keep the development server running, as explicitly requested by the user. Development remains local; Cloudflare deployment and scheduled workflows are deferred.
 
-## 页面与计算
+## Backtest behavior
 
-- 图中只显示用户所选 **Top N + 标普 + 纳指**，N 默认 1，可选 1-10。
-- 默认区间 2012 至股票样本最后完整年度（当前 2022）。有 URL 参数时保留原配置。
-- 每年买上一年的前 N 名、年初等权、年内不再等权、年底换仓并复投。
-- 终值、CAGR、年末最大回撤放在图下；年度表包含持仓、权重、年度回报、资金、基准及超额。
-- 点击年份展开上一年度样本前十、样本覆盖数、缺失股票和仓位金额。
-- 来源/口径、导入导出折叠在底部。
-- `lang=zh/en` 保存语言。分享链接包含配置、指数快照 `data` 和个股快照 `base`，避免刷新数据后同一链接悄悄改变结果。
+- Initial capital defaults to USD 1. Top N defaults to 1 and accepts 1 through 10.
+- Changes update results immediately. The first row contains dates and capital; the second contains Top N and an editable rank-weight table. Weights default to equal allocation and must sum to 100%.
+- At each year boundary, invest the entire portfolio balance in the previous year's top N stocks at the chosen rank weights. Hold for a year, then rebalance and reinvest all proceeds.
+- Only the selected strategy and the two index references are shown. Click a legend item to hide or restore its curve.
+- Annual details show positions, weights, returns, portfolio value, index returns and excess performance. Expand a year to inspect the preceding year's sample ranking, coverage and missing symbols.
+- The default range starts in 2012 and ends at the last complete sample year. Explicit URL parameters preserve the requested configuration.
+- The current year is selectable and uses a separate stock YTD snapshot with its cutoff displayed. Available index references currently end in 2025; no current-year index return is fabricated.
+- CAGR uses the fractional elapsed calendar year when a YTD point is included. Drawdown checks annual endpoints and the latest YTD point, not daily observations.
+- Taxes, fees, slippage, inflation and signal publication delays are excluded. Year-boundary execution is idealized.
 
-## 静态 base 是什么
+## Data coverage
 
-| 资料 | 实际覆盖 | 口径 |
+| Source | Coverage | Convention and limitations |
 | --- | --- | --- |
-| NYU Damodaran | 1958-2025，68 个完整年度 | 标普含股息年度回报；不是官方 S&P TRI 点位许可 |
-| Nasdaq via FRED | 1972-2025，54 个完整年度 | 纳指综合价格回报，不含分红；1971 年不是完整年度 |
-| FNSPID + fja05680 | 信号年 1996-2022，策略最早 1997 起 | 历史年末成分与可得完整年价格端点交集，只是样本排名 |
+| NYU Damodaran | 1958-2025, 68 complete years | S&P annual returns including dividends; not licensed official S&P TRI levels |
+| Nasdaq through FRED | 1972-2025, 54 complete years | Nasdaq Composite price return excluding dividends; 1971 starts in February |
+| FNSPID and fja05680 historical membership | 1996-2022 signal years | Historical year-end members intersected with exact adjusted-close year-end endpoints |
+| Darkmatternet Kaggle dataset and historical members | 2023-2025; 442/458/477 available members | Uploader declares CC0. Close ratios have undocumented dividend/adjustment treatment |
+| Separate current-year sample | 2026 through 2026-10-15 | Available close ratios only; explicitly YTD, not a final annual result |
 
-FNSPID 为 Dong, Fan & Peng (2024) 发布的学术数据。项目按其 CC BY-NC 4.0 条件，用于署名的非商业研究展示；fja05680 历史成员表按 MIT 使用。完整许可保留在 `docs/licenses/`，网页附上来源和许可链接。pmoe7 等其他调查来源没有用于公开 base。
+FNSPID is attributed to Dong, Fan and Peng (2024), under its CC BY-NC 4.0 terms for non-commercial research. The membership reconstruction is MIT licensed. Source links, uploader license declarations and hashes accompany published snapshots. License copies are in `docs/licenses/`.
 
-原始 ZIP 约 590 MB（十进制），仅本机缓存。静态年度 JSON 约 3.1 MB，包含样本排名、年度持有回报、覆盖与异常记录，没有日频报价或新闻内容。它可能有幸存者偏差、遗漏退市和收购、更名连接错误、未正确处理公司行为；不能当成权威全量研究结果。
+The public sample can omit former members, delistings, mergers, ticker changes and corporate actions. Recent price availability comes from surviving/current companies, intersected with historical membership; this is not a full historic universe and can have selection bias. A ranking alone does not provide the following year's holding returns.
 
-### 已发现并处理的问题
+## Quality controls and gaps
 
-- 原始文件大小写不一致（如 `nvda.csv`），归一化后才可匹配。
-- 部分价格序列在 2020-07-06 发生调整口径拼接，GE 出现虚假的数倍上涨，TSLA 和 AAPL 出现异常跌幅。
-- 任何相邻观察的调整价变动绝对值超过 50%，暂时隔离该证券当年回报并披露。真正的极端行情也可能被隔离，这是一条保守的质量筛查规则，不证明剩余数据已正确。
-- 2023 年末资料不少只到 12 月 28 日，未覆盖最后交易日 12 月 29 日，所以不把它当成完整 2023 年。
-- 使用两个精确年末交易日端点，不用近似日期凑数，不将缺失收益填成 0。
+Exact year-end trading dates are required. Missing returns are never replaced with zero or another stock. FNSPID's incomplete December 2023 endpoints are not accepted as a full year; the recent extension uses a different source.
 
-### 缺口如何显示
+Observed adjustment splices in GE, TSLA, AAPL and ETN motivated conservative screening: absolute adjacent moves above 50% quarantine a security-year. This can also exclude genuine market moves. THC's 2010-12-10 rise has a narrowly documented takeover-event exception in `docs/EVENT-REVIEWS.md`; remaining anomaly flags stay in force.
 
-网络探索模式只画从有效起点开始的连续、完整可得区间。遇到第一只持仓缺回报，就在上一年停止，显示实际区间和缺口原因；之后的年份不外推、不补现金收益、不从后续年份重新接上。
+The exploratory curve stops at the first missing holding return. Strict reviewed imports reject the entire requested period when a holding return is missing. Neither mode jumps over a gap. A starting investment year of 1996 requires a 1995 signal, which is currently missing, so the sample's earliest investment year is 1997.
 
-例如当前 Top 10 在 2020 年缺 IR 的持有回报，请求 2012-2022 时仅画到 2019 年，并标明停止原因。用户可以改起点检查其他连续区间。
+URLs pin index and stock snapshot versions. A link containing the original stock hash continues to use that original data; use the visible latest-data link to opt into a new snapshot. The share button is removed, but address parameters still preserve configuration, language, weights and selected snapshot versions.
 
-私有“已复核”模式仍采用严格规则：整个请求区间缺任何一个持仓回报就不生成该策略结果。两种质量层级不混在一起。
-
-不同曲线若起点/终点不一样，终值不能直接比较。标普含股息、纳指不含股息，也不是完全同口径。年度边界成交是理想化假设，没有税费、通胀、滑点与发布延迟；最大回撤只检查年末。
-
-## 更新与覆盖
+## Update and reproduce
 
 ```sh
-npm run update          # 刷新指数数据，失败保留旧快照
-npm run update:base     # 从已缓存原始资料重新整理个股 base
-npm run download:base   # 重新下载原始资料再整理（约 590 MB）
-npm run validate       # 发布字段、许可依据、覆盖、隔离记录与内容哈希检查
+npm run update          # Refresh index data; preserve the old snapshot on failure
+npm run update:base     # Rebuild the original source sample from local caches
+npm run download:base  # Download the original sources first, approximately 590 MB
+npm run update:recent  # Rebuild 2023-2025 and YTD from cached Kaggle files
+python3 scripts/review_events.py
+npm run update:catalogue
+npm run validate
 ```
 
-经过验证的年份按年份替换，更新文件中没出现的旧年份保留。质量层级不匹配、空排名、非法数值或隔离收益混入都会拒绝写入。对已合法取得的年份补丁：
+The recent extension reads `data/raw/base/kaggle-recent.zip` and `kaggle-metadata.json`. Its script records the public Kaggle dataset URL, source hash and uploader license declaration. Raw downloads and private inputs are ignored by Git and excluded from the production website.
+
+Validated patches replace whole years while preserving omitted years and source provenance:
 
 ```sh
-python3 scripts/build_base.py --patch /本机路径/validated-patch.json
+python3 scripts/build_base.py --patch /absolute/path/validated-patch.json
 ```
 
-补丁包含相同格式的 `quality/sources/rankings/returns/coverage` 等字段，排名需覆盖完整可得样本并说明母集数量。补丁按**整个年度**覆盖，不能只拿新增的十只股票替换成分母集。不会把缺失字段解释为删除，更不会静默把未知收益变成 0。输出原子替换，旧快照保留在 `public/data/base-versions/`。
+Patches must contain the full available sample, coverage and source information for each replaced year. Empty rankings, incompatible quality tiers, invalid numbers and leaked quarantined returns are rejected. Writes are atomic; immutable snapshots remain in `public/data/base-versions/`.
 
-如需撤销某个旧年度，应明确重新审核整个年份；本接口不通过遗漏或空数据实施删除。后续受许可的全量数据应作为独立质量层级导入，不能用探索数据覆盖已复核数据。
+## Independent historical catalogue
 
-## 私有资料
+`data/research/top10-history.json` explicitly covers every year from 1958 through 2026. It contains 300 sample top-ten rows for 1996-2025 plus ten YTD sample rows for 2026. Partial older observations and reported lists remain distinct from complete numeric rankings. No complete, usable 1958-1995 stock ranking has been obtained.
 
-本机文件导入只进入当前标签页内存，不上传、不放进 URL、不进入 localStorage。分享链接不携带私有数据，接收者需自行有权取得同一文件。生成严格格式的工具见 [导入说明](docs/STOCK-IMPORT.md)。
+Reported market data without established redistribution permission stays in ignored local research files. Public repository evidence retains source links and limitations. Monthly refresh and reviewed year-end archival are not yet automated.
 
-## 验收与发布
+## Private data and verification
 
-[目标清单](docs/CHECKLIST.md)、[来源研究](docs/DATA-RESEARCH.md)、[本机验收](docs/LOCAL-ACCEPTANCE.md)。
+Local imports remain in the tab's memory: no upload, URL embedding or localStorage persistence. See [stock import format](docs/STOCK-IMPORT.md), [source research](docs/DATA-RESEARCH.md), [acceptance checks](docs/LOCAL-ACCEPTANCE.md), [catalogue notes](docs/TOP10-CATALOGUE.md) and [delivery checklist](docs/CHECKLIST.md).
 
-公网部署仍按用户要求排在功能之后，尚未启用 GitHub Actions 或 Cloudflare Pages；没有声称已通过公网自动更新/部署验收。开发服务保持在本机运行。
+Synthetic tests verify arithmetic and safeguards; they do not validate historical market truth. The complete 1958-present, delisting-aware strategy and public deployment remain outstanding.

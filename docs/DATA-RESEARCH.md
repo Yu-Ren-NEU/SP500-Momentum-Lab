@@ -1,43 +1,36 @@
-# 来源、覆盖及不可得资料
+# Sources, coverage and unavailable data
 
-研究时间：2026-10-18，北京时间。开发和下载运行于用户 Mac。下表记录已访问资料，不将搜索摘要当作已取得的数据。
+Research date: 2026-10-18, Asia/Shanghai. Downloads and development run on the user's Mac.
 
-| 来源 | 获取结果 | 用途及限制 |
+| Source | Acquisition | Use and limitations |
 | --- | --- | --- |
-| [NYU Damodaran 年度历史回报](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html) | 已下载、解析 1958-2025 | 含股息年度数据；网页标题仍可能写 1928-2024，实际末行为 2025；以解析行验证而非标题推断 |
-| [NYU 使用规则](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/guide.html) | 已阅读 | 允许研究/职业使用并要求注明来源，不可转售数据；本项目为非商业研究展示 |
-| [FRED NASDAQCOM](https://fred.stlouisfed.org/series/NASDAQCOM) | 已下载日收盘，派生完整年度回报 | 序列从 1971-02-05 开始，完整年度从 1972 开始。不是 Nasdaq-100，也不是含股息指数 |
-| [FRED 使用条款](https://fred.stlouisfed.org/legal/terms/) | 已阅读 | NASDAQCOM 当前标为 Copyrighted: Pre-Approval Required，例外允许非商业教育/个人使用；保留 Nasdaq 与 FRED 署名。仅发布年度派生研究数值，不公开原始日频下载或转售；商用前须取得权利人同意 |
-| [WRDS S&P 500 课堂说明](https://wrds-www.wharton.upenn.edu/pages/classroom/the-sp-500/) | 已访问 | 说明可查询 1958 起任一天真实成分；完整查询重定向登录，未登录、未调用任何他人账号 |
-| [WRDS 历史变更教学页面](https://wrds-www.wharton.upenn.edu/classroom/sp500-introduction/over-time/) | 取得部分教学表，去重 1,889 个区间 | 区间端点最晚 2022-12-30；这些是变化线索，不是完整成员历史。不公开其证券记录，仅保留本机解析缓存与公开覆盖摘要 |
-| [CRSP 历史指数指南](https://www.crsp.org/crsp_pdf/crsp-historical-indexes-guide/) | 已查阅方法说明 | 明确退市回报对持有期的重要性；没有取得受许可的历史个股回报 |
-| [S&P 官方 2023 年回顾](https://www.indexologyblog.com/2024/01/22/2023-market-review-for-asian-investors/) | 已阅读 | NVDA 约 239% 的文章线索，只证明其在文章所说七大科技股中的比较，不能作为完整指数总回报排名 |
-| S&P Market Attributes 2023/2024 年 12 月英文 PDF | 请求失败（HTTP 403 / 不可访问） | 不推断其中数字，不使用未读到的表格 |
-| Slickcharts 历史年度表现页 | 请求失败（HTTP 403） | 未抓取数据，也未用今天成分表替代 |
-| Yahoo chart API 测试 | HTTP 429 | 未取得个股年度记录；即使取得也不能独自证明当时母集、退市处理和再分发许可 |
+| [NYU Damodaran](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html) | Downloaded and parsed through 2025 | Annual S&P returns including dividends; use parsed rows rather than the potentially stale page heading |
+| [NYU guide](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/guide.html) | Read | Attribute the source; no resale; non-commercial research display |
+| [FRED NASDAQCOM](https://fred.stlouisfed.org/series/NASDAQCOM) | Daily closes downloaded; annual values derived | Starts 1971-02-05, so complete years start in 1972. Nasdaq Composite, excluding dividends |
+| [FRED terms](https://fred.stlouisfed.org/legal/terms/) | Read | Nasdaq copyright restrictions apply; retain attribution and non-commercial educational/personal scope. Do not sell or redistribute raw daily downloads |
+| [WRDS classroom](https://wrds-www.wharton.upenn.edu/pages/classroom/the-sp-500/) | Public documentation accessible; full query requires login | Does not provide an authorized full historical constituent dataset to this project |
+| [WRDS teaching changes](https://wrds-www.wharton.upenn.edu/classroom/sp500-introduction/over-time/) | Partial teaching intervals parsed locally | 1,889 deduplicated intervals, latest endpoint 2022-12-30. Not full membership. Security records and page HTML are not published |
+| [CRSP guide](https://www.crsp.org/crsp_pdf/crsp-historical-indexes-guide/) | Methodology consulted | No licensed security-level return data acquired |
+| [S&P 2023 review](https://www.indexologyblog.com/2024/01/22/2023-market-review-for-asian-investors/) | Read | The Nvidia comparison among seven technology stocks does not certify an index-wide total-return ranking |
+| S&P December 2023/2024 Market Attributes PDFs | HTTP 403/unavailable | No unread table values inferred |
+| [FNSPID](https://huggingface.co/datasets/Zihan1004/FNSPID) | Price ZIP downloaded | CC BY-NC 4.0 academic source, Dong, Fan and Peng (2024); adjusted-close proxies can contain splices |
+| [fja05680 history](https://github.com/fja05680/sp500) | Historical snapshots downloaded | MIT reconstruction from 1996; not official or proven complete |
+| [Darkmatternet prices](https://www.kaggle.com/datasets/darkmatternet/s-and-p-500-stocks-25-years-of-data-updated-daily) | ZIP and metadata downloaded | Uploader declares CC0. Current/surviving price availability intersected with historic members; close adjustment/dividend treatment undocumented |
+| [Slickcharts YTD](https://www.slickcharts.com/sp500/performance) | Current screen inspected | Reported screen lacks a reliable explicit market cutoff in the extracted page. Historical requests previously failed; not substituted for historical constituents |
+| Yahoo chart API | HTTP 429 | No bypass or account access attempted |
 
-## 1958 年起缺口
+## Coverage and quality
 
-- 1957 年信号 + 1958-2025 年完整真实母集与逐股回报尚未取得。
-- 退市、收购、破产、分拆、永久证券标识、现金结算及可交易性必须同时处理。
-- 不采用今天的标普成分回算过去，不用现存股票做幸存者替代，不将报道价格涨幅冒充含股息总回报。
-- 2026 年尚未结束，不制作全年成绩。
-- 不借助外部页面缓存中可能出现的账户信息进行登录；完整教学 HTML 不进入仓库。
+Annual sample rankings cover 1996-2025. The recent extension observes 442, 458 and 477 source members in 2023, 2024 and 2025. Current-year close ratios are stored separately with their actual source cutoff, 2026-10-15. No final 2026 annual return is asserted.
 
-## 当前可复算与不可复算
+Exact year-end endpoints are required. Missing securities are disclosed rather than replaced. Current membership is never presented as historical membership; a source containing only survivors remains an incomplete sample even after the historical intersection.
 
-可以复算公开指数年度路径、终值、CAGR 和年末回撤，可以用独立合成测试验证策略引擎。不能据此声称真实 Top 1/3/5/10 策略已经在 1958-2025 被验证。后者需要完整且有合法使用权的数据。
+GE, TSLA, AAPL and ETN have observed adjustment discontinuities. Moves above 50% are quarantined pending review; genuine moves can also be excluded. The THC 2010 takeover exception is narrowly reviewed in [event reviews](EVENT-REVIEWS.md).
 
-来源 SHA-256、抓取时间和使用条件保存在 `public/data/public.json`。金融内容版本号与抓取时间分离；同样的金融数值不因每次抓取而制造新版本。旧版本保留以重现分享链接。
+The initial sample stops before the last trading day in much of 2023, so those observations are not used as a complete year. Recent years come from the separately attributed Kaggle extension, with adjustment uncertainty retained.
 
-## 静态网络 base（2026-10-18 第二阶段）
+## Remaining gaps
 
-已实际下载 [FNSPID 股票价格 ZIP](https://huggingface.co/datasets/Zihan1004/FNSPID) 和 [fja05680 历史成员表](https://github.com/fja05680/sp500)。按 FNSPID 的 CC BY-NC 4.0 与成员表 MIT 条件，保留署名、来源、许可副本及修改说明，用于非商业年度研究展示。
+The complete 1957 signal universe and 1958-present historical stock rankings remain unavailable. Full delisting, merger, bankruptcy, spinoff, permanent-identifier and cash-settlement handling is unresolved. Partial reported lists and long-period winners must not be promoted into complete annual rankings. No today's-constituent backfill, invented returns, zero filling or arbitrary delisting assumptions are allowed.
 
-FNSPID 原始 ZIP 的 SHA-256 和成员表校验值保存在每个 base 快照的 sources 中。每年按当时年末历史成员表取母集，然后与有两个精确年末交易日调整价的证券相交。不是把当前成分股用于历史，也不是声称历史成员资料已完全权威核实。
-
-可用信号年 1996-2022；不少 2023 资料未到最后交易日，因此不纳入完整年。不同年份覆盖不同，例如 1996 年约四成成员、近年也缺不少证券，具体数目以每年 coverage 为准。缺失母集证券和已隔离的证券在年度详情里列出。
-
-实际发现 GE、TSLA、AAPL 等在 2020-07-06 附近存在调整口径跳变，ETN 在 2019 年也有大幅异常。未人工凑回报或把异常归零；任何相邻观察调整价变动绝对值大于 50% 的证券当年回报暂不使用。真实极端日也可能被筛掉，因此这仍是保守且不完整的样本。
-
-网络样本可以探索策略，但仍不能验收“1958 年起真实全标普前十，完整包含拆股分红及退市结算”的原目标。缺口、价格代理口径和幸存者问题继续存在。不是 CRSP 的替代授权，也没有分发 CRSP 数据。
+Source hashes, conventions and coverage accompany snapshots. Research observations with unresolved redistribution rights remain local; the public repository keeps links and methodological notes. Index arithmetic and synthetic strategy tests can be reproduced, but they do not establish the validity of a full historical strategy.

@@ -52,10 +52,37 @@ def validate_base(data):
     if data['version']!=version:raise ValueError('Stock snapshot hash mismatch')
     return True
 
+def validate_ytd(data):
+    import datetime as dt
+    expected={'schemaVersion','kind','year','asOf','version','sourceUrl','sourceSha256','license','basis','returns'}
+    if set(data)!=expected or data['kind']!='stocks-ytd' or data['schemaVersion']!=1:
+        raise ValueError('Invalid YTD schema')
+    cutoff=dt.date.fromisoformat(data['asOf'])
+    if cutoff.year!=data['year'] or cutoff>dt.datetime.now(dt.timezone.utc).date():
+        raise ValueError('Invalid YTD cutoff')
+    if data['basis']!='close-ratio-adjustment-unverified' or not all(data[k] for k in ('sourceUrl','sourceSha256','license')):
+        raise ValueError('YTD provenance or convention missing')
+    seen=set()
+    for row in data['returns']:
+        if set(row)!={'id','ticker','name','totalReturn','source'} or row['id'] in seen:
+            raise ValueError('Raw quote or duplicate YTD identity')
+        seen.add(row['id'])
+        r=row['totalReturn']
+        if isinstance(r,bool) or not isinstance(r,(int,float)) or not math.isfinite(r) or r < -1:
+            raise ValueError('Invalid YTD return')
+    content={k:v for k,v in data.items() if k!='version'}
+    if data['version']!=hashlib.sha256(json.dumps(content,sort_keys=True).encode()).hexdigest()[:16]:
+        raise ValueError('YTD hash mismatch')
+    return True
+
 if __name__=='__main__':
     files=list((ROOT/'public/data/versions').glob('*.json'))+[ROOT/'public/data/public.json']
     for path in files:validate(json.loads(path.read_text()))
     bases=list((ROOT/'public/data/base-versions').glob('*.json'))
     if (ROOT/'public/data/stocks-base.json').exists():bases.append(ROOT/'public/data/stocks-base.json')
     for path in bases:validate_base(json.loads(path.read_text()))
+    ytds=list((ROOT/'public/data/ytd-versions').glob('*.json'))
+    if (ROOT/'public/data/stocks-ytd.json').exists():ytds.append(ROOT/'public/data/stocks-ytd.json')
+    for path in ytds:validate_ytd(json.loads(path.read_text()))
+    print(f'Validated {len(ytds)} YTD snapshots.')
     print(f'Validated {len(files)} index and {len(bases)} exploratory stock snapshots; private/raw data excluded.')

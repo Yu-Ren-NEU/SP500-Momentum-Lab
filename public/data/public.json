@@ -765,10 +765,10 @@
     "membershipEvidenceIntervals": 1889,
     "membershipLastEndpoint": "2022-12-30",
     "notes": [
-      "1958-2025 个股完整总回报及当时成分母集尚未取得，不生成真实策略曲线。",
-      "WRDS 教学变更记录不是完整成分数据，未公开分发原文或证券记录。",
-      "2026 是未结束年度，不参与自然年回测。",
-      "1958 年策略还需 1957 年排名和当时可交易性。"
+      "Complete historical stock total returns and point-in-time universes for 1958-2025 remain unavailable; no certified full-universe strategy is asserted.",
+      "WRDS teaching change excerpts are not full constituent history; source pages and security records are not redistributed.",
+      "2026 is incomplete; YTD observations must remain separate from complete calendar-year returns.",
+      "A 1958 investment requires the 1957 ranking and point-in-time investability."
     ]
   },
   "version": "f113947b02cf5930"

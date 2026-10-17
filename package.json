@@ -16,7 +16,9 @@
     "check": "npm run validate && npm test && npm run build",
     "test:ui": "vitest run",
     "update:base": "python3 scripts/build_base.py",
-    "download:base": "python3 scripts/build_base.py --download"
+    "download:base": "python3 scripts/build_base.py --download",
+    "update:recent": "python3 scripts/extend_recent.py",
+    "update:catalogue": "python3 scripts/build_top10_history.py"
   },
   "dependencies": {
     "echarts": "6.1.0",

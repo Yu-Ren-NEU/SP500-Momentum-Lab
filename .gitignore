@@ -6,3 +6,6 @@ node_modules/
 data/raw/
 dist/
 *.tsbuildinfo
+
+# Reported market observations without established redistribution rights
+data/research/reported-evidence.json

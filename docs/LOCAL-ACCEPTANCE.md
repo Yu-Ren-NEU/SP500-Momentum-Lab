@@ -1,36 +1,25 @@
-# 本机阶段验收记录
+# Local acceptance record
 
-日期：2026-10-18（北京时间）。执行环境：用户 Mac，Darwin，本机 Documents/Codex 下的独立 Git 项目。
+Date: 2026-10-18, Asia/Shanghai. Environment: the user's Mac, under Documents/Codex. Public deployment remains deferred.
 
-## 已通过
+## Verified behavior
 
-- `npm run check`：12 个引擎测试 + 10 个 Python 数据/导入测试 + 6 个 React 集成测试；TypeScript 与 Vite 生产构建成功。
-- 实浏览器：默认指数曲线、2001-2002 区间、Top 7 自定义参数、错误起止年份、分享按钮、固定数据版本刷新重现、键盘焦点。
-- 390 × 844 手机视口：浅色和深色均无文档横向溢出；参数控件高度至少 44px。桌面页面已截图检查。
-- 组件文件导入：明确标为合成的证券测试文件使 Top 1 生成已知 $30,000 终值，排名及持仓正常；移除后恢复缺失状态；文件内容未出现在网络请求。
-- 公开基准抓取：在线成功下载 68 年标普、54 年纳指，解析 1,889 个 WRDS 教学区间线索。教学证券记录只保留本机，不进入发布目录。
-- 发布数据检查：只含允许列表中的基准、来源、版本和研究摘要；没有个股授权数据、原始日频序列或 WRDS 页面。
+- Engine arithmetic: prior-year signals, annual rotation, compounding, equal and custom rank weights, URL round trips, missing-data safeguards and terminal losses.
+- React integration: default capital of USD 1, default N of 1, immediate updates, editable weight table, invalid weights preserving the last valid result, language switching and local imports.
+- Browser checks: selected strategy plus both references; legend toggles; Top N in the second row; no share/run buttons; annual explanation and table aligned at the top.
+- Earlier desktop and 390px mobile checks covered both themes, keyboard focus, zoom, translated text and document overflow. New YTD and snapshot notices are verified separately during implementation.
+- Private import fixtures produce known synthetic results and do not appear in request bodies. File chooser automation was blocked by extension permissions; permissions were not widened.
+- Published annual samples pass schema, hash, provenance, coverage and quarantine checks. Raw downloads, private data and WRDS teaching security records are excluded from the site.
+- Production TypeScript/Vite build succeeds. The ECharts bundle size warning remains non-blocking.
 
-## 可复算示例
+## Reproducible examples and limits
 
-2001-2002，初始 $10,000：标普 NYU 序列约 $6,878，纳指价格序列约 $5,406。1958-2025 的 NYU 年度百分比复利约 $11,589,727.17；全部为年度数据口径。
+The NYU 1958-2025 series compounds USD 10,000 to approximately USD 11,589,727.17 using the published annual percentages. This is not a claim of exact official S&P total-return index replication.
 
-## 验证限制与未完成事项
+The original sample's Top 1 2012-2022 calculation matched an independent Python calculation. The recent extension allows Top 1 through 2025. Agreement of calculations does not prove underlying market-data correctness.
 
-- 浏览器扩展未允许自动选择本机文件，因此真实文件选择对话框未完成自动化验收。没有更改扩展权限；导入事件后的完整程序路径已由组件集成测试覆盖。
-- 合成证券只验证计算，不是历史回报，未进入静态公开数据。
-- 个股全历史数据尚缺，不能验收真实 Top N 历史策略的收益结论。
-- 未部署公网，未创建/运行 GitHub Actions，未验证 Cloudflare 自动部署。用户要求先完成本机功能，这些留待下一阶段。
+A request beginning in 1996 starts investing in 1997 because the 1995 signal is missing. The original snapshot stopped in 2009 because THC's genuine 2010 takeover jump was quarantined. The reviewed exception restores that return in the latest snapshot, while the old immutable snapshot remains unchanged.
 
+Top 10 still stops before a missing 2020 IR holding return; Top 3/5 can encounter missing former members such as HES. Gaps are not bridged. YTD stock returns use their source cutoff and fractional-year CAGR; current-year index references are unavailable and remain at their last complete year.
 
-## 第二阶段：简化界面与网络静态 base
-
-- 改为极客风的简洁首页，Apache ECharts 线性图，默认只画 Top 1 与两组基准。选择其他 N 后替换策略曲线，不再强制画 Top 1/3/5/10。
-- 中英文、明暗主题、图表十字线与读数、缩放重置、年度展开明细已通过实浏览器检查。390px 手机视口两种主题下无文档横向溢出。
-- 已实际下载 FNSPID ZIP 与历史成员表，生成 1996-2022 信号年静态样本及覆盖/异常记录。它不是完整权威排名。
-- Top 1 的 2012-2022 样本复算：浏览器结果与独立 Python 逐年等权复利一致。只是程序复算一致，不证明底层市场数据准确。
-- 实测 Top 10 遇到 2020 IR 回报缺失时，只画 2012-2019，明确显示原因，不跳过缺口接续。
-- 分享链接同时固定指数和个股快照，刷新后重现相同结果。
-- 共 40 项测试通过：15 个引擎、17 个 Python 管道/发布检查、8 个 React 集成测试；生产构建成功。
-- 原始文件与私有文件不提交；公开 base 仅使用附带许可和署名的非商业年度派生样本。
-- 按用户明确要求，本机开发服务继续保持运行，不作关闭清理。
+No GitHub Actions or Cloudflare deployment acceptance is claimed. Keep the local development server running for the user.

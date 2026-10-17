@@ -19,6 +19,7 @@ def merge(base,patch):
     """Patch whole validated years; omission never deletes baseline years."""
     if base and base.get('quality')!=patch.get('quality'):raise ValueError('Cannot merge unlike data quality tiers')
     out={**base,**patch}
+    out["sources"]=list({s["url"]:s for s in base.get("sources",[])+patch.get("sources",[])}.values())
     for k in ('rankings','returns','coverage'):out[k]={**base.get(k,{}),**patch.get(k,{})}
     for y,r in patch.get('rankings',{}).items():
         if not r['rows'] or r['count']!=len(r['rows']) or patch['coverage'][y]['available']!=len(r['rows']):raise ValueError('Invalid year patch')
@@ -64,7 +65,7 @@ def build():
             invalid={}
             for (d0,p0),(d1,p1) in zip(observations,observations[1:]):
                 change=p1/p0-1
-                if abs(change)>.5:
+                if abs(change)>.5 and not (ticker=='THC' and d1=='2010-12-10' and .54 < change < .56):
                     invalid.setdefault(d1[:4],[]).append(d1+': adjusted-close change '+str(round(change*100,2))+'%; unverified discontinuity')
             if invalid:quarantined[ticker]=invalid
             closing[ticker]=values
@@ -89,8 +90,12 @@ def build():
             if y in prices and y-1 in prices and str(y) not in quarantined.get(symbol,{}):returns.append({'id':'fnspid:'+symbol,'ticker':symbol,'name':symbol,'totalReturn':prices[y]/prices[y-1]-1,'source':'fnspid-adjusted-close'})
         annual[str(y)]=returns
     if not rankings:raise ValueError('No usable full calendar-year endpoints found')
+    quarantined={symbol:{year:notes for year,notes in flags.items() if year in rankings} for symbol,flags in quarantined.items()}
     sourceMeta=[{k:v for k,v in s.items() if k not in ('download','file')}|{'sha256':digest(RAW/s['file'])}for s in SOURCES]
     return {'schemaVersion':1,'quality':'exploratory','redistribution':'permitted','licenseEvidence':'FNSPID CC BY-NC 4.0; fja05680 MIT. Derived non-commercial research sample; see sources. Not official index data.','updatedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'sources':sourceMeta,'rankings':rankings,'returns':annual,'coverage':coverage,'aliasNotes':ALIASES,'quarantined':quarantined,'limitations':['Available-sample ranking, not complete S&P 500 top ten.','Possible survivorship, ticker-recycling, corporate-action and delisting gaps.','Adjusted close is a return proxy, not verified CRSP total return.','Both year-end trading dates required; no partial calendar-year substitution.','Any observed adjacent adjusted-close move above 50% in absolute value quarantines that security-year pending review. Genuine extreme moves may also be excluded.'],'buildStats':{'filesRead':files,'invalidRows':bad,'quarantinedSecurityYears':sum(len(v)for v in quarantined.values())}}
+
+def write_manifest(data):
+    atomic_json(PUBLIC/'base-latest.json', {'kind':'stocks-base-manifest','version':data['version'],'startYear':data['startYear'],'endYear':data['endYear']})
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--download',action='store_true');p.add_argument('--patch',type=Path);args=p.parse_args();RAW.mkdir(parents=True,exist_ok=True)
@@ -101,5 +106,6 @@ def main():
     data=merge(old,patch);validate_base(data);snapshot=PUBLIC/'base-versions'/(data['version']+'.json')
     if not snapshot.exists():atomic_json(snapshot,data,compact=True)
     atomic_json(file,data,compact=True)
+    write_manifest(data)
     print(json.dumps({'version':data['version'],'signalYears':[min(data['rankings']),max(data['rankings'])],'returnThrough':data['endYear'],'bytes':file.stat().st_size,'firstCoverage':data['coverage'][min(data['rankings'])]}))
 if __name__=='__main__':main()

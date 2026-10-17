@@ -77,7 +77,7 @@ afterEach(() => {
 });
 async function mount() {
   render(<App />);
-  await screen.findByRole("button", { name: /运行回测/ });
+  await screen.findByRole("combobox", { name: "Top N" });
   return userEvent.setup();
 }
 test("only selected strategy plus two benchmarks; no forced Top 3/5/10", async () => {
@@ -86,7 +86,8 @@ test("only selected strategy plus two benchmarks; no forced Top 3/5/10", async (
   expect(legend.textContent).toContain("Top 1");
   expect(legend.textContent).not.toMatch(/Top (3|5|10)/);
   expect(legend.children.length).toBe(3);
-  expect(screen.getAllByRole("table").length).toBe(1);
+  expect(screen.getByRole("table", { name: "按上一年排名设置投资权重" })).toBeTruthy();
+  expect(screen.getByRole("table", { name: "年度明细" })).toBeTruthy();
 });
 test("local file calculates positions and known compounding without network upload", async () => {
   const user = await mount();
@@ -114,7 +115,7 @@ test("invalid import never changes active data", async () => {
   const file = new File(["{}"], "bad.json", { type: "application/json" });
   Object.defineProperty(file, "text", { value: async () => "{}" });
   await user.upload(screen.getByLabelText("选择本机历史数据 JSON"), file);
-  expect(screen.getByRole("status").textContent).toMatch(/导入失败/);
+  expect(document.querySelector(".status-line")?.textContent).toMatch(/导入失败/);
 });
 test("Top 7 replaces Top 1 rather than adding more curves", async () => {
   const user = await mount();
@@ -122,7 +123,6 @@ test("Top 7 replaces Top 1 rather than adding more curves", async () => {
     screen.getByRole("combobox", { name: "Top N" }),
     "7",
   );
-  await user.click(screen.getByRole("button", { name: /运行回测/ }));
   expect(document.querySelector(".legend")?.textContent).toContain("Top 7");
   expect(document.querySelector(".legend")?.textContent).not.toContain("Top 1");
   expect(new URLSearchParams(location.search).get("n")).toBe("7");
@@ -145,7 +145,7 @@ test("switching language translates header controls and details and preserves co
   ).toBeTruthy();
   expect(screen.getByRole("combobox", { name: "Start year" })).toBeTruthy();
   expect(screen.getByText("Sources & methodology")).toBeTruthy();
-  expect(screen.getByRole("button", { name: "Run backtest →" })).toBeTruthy();
+  expect(screen.queryByRole("button", { name: "Run backtest →" })).toBeNull();
   expect(document.documentElement.lang).toBe("en");
   expect(new URLSearchParams(location.search).get("n")).toBe("1");
 });
@@ -157,12 +157,50 @@ test("default N is one when URL omits it", async () => {
       .value,
   ).toBe("1");
 });
-test("sharing preserves language and financial snapshot", async () => {
+test("share button removed and rank weights are editable", async () => {
   const user = await mount();
-  await user.click(screen.getByRole("button", { name: "EN", exact: true }));
-  await user.click(screen.getByRole("button", { name: "Share ↗" }));
-  await waitFor(() =>
-    expect(location.search).toContain("data=" + publicData.version),
-  );
-  expect(location.search).toContain("lang=en");
+  expect(screen.queryByRole("button", {name: /分享/})).toBeNull();
+  await user.selectOptions(screen.getByRole("combobox", {name:"Top N"}), "2");
+  const first = screen.getByRole("spinbutton", {name:"第1名权重"}) as HTMLInputElement;
+  const second = screen.getByRole("spinbutton", {name:"第2名权重"}) as HTMLInputElement;
+  expect(first.value).toBe("50");
+  expect(second.value).toBe("50");
+  await user.clear(first); await user.type(first, "70");
+  await user.clear(second); await user.type(second, "30");
+  expect(new URLSearchParams(location.search).get("weights")).toBe("0.7,0.3");
+  await user.click(screen.getByRole("button", {name:"恢复等权"}));
+  expect(first.value).toBe("50");
+});
+
+test("default capital is one and edits update immediately", async () => {
+  history.replaceState(null, "", "/?start=2001&end=2002");
+  const user = await mount();
+  const input = screen.getByRole("spinbutton", {name: "初始资金 · USD"}) as HTMLInputElement;
+  expect(input.value).toBe("1");
+  await user.clear(input);
+  await user.type(input, "25");
+  expect(new URLSearchParams(location.search).get("initial")).toBe("25");
+  expect(screen.queryByRole("button", { name: /运行回测/ })).toBeNull();
+});
+
+test("end year includes the current year and discloses unavailable YTD references", async () => {
+  const user = await mount();
+  const current = String(new Date().getUTCFullYear());
+  await user.selectOptions(screen.getByRole("combobox", {name:"结束年份"}),current);
+  expect(new URLSearchParams(location.search).get("end")).toBe(current);
+  expect(screen.getByText(/本年为 YTD/)).toBeTruthy();
+});
+
+test("pinned old stock snapshot has a visible latest-data link", async () => {
+  const old = JSON.parse(readFileSync("public/data/base-versions/9bf6ebd73f3563a4.json","utf8"));
+  const latest = JSON.parse(readFileSync("public/data/base-latest.json","utf8"));
+  history.replaceState(null,"","/?start=1996&end=2012&base=9bf6ebd73f3563a4");
+  vi.mocked(fetch).mockImplementation(async (input) => {
+    const path=String(input);
+    return {ok:true,json:async()=>path.includes("base-latest")?latest:path.includes("base-versions")?old:publicData} as Response;
+  });
+  await mount();
+  const link=screen.getByRole("link",{name:"加载最新数据 ↗"});
+  expect(link.getAttribute("href")).toContain("base="+latest.version);
+  expect(link.getAttribute("href")).toContain("start=1996");
 });

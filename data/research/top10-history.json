@@ -1,0 +1,3331 @@
+{
+  "schemaVersion": 1,
+  "range": [
+    1958,
+    2026
+  ],
+  "purpose": "Research catalogue; sample rankings are not full historical S&P 500 rankings.",
+  "baseVersion": "dfa68874e9975e30",
+  "updatePolicy": "Current-year YTD requires explicit source cutoff. Freeze only after final trading day and source reconciliation; corrections require a documented revision. Never overwrite history with current membership.",
+  "years": {
+    "1958": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1959": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1960": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1961": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1962": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1963": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1964": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1965": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1966": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1967": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1968": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1969": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1970": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1971": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1972": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1973": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1974": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1975": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1976": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1977": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1978": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1979": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1980": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": [
+        {
+          "year": 1980,
+          "sourceUrl": "https://www.visualcapitalist.com/TOP-SP-500-STOCKS-BY-ANNUAL-RETURNS/",
+          "status": "reported-partial-top10-membership",
+          "basis": "price-return-excluding-distributions",
+          "note": "Selected from S&P-sourced top-50 one-year returns across 1980–2022, originally shortlisted from each year top ten. Exact within-year ranks not established. Historical names retained; no modern ticker guessed.",
+          "eligibleForVerifiedBacktest": false
+        }
+      ]
+    },
+    "1981": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1982": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": [
+        {
+          "year": 1982,
+          "sourceUrl": "https://www.visualcapitalist.com/TOP-SP-500-STOCKS-BY-ANNUAL-RETURNS/",
+          "status": "reported-partial-top10-membership",
+          "basis": "price-return-excluding-distributions",
+          "note": "Selected from S&P-sourced top-50 one-year returns across 1980–2022, originally shortlisted from each year top ten. Exact within-year ranks not established. Historical names retained; no modern ticker guessed.",
+          "eligibleForVerifiedBacktest": false
+        }
+      ]
+    },
+    "1983": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1984": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1985": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1986": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1987": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1988": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1989": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1990": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1991": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": [
+        {
+          "year": 1991,
+          "sourceUrl": "https://www.visualcapitalist.com/TOP-SP-500-STOCKS-BY-ANNUAL-RETURNS/",
+          "status": "reported-partial-top10-membership",
+          "basis": "price-return-excluding-distributions",
+          "note": "Selected from S&P-sourced top-50 one-year returns across 1980–2022, originally shortlisted from each year top ten. Exact within-year ranks not established. Historical names retained; no modern ticker guessed.",
+          "eligibleForVerifiedBacktest": false
+        }
+      ]
+    },
+    "1992": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1993": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1994": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1995": {
+      "period": "calendar-year",
+      "status": "missing",
+      "asOf": null,
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 0,
+      "rows": [],
+      "evidence": []
+    },
+    "1996": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "1996-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 203,
+      "rows": [
+        {
+          "id": "fnspid:TJX",
+          "ticker": "TJX",
+          "name": "TJX",
+          "totalReturn": 1.5355373254941105,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:INTC",
+          "ticker": "INTC",
+          "name": "INTC",
+          "totalReturn": 1.312993398790844,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:NKE",
+          "ticker": "NKE",
+          "name": "NKE",
+          "totalReturn": 0.8992131000509807,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:MSFT",
+          "ticker": "MSFT",
+          "name": "MSFT",
+          "totalReturn": 0.8831899426176684,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:HP",
+          "ticker": "HP",
+          "name": "HP",
+          "totalReturn": 0.8440671788233958,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:CVS",
+          "ticker": "CVS",
+          "name": "CVS",
+          "totalReturn": 0.736503327325702,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:IBM",
+          "ticker": "IBM",
+          "name": "IBM",
+          "totalReturn": 0.7355730670897347,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:AN",
+          "ticker": "AN",
+          "name": "AN",
+          "totalReturn": 0.7266435670445657,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:CSCO",
+          "ticker": "CSCO",
+          "name": "CSCO",
+          "totalReturn": 0.7051921362996232,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:FL",
+          "ticker": "FL",
+          "name": "FL",
+          "totalReturn": 0.6923086276923358,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "1997": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "1997-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 217,
+      "rows": [
+        {
+          "id": "fnspid:NAV",
+          "ticker": "NAV",
+          "name": "NAV",
+          "totalReturn": 1.7191779840913979,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:WEN",
+          "ticker": "WEN",
+          "name": "WEN",
+          "totalReturn": 1.3695649754539998,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:CINF",
+          "ticker": "CINF",
+          "name": "CINF",
+          "totalReturn": 1.2124598379540612,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:UIS",
+          "ticker": "UIS",
+          "name": "UIS",
+          "totalReturn": 1.0555555555555554,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:NC",
+          "ticker": "NC",
+          "name": "NC",
+          "totalReturn": 1.0269338050919656,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:FITB",
+          "ticker": "FITB",
+          "name": "FITB",
+          "totalReturn": 0.9792659290581132,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:LLY",
+          "ticker": "LLY",
+          "name": "LLY",
+          "totalReturn": 0.957171251202892,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:USB",
+          "ticker": "USB",
+          "name": "USB",
+          "totalReturn": 0.9056803214873022,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:OMC",
+          "ticker": "OMC",
+          "name": "OMC",
+          "totalReturn": 0.8787281350630434,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:BLL",
+          "ticker": "BLL",
+          "name": "BLL",
+          "totalReturn": 0.8672555897050893,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "1998": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "1998-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 226,
+      "rows": [
+        {
+          "id": "fnspid:AAPL",
+          "ticker": "AAPL",
+          "name": "AAPL",
+          "totalReturn": 2.1190467279191743,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:CSCO",
+          "ticker": "CSCO",
+          "name": "CSCO",
+          "totalReturn": 1.4971965461867995,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:UIS",
+          "ticker": "UIS",
+          "name": "UIS",
+          "totalReturn": 1.4819819819819822,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:GPS",
+          "ticker": "GPS",
+          "name": "GPS",
+          "totalReturn": 1.3834562231085514,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:LOW",
+          "ticker": "LOW",
+          "name": "LOW",
+          "totalReturn": 1.1660903753623222,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:MSFT",
+          "ticker": "MSFT",
+          "name": "MSFT",
+          "totalReturn": 1.1460344094778976,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:COF",
+          "ticker": "COF",
+          "name": "COF",
+          "totalReturn": 1.1448218652387872,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:HD",
+          "ticker": "HD",
+          "name": "HD",
+          "totalReturn": 1.084615235198139,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:WMT",
+          "ticker": "WMT",
+          "name": "WMT",
+          "totalReturn": 1.0756463055658818,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:F",
+          "ticker": "F",
+          "name": "F",
+          "totalReturn": 0.9519632483589728,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "1999": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "1999-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 242,
+      "rows": [
+        {
+          "id": "fnspid:QCOM",
+          "ticker": "QCOM",
+          "name": "QCOM",
+          "totalReturn": 26.194223489712844,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:ORCL",
+          "ticker": "ORCL",
+          "name": "ORCL",
+          "totalReturn": 2.8978264925394557,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:NTAP",
+          "ticker": "NTAP",
+          "name": "NTAP",
+          "totalReturn": 2.7045287715382282,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:TER",
+          "ticker": "TER",
+          "name": "TER",
+          "totalReturn": 2.1150441379379896,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:AMAT",
+          "ticker": "AMAT",
+          "name": "AMAT",
+          "totalReturn": 1.9677888632761005,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:ADI",
+          "ticker": "ADI",
+          "name": "ADI",
+          "totalReturn": 1.9641434134533515,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:GLW",
+          "ticker": "GLW",
+          "name": "GLW",
+          "totalReturn": 1.963293047136653,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:ADBE",
+          "ticker": "ADBE",
+          "name": "ADBE",
+          "totalReturn": 1.8836277122656662,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:KLAC",
+          "ticker": "KLAC",
+          "name": "KLAC",
+          "totalReturn": 1.5677238797029975,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:CTXS",
+          "ticker": "CTXS",
+          "name": "CTXS",
+          "totalReturn": 1.5344493531603725,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2000": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2000-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 249,
+      "rows": [
+        {
+          "id": "fnspid:EOG",
+          "ticker": "EOG",
+          "name": "EOG",
+          "totalReturn": 2.189786489800662,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:EHC",
+          "ticker": "EHC",
+          "name": "EHC",
+          "totalReturn": 2.0348836161420962,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:CAH",
+          "ticker": "CAH",
+          "name": "CAH",
+          "totalReturn": 1.0859011177507685,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:LUV",
+          "ticker": "LUV",
+          "name": "LUV",
+          "totalReturn": 1.079379769258721,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:EXC",
+          "ticker": "EXC",
+          "name": "EXC",
+          "totalReturn": 1.0783273443989363,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:PPL",
+          "ticker": "PPL",
+          "name": "PPL",
+          "totalReturn": 1.0542813693933808,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:CNP",
+          "ticker": "CNP",
+          "name": "CNP",
+          "totalReturn": 1.0087515048123747,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:OKE",
+          "ticker": "OKE",
+          "name": "OKE",
+          "totalReturn": 0.9998486665383621,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:TMO",
+          "ticker": "TMO",
+          "name": "TMO",
+          "totalReturn": 0.9833329765938577,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:APA",
+          "ticker": "APA",
+          "name": "APA",
+          "totalReturn": 0.9148747744730437,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2001": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2001-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 258,
+      "rows": [
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 3.083550705076389,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:ODP",
+          "ticker": "ODP",
+          "name": "ODP",
+          "totalReturn": 1.6021044865817622,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:JCP",
+          "ticker": "JCP",
+          "name": "JCP",
+          "totalReturn": 1.5462757451781401,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:BBY",
+          "ticker": "BBY",
+          "name": "BBY",
+          "totalReturn": 1.5194087219031078,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:AZO",
+          "ticker": "AZO",
+          "name": "AZO",
+          "totalReturn": 1.5192983526932564,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:HRB",
+          "ticker": "HRB",
+          "name": "HRB",
+          "totalReturn": 1.2909202120053322,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:DLX",
+          "ticker": "DLX",
+          "name": "DLX",
+          "totalReturn": 1.164102356099879,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:LOW",
+          "ticker": "LOW",
+          "name": "LOW",
+          "totalReturn": 1.0910553686250641,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:CAR",
+          "ticker": "CAR",
+          "name": "CAR",
+          "totalReturn": 1.0374028425585036,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:WOR",
+          "ticker": "WOR",
+          "name": "WOR",
+          "totalReturn": 0.9191272748082866,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2002": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2002-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 267,
+      "rows": [
+        {
+          "id": "fnspid:BSX",
+          "ticker": "BSX",
+          "name": "BSX",
+          "totalReturn": 0.7628523622852033,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:BLL",
+          "ticker": "BLL",
+          "name": "BLL",
+          "totalReturn": 0.5447286889367333,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:NEM",
+          "ticker": "NEM",
+          "name": "NEM",
+          "totalReturn": 0.5260110516195706,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:HAL",
+          "ticker": "HAL",
+          "name": "HAL",
+          "totalReturn": 0.42824416333135473,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:ZBH",
+          "ticker": "ZBH",
+          "name": "ZBH",
+          "totalReturn": 0.359528203756327,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:BIG",
+          "ticker": "BIG",
+          "name": "BIG",
+          "totalReturn": 0.2721154135673045,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:ITT",
+          "ticker": "ITT",
+          "name": "ITT",
+          "totalReturn": 0.2709923562748604,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:ANTM",
+          "ticker": "ANTM",
+          "name": "ANTM",
+          "totalReturn": 0.27070728057694704,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:PFG",
+          "ticker": "PFG",
+          "name": "PFG",
+          "totalReturn": 0.2667752388332736,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:ECL",
+          "ticker": "ECL",
+          "name": "ECL",
+          "totalReturn": 0.2597652336234122,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2003": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2003-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 272,
+      "rows": [
+        {
+          "id": "fnspid:GLW",
+          "ticker": "GLW",
+          "name": "GLW",
+          "totalReturn": 2.151058038605293,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AES",
+          "ticker": "AES",
+          "name": "AES",
+          "totalReturn": 2.125828616890763,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:SANM",
+          "ticker": "SANM",
+          "name": "SANM",
+          "totalReturn": 1.8062359679075501,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:X",
+          "ticker": "X",
+          "name": "X",
+          "totalReturn": 1.7027704089201916,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:FCX",
+          "ticker": "FCX",
+          "name": "FCX",
+          "totalReturn": 1.5665791803825595,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "AMD",
+          "totalReturn": 1.306501475316443,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:HUM",
+          "ticker": "HUM",
+          "name": "HUM",
+          "totalReturn": 1.28499973092574,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:ATI",
+          "ticker": "ATI",
+          "name": "ATI",
+          "totalReturn": 1.2214984677495369,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:LPX",
+          "ticker": "LPX",
+          "name": "LPX",
+          "totalReturn": 1.2183618933125575,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:BBY",
+          "ticker": "BBY",
+          "name": "BBY",
+          "totalReturn": 1.1799854537681367,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2004": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2004-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 275,
+      "rows": [
+        {
+          "id": "fnspid:ADSK",
+          "ticker": "ADSK",
+          "name": "ADSK",
+          "totalReturn": 2.096157483948583,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AAPL",
+          "ticker": "AAPL",
+          "name": "AAPL",
+          "totalReturn": 2.013569772175701,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:VLO",
+          "ticker": "VLO",
+          "name": "VLO",
+          "totalReturn": 0.976448747910734,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:NUE",
+          "ticker": "NUE",
+          "name": "NUE",
+          "totalReturn": 0.8909759646771185,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:GT",
+          "ticker": "GT",
+          "name": "GT",
+          "totalReturn": 0.8651399300025735,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:CMI",
+          "ticker": "CMI",
+          "name": "CMI",
+          "totalReturn": 0.8541392785911244,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:BIIB",
+          "ticker": "BIIB",
+          "name": "BIIB",
+          "totalReturn": 0.8149863549217129,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:EBAY",
+          "ticker": "EBAY",
+          "name": "EBAY",
+          "totalReturn": 0.8006501305811722,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:NCR",
+          "ticker": "NCR",
+          "name": "NCR",
+          "totalReturn": 0.7842784721193301,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:RIG",
+          "ticker": "RIG",
+          "name": "RIG",
+          "totalReturn": 0.7655142052539456,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2005": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2005-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 285,
+      "rows": [
+        {
+          "id": "fnspid:VLO",
+          "ticker": "VLO",
+          "name": "VLO",
+          "totalReturn": 1.2845289094785497,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AAPL",
+          "ticker": "AAPL",
+          "name": "AAPL",
+          "totalReturn": 1.2326095228860194,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:EOG",
+          "ticker": "EOG",
+          "name": "EOG",
+          "totalReturn": 1.0723482524535628,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:HUM",
+          "ticker": "HUM",
+          "name": "HUM",
+          "totalReturn": 0.8299085389977179,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:ODP",
+          "ticker": "ODP",
+          "name": "ODP",
+          "totalReturn": 0.8087553518890569,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:NOV",
+          "ticker": "NOV",
+          "name": "NOV",
+          "totalReturn": 0.7767071658148947,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:ATI",
+          "ticker": "ATI",
+          "name": "ATI",
+          "totalReturn": 0.6824012775551831,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:GLW",
+          "ticker": "GLW",
+          "name": "GLW",
+          "totalReturn": 0.6703481033804106,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:RIG",
+          "ticker": "RIG",
+          "name": "RIG",
+          "totalReturn": 0.6440197189248376,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:MCK",
+          "ticker": "MCK",
+          "name": "MCK",
+          "totalReturn": 0.6398601924324456,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2006": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2006-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 297,
+      "rows": [
+        {
+          "id": "fnspid:ATI",
+          "ticker": "ATI",
+          "name": "ATI",
+          "totalReturn": 1.5294782533705118,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:TEX",
+          "ticker": "TEX",
+          "name": "TEX",
+          "totalReturn": 1.1744108871663048,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 1.0246163851950225,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:BIG",
+          "ticker": "BIG",
+          "name": "BIG",
+          "totalReturn": 0.908409627536725,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:NUE",
+          "ticker": "NUE",
+          "name": "NUE",
+          "totalReturn": 0.7045092278507836,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:CMCSA",
+          "ticker": "CMCSA",
+          "name": "CMCSA",
+          "totalReturn": 0.6331014631938885,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:CSCO",
+          "ticker": "CSCO",
+          "name": "CSCO",
+          "totalReturn": 0.596377937819961,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:GS",
+          "ticker": "GS",
+          "name": "GS",
+          "totalReturn": 0.5739322121314969,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:T",
+          "ticker": "T",
+          "name": "T",
+          "totalReturn": 0.5558450419445204,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:BXP",
+          "ticker": "BXP",
+          "name": "BXP",
+          "totalReturn": 0.551968849854402,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2007": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2007-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 310,
+      "rows": [
+        {
+          "id": "fnspid:NOV",
+          "ticker": "NOV",
+          "name": "NOV",
+          "totalReturn": 1.4014383184220103,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AMZN",
+          "ticker": "AMZN",
+          "name": "AMZN",
+          "totalReturn": 1.3476939062094884,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:AAPL",
+          "ticker": "AAPL",
+          "name": "AAPL",
+          "totalReturn": 1.3347478925515142,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:GME",
+          "ticker": "GME",
+          "name": "GME",
+          "totalReturn": 1.254037548872967,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:CNX",
+          "ticker": "CNX",
+          "name": "CNX",
+          "totalReturn": 1.242043214912698,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:CMI",
+          "ticker": "CMI",
+          "name": "CMI",
+          "totalReturn": 1.2061421866221882,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:HES",
+          "ticker": "HES",
+          "name": "HES",
+          "totalReturn": 1.0478887068088039,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:DE",
+          "ticker": "DE",
+          "name": "DE",
+          "totalReturn": 1.009010135834279,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:FCX",
+          "ticker": "FCX",
+          "name": "FCX",
+          "totalReturn": 0.8998708854774928,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:RRC",
+          "ticker": "RRC",
+          "name": "RRC",
+          "totalReturn": 0.8766831120150733,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2008": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2008-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 315,
+      "rows": [
+        {
+          "id": "fnspid:HRB",
+          "ticker": "HRB",
+          "name": "HRB",
+          "totalReturn": 0.25810222223993295,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AMGN",
+          "ticker": "AMGN",
+          "name": "AMGN",
+          "totalReturn": 0.24353997281455397,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:WMT",
+          "ticker": "WMT",
+          "name": "WMT",
+          "totalReturn": 0.2000468594647744,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:HAS",
+          "ticker": "HAS",
+          "name": "HAS",
+          "totalReturn": 0.16832505548834065,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:AZO",
+          "ticker": "AZO",
+          "name": "AZO",
+          "totalReturn": 0.16312231641416042,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:PSA",
+          "ticker": "PSA",
+          "name": "PSA",
+          "totalReturn": 0.11221250135544292,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:GILD",
+          "ticker": "GILD",
+          "name": "GILD",
+          "totalReturn": 0.11149764026489639,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:GIS",
+          "ticker": "GIS",
+          "name": "GIS",
+          "totalReturn": 0.09490789439698699,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:MCD",
+          "ticker": "MCD",
+          "name": "MCD",
+          "totalReturn": 0.0556781325376452,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:PHM",
+          "ticker": "PHM",
+          "name": "PHM",
+          "totalReturn": 0.05015469616067869,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2009": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2009-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 338,
+      "rows": [
+        {
+          "id": "fnspid:THC",
+          "ticker": "THC",
+          "name": "THC",
+          "totalReturn": 3.686956502809867,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "AMD",
+          "totalReturn": 3.481481444688492,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:F",
+          "ticker": "F",
+          "name": "F",
+          "totalReturn": 3.366811184416286,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:GNW",
+          "ticker": "GNW",
+          "name": "GNW",
+          "totalReturn": 3.0106009496304935,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:MU",
+          "ticker": "MU",
+          "name": "MU",
+          "totalReturn": 3.0,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:WDC",
+          "ticker": "WDC",
+          "name": "WDC",
+          "totalReturn": 2.8558944920028937,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:FCX",
+          "ticker": "FCX",
+          "name": "FCX",
+          "totalReturn": 2.285188375977556,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:EXPE",
+          "ticker": "EXPE",
+          "name": "EXPE",
+          "totalReturn": 2.122570963408387,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:PXD",
+          "ticker": "PXD",
+          "name": "PXD",
+          "totalReturn": 1.9870514167237263,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:BKNG",
+          "ticker": "BKNG",
+          "name": "BKNG",
+          "totalReturn": 1.9655125476863033,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2010": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2010-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 349,
+      "rows": [
+        {
+          "id": "fnspid:NFLX",
+          "ticker": "NFLX",
+          "name": "NFLX",
+          "totalReturn": 2.1893266513925282,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:FFIV",
+          "ticker": "FFIV",
+          "name": "FFIV",
+          "totalReturn": 1.4572399596478927,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:CMI",
+          "ticker": "CMI",
+          "name": "CMI",
+          "totalReturn": 1.4269163606749649,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:AIG",
+          "ticker": "AIG",
+          "name": "AIG",
+          "totalReturn": 0.9219481565572523,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:HBAN",
+          "ticker": "HBAN",
+          "name": "HBAN",
+          "totalReturn": 0.8949227064976939,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:ZION",
+          "ticker": "ZION",
+          "name": "ZION",
+          "totalReturn": 0.8919856717900463,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:LB",
+          "ticker": "LB",
+          "name": "LB",
+          "totalReturn": 0.861405314719542,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:AKAM",
+          "ticker": "AKAM",
+          "name": "AKAM",
+          "totalReturn": 0.8567481828627963,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:BKNG",
+          "ticker": "BKNG",
+          "name": "BKNG",
+          "totalReturn": 0.8293575435816196,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:PXD",
+          "ticker": "PXD",
+          "name": "PXD",
+          "totalReturn": 0.8048542381378594,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2011": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2011-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 357,
+      "rows": [
+        {
+          "id": "fnspid:COG",
+          "ticker": "COG",
+          "name": "COG",
+          "totalReturn": 1.0225489024684418,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:ISRG",
+          "ticker": "ISRG",
+          "name": "ISRG",
+          "totalReturn": 0.7963531463461178,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:MA",
+          "ticker": "MA",
+          "name": "MA",
+          "totalReturn": 0.7003954038828561,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:BIIB",
+          "ticker": "BIIB",
+          "name": "BIIB",
+          "totalReturn": 0.6413124242038746,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:HUM",
+          "ticker": "HUM",
+          "name": "HUM",
+          "totalReturn": 0.6150002525809386,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:OKE",
+          "ticker": "OKE",
+          "name": "OKE",
+          "totalReturn": 0.6128368176682177,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:CMG",
+          "ticker": "CMG",
+          "name": "CMG",
+          "totalReturn": 0.5881688348458909,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:PRGO",
+          "ticker": "PRGO",
+          "name": "PRGO",
+          "totalReturn": 0.5417059807947424,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:ROST",
+          "ticker": "ROST",
+          "name": "ROST",
+          "totalReturn": 0.5200530088453146,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:VFC",
+          "ticker": "VFC",
+          "name": "VFC",
+          "totalReturn": 0.5094606009219227,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2012": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2012-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 369,
+      "rows": [
+        {
+          "id": "fnspid:PHM",
+          "ticker": "PHM",
+          "name": "PHM",
+          "totalReturn": 1.8779711746364969,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:WHR",
+          "ticker": "WHR",
+          "name": "WHR",
+          "totalReturn": 1.2025541312263273,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:EXPE",
+          "ticker": "EXPE",
+          "name": "EXPE",
+          "totalReturn": 1.1558557716858981,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:BAC",
+          "ticker": "BAC",
+          "name": "BAC",
+          "totalReturn": 1.0982557088975007,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:MPC",
+          "ticker": "MPC",
+          "name": "MPC",
+          "totalReturn": 0.9940407811149097,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:LEN",
+          "ticker": "LEN",
+          "name": "LEN",
+          "totalReturn": 0.9793588041878956,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:LYB",
+          "ticker": "LYB",
+          "name": "LYB",
+          "totalReturn": 0.8162619475447941,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:GILD",
+          "ticker": "GILD",
+          "name": "GILD",
+          "totalReturn": 0.7945272562965882,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:DXC",
+          "ticker": "DXC",
+          "name": "DXC",
+          "totalReturn": 0.7807727319599242,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:EMN",
+          "ticker": "EMN",
+          "name": "EMN",
+          "totalReturn": 0.7771753035920641,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2013": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2013-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 372,
+      "rows": [
+        {
+          "id": "fnspid:NFLX",
+          "ticker": "NFLX",
+          "name": "NFLX",
+          "totalReturn": 2.976347229727611,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:BBY",
+          "ticker": "BBY",
+          "name": "BBY",
+          "totalReturn": 2.4420211443204045,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:MU",
+          "ticker": "MU",
+          "name": "MU",
+          "totalReturn": 2.430599286519257,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:DAL",
+          "ticker": "DAL",
+          "name": "DAL",
+          "totalReturn": 1.3261021866913638,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:PBI",
+          "ticker": "PBI",
+          "name": "PBI",
+          "totalReturn": 1.3222074526225094,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:ETFC",
+          "ticker": "ETFC",
+          "name": "ETFC",
+          "totalReturn": 1.1944131985739657,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:BSX",
+          "ticker": "BSX",
+          "name": "BSX",
+          "totalReturn": 1.0977313119987127,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:GNW",
+          "ticker": "GNW",
+          "name": "GNW",
+          "totalReturn": 1.067909355481265,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:FB",
+          "ticker": "FB",
+          "name": "FB",
+          "totalReturn": 1.0529676860616024,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:GILD",
+          "ticker": "GILD",
+          "name": "GILD",
+          "totalReturn": 1.0449285422032282,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2014": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2014-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 382,
+      "rows": [
+        {
+          "id": "fnspid:LUV",
+          "ticker": "LUV",
+          "name": "LUV",
+          "totalReturn": 1.2462844666702977,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:EA",
+          "ticker": "EA",
+          "name": "EA",
+          "totalReturn": 1.0496948283831098,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:EW",
+          "ticker": "EW",
+          "name": "EW",
+          "totalReturn": 0.9370436909283182,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:AVGO",
+          "ticker": "AVGO",
+          "name": "AVGO",
+          "totalReturn": 0.9321693895501169,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:MNK",
+          "ticker": "MNK",
+          "name": "MNK",
+          "totalReturn": 0.8949483727498049,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:DAL",
+          "ticker": "DAL",
+          "name": "DAL",
+          "totalReturn": 0.8053375511200433,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:RCL",
+          "ticker": "RCL",
+          "name": "RCL",
+          "totalReturn": 0.7694578101559952,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:KR",
+          "ticker": "KR",
+          "name": "KR",
+          "totalReturn": 0.672141979779407,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:MU",
+          "ticker": "MU",
+          "name": "MU",
+          "totalReturn": 0.6096550952429058,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:MAR",
+          "ticker": "MAR",
+          "name": "MAR",
+          "totalReturn": 0.6004333632552337,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2015": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2015-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 389,
+      "rows": [
+        {
+          "id": "fnspid:NFLX",
+          "ticker": "NFLX",
+          "name": "NFLX",
+          "totalReturn": 1.3437837342634662,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:AMZN",
+          "ticker": "AMZN",
+          "name": "AMZN",
+          "totalReturn": 1.1778314849557243,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:ATVI",
+          "ticker": "ATVI",
+          "name": "ATVI",
+          "totalReturn": 0.9407558289694602,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:VLO",
+          "ticker": "VLO",
+          "name": "VLO",
+          "totalReturn": 0.719380596324499,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 0.6711557886910025,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:VMC",
+          "ticker": "VMC",
+          "name": "VMC",
+          "totalReturn": 0.5585858833746438,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:VRSN",
+          "ticker": "VRSN",
+          "name": "VRSN",
+          "totalReturn": 0.5326315896552907,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:HRL",
+          "ticker": "HRL",
+          "name": "HRL",
+          "totalReturn": 0.5178503675069204,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:FSLR",
+          "ticker": "FSLR",
+          "name": "FSLR",
+          "totalReturn": 0.4795964152792489,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:EXPE",
+          "ticker": "EXPE",
+          "name": "EXPE",
+          "totalReturn": 0.467506486719649,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2016": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2016-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 432,
+      "rows": [
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 2.2696036327548765,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:OKE",
+          "ticker": "OKE",
+          "name": "OKE",
+          "totalReturn": 1.496249174229633,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:FCX",
+          "ticker": "FCX",
+          "name": "FCX",
+          "totalReturn": 0.9483010249562465,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:NEM",
+          "ticker": "NEM",
+          "name": "NEM",
+          "totalReturn": 0.900969490585068,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:AMAT",
+          "ticker": "AMAT",
+          "name": "AMAT",
+          "totalReturn": 0.7570243714593967,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:PWR",
+          "ticker": "PWR",
+          "name": "PWR",
+          "totalReturn": 0.7209877387690886,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:CMA",
+          "ticker": "CMA",
+          "name": "CMA",
+          "totalReturn": 0.6596506594614837,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:MLM",
+          "ticker": "MLM",
+          "name": "MLM",
+          "totalReturn": 0.6367108285807119,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:CMI",
+          "ticker": "CMI",
+          "name": "CMI",
+          "totalReturn": 0.6067646553138326,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:ZION",
+          "ticker": "ZION",
+          "name": "ZION",
+          "totalReturn": 0.5925864016508102,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2017": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2017-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 444,
+      "rows": [
+        {
+          "id": "fnspid:NRG",
+          "ticker": "NRG",
+          "name": "NRG",
+          "totalReturn": 1.3369418110923261,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:ALGN",
+          "ticker": "ALGN",
+          "name": "ALGN",
+          "totalReturn": 1.3113493060409525,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:VRTX",
+          "ticker": "VRTX",
+          "name": "VRTX",
+          "totalReturn": 1.034206655831345,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:BA",
+          "ticker": "BA",
+          "name": "BA",
+          "totalReturn": 0.9471509077141032,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:DHI",
+          "ticker": "DHI",
+          "name": "DHI",
+          "totalReturn": 0.8905561194368425,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:MU",
+          "ticker": "MU",
+          "name": "MU",
+          "totalReturn": 0.8759123535020079,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:PYPL",
+          "ticker": "PYPL",
+          "name": "PYPL",
+          "totalReturn": 0.8652140985485015,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:PHM",
+          "ticker": "PHM",
+          "name": "PHM",
+          "totalReturn": 0.8343207297960353,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 0.8198788014507163,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:CNC",
+          "ticker": "CNC",
+          "name": "CNC",
+          "totalReturn": 0.7851707706559514,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2018": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2018-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 458,
+      "rows": [
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "AMD",
+          "totalReturn": 0.795719801943733,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:ABMD",
+          "ticker": "ABMD",
+          "name": "ABMD",
+          "totalReturn": 0.7343791803715691,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:FTNT",
+          "ticker": "FTNT",
+          "name": "FTNT",
+          "totalReturn": 0.6120394259321367,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:AAP",
+          "ticker": "AAP",
+          "name": "AAP",
+          "totalReturn": 0.5821683533622011,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:TRIP",
+          "ticker": "TRIP",
+          "name": "TRIP",
+          "totalReturn": 0.5652931199926503,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:CMG",
+          "ticker": "CMG",
+          "name": "CMG",
+          "totalReturn": 0.49392800182875285,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:KEYS",
+          "ticker": "KEYS",
+          "name": "KEYS",
+          "totalReturn": 0.4923077910609539,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:ORLY",
+          "ticker": "ORLY",
+          "name": "ORLY",
+          "totalReturn": 0.43148747062061354,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:BSX",
+          "ticker": "BSX",
+          "name": "BSX",
+          "totalReturn": 0.4255747820667688,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:HCA",
+          "ticker": "HCA",
+          "name": "HCA",
+          "totalReturn": 0.41678053434252593,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2019": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2019-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 470,
+      "rows": [
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "AMD",
+          "totalReturn": 1.4842905138021374,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:LRCX",
+          "ticker": "LRCX",
+          "name": "LRCX",
+          "totalReturn": 1.1933345016806163,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:KLAC",
+          "ticker": "KLAC",
+          "name": "KLAC",
+          "totalReturn": 1.0398772364891116,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:TGT",
+          "ticker": "TGT",
+          "name": "TGT",
+          "totalReturn": 1.0017280445223467,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:CMG",
+          "ticker": "CMG",
+          "name": "CMG",
+          "totalReturn": 0.938696979516775,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:IR",
+          "ticker": "IR",
+          "name": "IR",
+          "totalReturn": 0.9280330838034936,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:QRVO",
+          "ticker": "QRVO",
+          "name": "QRVO",
+          "totalReturn": 0.9138811828262616,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:CPRT",
+          "ticker": "CPRT",
+          "name": "CPRT",
+          "totalReturn": 0.9033069226617607,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:AMAT",
+          "ticker": "AMAT",
+          "name": "AMAT",
+          "totalReturn": 0.8985514905308718,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:AAPL",
+          "ticker": "AAPL",
+          "name": "AAPL",
+          "totalReturn": 0.8895780055178322,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2020": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2020-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 329,
+      "rows": [
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 1.2229569738049229,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:PYPL",
+          "ticker": "PYPL",
+          "name": "PYPL",
+          "totalReturn": 1.1651104826909298,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "AMD",
+          "totalReturn": 0.9997818984714926,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:ALB",
+          "ticker": "ALB",
+          "name": "ALB",
+          "totalReturn": 0.9841622082286776,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:CDNS",
+          "ticker": "CDNS",
+          "name": "CDNS",
+          "totalReturn": 0.9669837294583283,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:NOW",
+          "ticker": "NOW",
+          "name": "NOW",
+          "totalReturn": 0.9496669679654077,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:ALGN",
+          "ticker": "ALGN",
+          "name": "ALGN",
+          "totalReturn": 0.9150658992213447,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:WST",
+          "ticker": "WST",
+          "name": "WST",
+          "totalReturn": 0.8755717227913447,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:CTLT",
+          "ticker": "CTLT",
+          "name": "CTLT",
+          "totalReturn": 0.84849025053482,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:PWR",
+          "ticker": "PWR",
+          "name": "PWR",
+          "totalReturn": 0.7635923706443155,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2021": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2021-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 354,
+      "rows": [
+        {
+          "id": "fnspid:DVN",
+          "ticker": "DVN",
+          "name": "DVN",
+          "totalReturn": 1.9589162583941393,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:MRO",
+          "ticker": "MRO",
+          "name": "MRO",
+          "totalReturn": 1.4977320560584357,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:FTNT",
+          "ticker": "FTNT",
+          "name": "FTNT",
+          "totalReturn": 1.419713147755186,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:F",
+          "ticker": "F",
+          "name": "F",
+          "totalReturn": 1.3748101594116608,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:FANG",
+          "ticker": "FANG",
+          "name": "FANG",
+          "totalReturn": 1.2750975929769486,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "totalReturn": 1.2548205432539805,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:NUE",
+          "ticker": "NUE",
+          "name": "NUE",
+          "totalReturn": 1.1844646385065745,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:EXR",
+          "ticker": "EXR",
+          "name": "EXR",
+          "totalReturn": 1.0098226560794479,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:ANET",
+          "ticker": "ANET",
+          "name": "ANET",
+          "totalReturn": 0.9788690694370721,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:APA",
+          "ticker": "APA",
+          "name": "APA",
+          "totalReturn": 0.9075946849205148,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2022": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2022-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "fnspid + fja05680 historical snapshot",
+      "observedUniverseCount": 363,
+      "rows": [
+        {
+          "id": "fnspid:OXY",
+          "ticker": "OXY",
+          "name": "OXY",
+          "totalReturn": 1.190983754086687,
+          "source": "fnspid-adjusted-close",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:HES",
+          "ticker": "HES",
+          "name": "HES",
+          "totalReturn": 0.9402210101431032,
+          "source": "fnspid-adjusted-close",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:XOM",
+          "ticker": "XOM",
+          "name": "XOM",
+          "totalReturn": 0.8740906999639655,
+          "source": "fnspid-adjusted-close",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:APA",
+          "ticker": "APA",
+          "name": "APA",
+          "totalReturn": 0.7644056034255406,
+          "source": "fnspid-adjusted-close",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:VLO",
+          "ticker": "VLO",
+          "name": "VLO",
+          "totalReturn": 0.7495389676919777,
+          "source": "fnspid-adjusted-close",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:HAL",
+          "ticker": "HAL",
+          "name": "HAL",
+          "totalReturn": 0.7445347845602595,
+          "source": "fnspid-adjusted-close",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:FSLR",
+          "ticker": "FSLR",
+          "name": "FSLR",
+          "totalReturn": 0.7185634120303537,
+          "source": "fnspid-adjusted-close",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:COP",
+          "ticker": "COP",
+          "name": "COP",
+          "totalReturn": 0.716917687750197,
+          "source": "fnspid-adjusted-close",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:MRO",
+          "ticker": "MRO",
+          "name": "MRO",
+          "totalReturn": 0.6691159546745549,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:CVX",
+          "ticker": "CVX",
+          "name": "CVX",
+          "totalReturn": 0.5846233551971853,
+          "source": "fnspid-adjusted-close",
+          "rank": 10
+        }
+      ],
+      "evidence": []
+    },
+    "2023": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2023-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified",
+      "observedUniverseCount": 442,
+      "rows": [
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "totalReturn": 2.390172323052721,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:FB",
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "totalReturn": 1.9413333000502768,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:RCL",
+          "ticker": "RCL",
+          "name": "Royal Caribbean Group",
+          "totalReturn": 1.6196641812133965,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:UBER",
+          "ticker": "UBER",
+          "name": "Uber",
+          "totalReturn": 1.4896886710276283,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:CCL",
+          "ticker": "CCL",
+          "name": "Carnival Corporation",
+          "totalReturn": 1.3002483512130376,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:PHM",
+          "ticker": "PHM",
+          "name": "PulteGroup",
+          "totalReturn": 1.2876194170571962,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "totalReturn": 1.2758995106091229,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:PANW",
+          "ticker": "PANW",
+          "name": "Palo Alto Networks",
+          "totalReturn": 1.1132293182653967,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:AVGO",
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "totalReturn": 1.041842628928935,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:TSLA",
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "totalReturn": 1.0172105464518206,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 10
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.youtube.com/watch?v=Mvg0Q4oR218",
+          "publisher": "FAST Graphs",
+          "published": "2024-05-03",
+          "status": "reported-top10-unordered",
+          "note": "Author reports top-ten membership. Description is alphabetical; no numeric ranking or return inferred. Redistribution permission for underlying market data not established; evidence link only."
+        }
+      ]
+    },
+    "2024": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2024-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified",
+      "observedUniverseCount": 458,
+      "rows": [
+        {
+          "id": "fnspid:PLTR",
+          "ticker": "PLTR",
+          "name": "Palantir Technologies",
+          "totalReturn": 3.4047755921584306,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:VST",
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "totalReturn": 2.615291675051501,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:NVDA",
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "totalReturn": 1.71249279030634,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:UAL",
+          "ticker": "UAL",
+          "name": "United Airlines Holdings",
+          "totalReturn": 1.3533689390250294,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:AXON",
+          "ticker": "AXON",
+          "name": "Axon Enterprise",
+          "totalReturn": 1.3006233817844555,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:TPL",
+          "ticker": "TPL",
+          "name": "Texas Pacific Land Corporation",
+          "totalReturn": 1.153145604193977,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:AVGO",
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "totalReturn": 1.104929186370307,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:TRGP",
+          "ticker": "TRGP",
+          "name": "Targa Resources",
+          "totalReturn": 1.1012465267129636,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:HWM",
+          "ticker": "HWM",
+          "name": "Howmet Aerospace",
+          "totalReturn": 1.027053782690532,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:CEG",
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "totalReturn": 0.9271387222397294,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 10
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fool.com/investing/2025/01/20/these-were-the-5-top-performing-stocks-in-the-sp-5/",
+          "status": "conflicting-methodology",
+          "note": "Finviz-based five-stock list excludes partial-year listing GEV; differs from other year-end reports. Not merged into verified rankings. Underlying data redistribution permission not established."
+        }
+      ]
+    },
+    "2025": {
+      "period": "calendar-year",
+      "status": "available-sample",
+      "asOf": "2025-12-31",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "historical-members-available-sample",
+      "source": "Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified",
+      "observedUniverseCount": 477,
+      "rows": [
+        {
+          "id": "fnspid:WDC",
+          "ticker": "WDC",
+          "name": "Western Digital",
+          "totalReturn": 2.836784835650428,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 1
+        },
+        {
+          "id": "fnspid:MU",
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "totalReturn": 2.4023928387769127,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 2
+        },
+        {
+          "id": "fnspid:STX",
+          "ticker": "STX",
+          "name": "Seagate Technology",
+          "totalReturn": 2.252624262841422,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 3
+        },
+        {
+          "id": "fnspid:HOOD",
+          "ticker": "HOOD",
+          "name": "Robinhood Markets",
+          "totalReturn": 2.035426826864848,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:NEM",
+          "ticker": "NEM",
+          "name": "Newmont",
+          "totalReturn": 1.728181474392899,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:LRCX",
+          "ticker": "LRCX",
+          "name": "Lam Research",
+          "totalReturn": 1.3916331753059978,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 6
+        },
+        {
+          "id": "fnspid:PLTR",
+          "ticker": "PLTR",
+          "name": "Palantir Technologies",
+          "totalReturn": 1.350257919544839,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 7
+        },
+        {
+          "id": "fnspid:FIX",
+          "ticker": "FIX",
+          "name": "Comfort Systems USA",
+          "totalReturn": 1.2086381431526663,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 8
+        },
+        {
+          "id": "fnspid:APP",
+          "ticker": "APP",
+          "name": "AppLovin",
+          "totalReturn": 1.0807832358472758,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:CVNA",
+          "ticker": "CVNA",
+          "name": "Carvana",
+          "totalReturn": 1.0752359729545922,
+          "source": "kaggle-close-ratio-adjustment-unverified",
+          "rank": 10
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fool.com/investing/2026/01/11/these-were-the-sp-500s-top-performers-in-2025-are/",
+          "status": "research-lead",
+          "note": "Post-year-end review; still needs full ten-stock ranking, return convention and point-in-time membership verification."
+        },
+        {
+          "year": 2025,
+          "sourceUrl": "https://www.benzinga.com/markets/equities/26/01/49678184/top-10-sp-500-stocks-in-2025-one-name-leads-both-first-years-of-donald-trump-in-white-house",
+          "status": "reported-final-top10",
+          "basis": "reported-return-convention-unverified",
+          "note": "Published 2026-01-02; quotes Slickcharts. Includes partial-year listing SNDK. Price/dividend/corporate-action reconciliation outstanding. Distinct from full-year endpoint sample.",
+          "eligibleForVerifiedBacktest": false
+        }
+      ]
+    },
+    "2026": {
+      "period": "ytd",
+      "status": "available-sample",
+      "asOf": "2026-10-15",
+      "eligibleForVerifiedBacktest": false,
+      "universe": "not-established",
+      "source": null,
+      "observedUniverseCount": 492,
+      "rows": [
+        {
+          "ticker": "SNDK",
+          "name": "Sandisk",
+          "return": 4.8759370097042245,
+          "rank": 1
+        },
+        {
+          "ticker": "DELL",
+          "name": "Dell Technologies",
+          "return": 2.795045378272558,
+          "rank": 2
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "return": 2.26520114536653,
+          "rank": 3
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "return": 1.9665918234621675,
+          "rank": 4
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "return": 1.8435725341977176,
+          "rank": 5
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy",
+          "return": 1.7681882487587015,
+          "rank": 6
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "return": 1.6252800282717939,
+          "rank": 7
+        },
+        {
+          "ticker": "INTC",
+          "name": "Intel",
+          "return": 1.5845528130858377,
+          "rank": 8
+        },
+        {
+          "ticker": "STX",
+          "name": "Seagate Technology",
+          "return": 1.5166618156283778,
+          "rank": 9
+        },
+        {
+          "ticker": "HPE",
+          "name": "Hewlett Packard Enterprise",
+          "return": 1.470040826900627,
+          "rank": 10
+        }
+      ],
+      "evidence": [
+        {
+          "year": 2026,
+          "sourceUrl": "https://www.slickcharts.com/sp500/performance",
+          "status": "reported-ytd-cutoff-unconfirmed",
+          "basis": "source-ytd",
+          "note": "Retrieved 2026-10-18; source page extraction lacks an explicit market timestamp. Retrieval date is not asserted to be the price cutoff. Never treat as complete 2026 or archived year-end data.",
+          "eligibleForVerifiedBacktest": false
+        }
+      ],
+      "year": 2026,
+      "sourceUrl": "https://www.kaggle.com/datasets/darkmatternet/s-and-p-500-stocks-25-years-of-data-updated-daily",
+      "sourceSha256": "ddd5fe693b3ee31d56e8f77811542159367277a007ca2d7ffd708766e507ebf6",
+      "basis": "close-ratio-adjustment-unverified",
+      "note": "Partial year; membership snapshot through 2026-08-18; not a full-universe or total-return ranking."
+    }
+  }
+}

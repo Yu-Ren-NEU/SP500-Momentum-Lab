@@ -1,55 +1,45 @@
-# 项目验收清单
+# Delivery checklist
 
-用户顺序（2026-10-18）：先把整个本机功能实现并验证，再看部署工作流。
+Order requested on 2026-10-18: complete and verify local functionality before deployment workflows. All development runs on the user's Mac.
 
-## 本机功能
-- [x] 确认在用户 Mac 执行（Darwin，本机 Documents/Codex 路径）
-- [x] 查看现有 GitHub 命名：采用 SP500-Momentum-Lab
-- [x] React + Vite + TypeScript，纯静态，无后端/数据库
-- [x] 起止年份、初始资金、Top N 1-10
-- [x] 仅所选 Top N（默认 1）与标普/纳指常驻基准
-- [x] 年度排名、仓位、年度同比与跑赢比例
-- [x] 复利终值、CAGR、年末最大回撤
-- [x] URL 参数及固定数据版本重现配置
-- [x] 本机文件导入，授权数据不上传
-- [x] 明确数据覆盖、缺口、口径和来源许可
-- [x] Python 可重现抓取、验证及整理脚本
-- [x] 计算测试、桌面/手机与明暗主题验证
-- [x] README、数据说明和最终运行方法
+## Local application
 
-## 数据（与软件功能分别验收）
-- [x] 收集 NYU 含股息标普年度基准：1958-2025，68 年
-- [x] 收集 FRED/Nasdaq 纳指价格基准：完整年度 1972-2025，54 年
-- [ ] 1957-2025 各年真实成分母集及前十：尚无完整可核验来源
-- [ ] 个股拆股、分红、退市与收购回报：尚无 CRSP/WRDS 授权数据
-- [ ] 对真实策略作独立复算：待上述数据取得；合成测试不得称为真实回测
-- [x] 禁止用今天成分股倒推，禁止缺失回报补零
+- [x] Confirm local Mac execution and use an independent Git repository
+- [x] Follow existing repository naming: SP500-Momentum-Lab
+- [x] React, Vite and TypeScript; static architecture without a backend/database
+- [x] Date range, initial capital and Top N from 1 through 10
+- [x] Selected strategy only, with both index references available
+- [x] Editable rank-weight table, equal weights by default, immediate recalculation
+- [x] Annual holdings, weights, returns, value and benchmark comparisons
+- [x] Compound ending value, CAGR and annual-checkpoint drawdown
+- [x] URL configuration and immutable snapshots
+- [x] Local-only private file import
+- [x] Source, coverage, missing-data and license disclosures
+- [x] Python data preparation and validation scripts
+- [x] Calculation and integration tests, production build
+- [x] English repository documentation and bilingual application UI
+- [x] Keep http://127.0.0.1:5173 running for the user's tests
 
-## 功能完成后再做
-- [x] 独立 GitHub repo（已检查发布文件；原始及私有资料未提交）：https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab
-- [ ] GitHub Actions 定期更新静态 JSON，更新失败保留旧数据
-- [ ] Cloudflare Pages 免费 Git 集成与 pages.dev 地址
-- [ ] 实测代码合并自动部署及数据更新
-- [ ] 公网参数链接重现功能验收
-- [ ] 自定义域名文档（域名本身不包含在零成本承诺中）
+## Data: separate acceptance from software
 
-## 外部限制
-没有金融数据库授权。公开资料允许的覆盖范围内继续收集，不擅自购买。
-Cloudflare 控制台当前尚未登录；待软件功能完成后再处理连接。开发持续在 Mac 本机。
+- [x] NYU dividend-inclusive S&P annual reference, 1958-2025
+- [x] FRED Nasdaq Composite price reference, full years 1972-2025
+- [x] Available-sample rankings, 1996-2025, with incomplete-universe labels
+- [x] Separate 2026 YTD stock sample with explicit cutoff
+- [x] Audited THC event exception; preserve other anomaly checks
+- [ ] Complete historical point-in-time constituents and top tens from 1957 onward
+- [ ] Complete dividend, split, merger and delisting holding returns
+- [ ] Independent verification of the complete real-world strategy
+- [ ] Current-year index references on explicitly reconciled conventions
+- [ ] Monthly refresh and reviewed year-end archival workflow
 
-2026-10-18 初版本机阶段：28 项测试通过（12 个引擎、10 个 Python 数据管道、6 个组件集成测试），生产构建成功。桌面/390px 手机明暗主题、参数变更、错误参数、键盘焦点和分享链接刷新已通过实浏览器检查。本机文件自动选择受 Chrome 扩展文件权限限制，文件导入后的完整链路由组件测试验证，未扩大扩展权限。数据与公网阶段仍按上方清单单独验收。
+## Deferred deployment
 
-## 2026-10-18 用户追加的简化要求
+- [x] Independent repository: https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab
+- [ ] GitHub Actions updates with failure preservation
+- [ ] Cloudflare Pages Git integration and free pages.dev address
+- [ ] Verify automatic deployments and data updates
+- [ ] Verify public configuration URLs
+- [ ] Document optional custom domains
 
-- [x] 标题与右侧小字网络数据提示；去掉长介绍和多个分区
-- [x] 极客风（用户纠正：不是赛博朋克），明暗主题、等宽字体、细网格
-- [x] 使用 Apache ECharts：十字线、悬浮读数、缩放与重置
-- [x] 图上只显示所选 Top N 和两组基准；N 默认 1
-- [x] 中英文界面与语言分享参数
-- [x] 年度详情一张表，按年份展开；来源和工具折叠在底部
-- [x] 下载并整理 FNSPID + 历史成员静态样本，自动载入页面
-- [x] 静态 base + 经验证的按年覆盖，保留未更新的年份和历史快照
-- [x] 剔除原始价格拼接异常；披露样本覆盖、缺失与保守过滤
-- [x] 按用户明确要求保持本机服务运行，地址 http://127.0.0.1:5173
-
-以上“网络样本可用”不等于完整权威历史数据已齐全，原始全量数据任务仍未完成。
+No paid financial database subscription is available. Do not purchase access or switch development to cloud execution without authorization. The presence of an exploratory sample does not satisfy the full historical-data objective.

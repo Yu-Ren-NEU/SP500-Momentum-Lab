@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   strategy,
   sampleStrategy,
+  strategyWithYtd,
   benchmark,
   metrics,
   readConfig,
@@ -199,4 +200,42 @@ test("exploratory series stops before missing holding year, never bridges gap", 
   assert.equal(r.final, 15000);
   assert.equal(r.annual.length, 1);
   assert.match(r.coverageNote, /2002/);
+});
+
+test("rank weights compound weighted buy-and-hold returns and survive URLs", () => {
+  const data = fixture();
+  const weighted = {...c, n:2, weights:[.7,.3]};
+
+  const result = strategy(data, weighted);
+  assert.equal(result.error, undefined);
+  close(result.annual[0].return, .2);
+  close(result.final, 20400);
+  for (const annual of result.annual) {
+    close(annual.holdings[0].weight,.7);
+    close(annual.holdings[1].weight,.3);
+    close(annual.return, annual.holdings[0].totalReturn*.7+annual.holdings[1].totalReturn*.3);
+  }
+  assert.deepEqual(readConfig(configSearch(weighted),2002),weighted);
+  assert.throws(() => strategy(data,{...weighted, weights:[.7,.4]}));
+});
+
+test("YTD uses prior-year signals and fractional-year CAGR without extending benchmarks", () => {
+  const year = new Date().getUTCFullYear();
+  const row = stock("A", .1);
+  const universe=[row,...Array.from({length:9},(_,i)=>stock("other"+i,0))];
+  const data = {schemaVersion:1, redistribution:"local-only",licenseEvidence:"synthetic",rankings:{
+    [year-2]:rank(year-2,universe),[year-1]:rank(year-1,universe)
+  },returns:{[year-1]:[{...row,totalReturn:.5}]}};
+  const ytd = {schemaVersion:1,kind:"stocks-ytd",year,asOf:`${year}-07-01`,version:"test",returns:[row]};
+  const config = {start:year-1,end:year,initial:1,n:1};
+  const result = strategyWithYtd(data,config,ytd);
+  assert.equal(result.error,undefined);
+  close(result.final,1.65);
+  const fraction=(Date.UTC(year,6,1)-Date.UTC(year,0,1))/(Date.UTC(year+1,0,1)-Date.UTC(year,0,1));
+  close(result.cagr,Math.pow(1.65,1/(1+fraction))-1);
+  assert.equal(result.asOf,`${year}-07-01`);
+  const references={benchmarks:{sp500:{[year-1]:{return:.1,source:"test",basis:"total_return"}}}};
+  const reference=benchmark("sp500",references,config);
+  assert.equal(reference.end,year-1);
+  assert.equal(reference.annual.length,1);
 });

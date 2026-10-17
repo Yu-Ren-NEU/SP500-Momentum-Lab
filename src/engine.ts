@@ -1,4 +1,4 @@
-export type Config = { start: number; end: number; initial: number; n: number };
+export type Config = { start: number; end: number; initial: number; n: number; weights?: number[] };
 export type ReturnRow = {
   return: number;
   source: string;
@@ -101,20 +101,23 @@ export type Result = {
   maxDrawdown: number | null;
   error?: string;
   coverageNote?: string;
+  asOf?: string;
 };
 export const UNIVERSE = "year-end-sp500-full-year-total-return";
 function validReturn(r: unknown): r is number {
   return typeof r === "number" && Number.isFinite(r) && r >= -1;
 }
 export function validateConfig(c: Config) {
+  if (c.weights && (c.weights.length !== c.n || c.weights.some(w => !Number.isFinite(w) || w < 0 || w > 1) || Math.abs(c.weights.reduce((a,b) => a+b, 0) - 1) > 1e-8))
+    throw new Error("Weights must be nonnegative and sum to 100%.");
   if (
     !Number.isInteger(c.start) ||
     !Number.isInteger(c.end) ||
     c.start < 1958 ||
     c.end < c.start ||
-    c.end > new Date().getUTCFullYear() - 1
+    c.end > new Date().getUTCFullYear()
   )
-    throw new Error("请选择 1958 年起的完整自然年，结束年份不得早于起始年份。");
+    throw new Error("请选择 1958 年起的年份，结束年份不得早于起始年份或晚于本年。");
   if (!Number.isFinite(c.initial) || c.initial <= 0 || c.initial > 1e12)
     throw new Error("初始资金须大于 0，且不超过 1 万亿美元。");
   if (!Number.isInteger(c.n) || c.n < 1 || c.n > 10)
@@ -188,7 +191,7 @@ export function benchmark(
     .map(Number)
     .sort((a, b) => a - b);
   const start = Math.max(c.start, available[0] ?? c.start);
-  if (start > c.end)
+  if (start > Math.min(c.end, available.at(-1) ?? c.end))
     return {
       key,
       label,
@@ -201,7 +204,7 @@ export function benchmark(
       maxDrawdown: null,
       error: "所选区间尚无完整自然年数据（纳指完整年度始于 1972 年）",
     };
-  return series(key, label, start, c.end, c.initial, (y) => {
+  return series(key, label, start, Math.min(c.end, available.at(-1) ?? c.end), c.initial, (y) => {
     const r = data.benchmarks[key][y];
     if (!r) throw new Error(`${y} 年基准数据不可得；未补零或推算`);
     return { return: r.return };
@@ -270,7 +273,8 @@ export function strategy(
     (year, value) => {
       const picks = rankingFor(data, year - 1, allowExploratory).slice(0, n);
       const returns = data?.returns[year];
-      const holdings = picks.map((pick) => {
+      const holdings = picks.map((pick, index) => {
+        const weight = c.weights?.[index] ?? 1 / n;
         const matched = returns?.filter((x) => x.id === pick.id);
         if (
           matched?.length !== 1 ||
@@ -285,13 +289,13 @@ export function strategy(
           ...row,
           ticker: pick.ticker,
           name: pick.name,
-          weight: 1 / n,
-          startValue: value / n,
-          endValue: (value / n) * (1 + row.totalReturn),
+          weight,
+          startValue: value * weight,
+          endValue: value * weight * (1 + row.totalReturn),
         };
       });
       return {
-        return: holdings.reduce((s, h) => s + h.totalReturn / n, 0),
+        return: holdings.reduce((s, h) => s + h.totalReturn * h.weight, 0),
         holdings,
       };
     },
@@ -303,9 +307,11 @@ export function readConfig(search: string, maxYear: number): Config {
   const c = {
     start: get("start", 1958),
     end: get("end", maxYear),
-    initial: get("initial", 10000),
+    initial: get("initial", 1),
     n: get("n", 1),
   };
+  const weights = p.get("weights");
+  if (weights !== null) (c as Config).weights = weights.split(",").map(Number);
   validateConfig(c);
   return c;
 }
@@ -317,6 +323,7 @@ export function configSearch(c: Config, version?: string) {
     initial: String(c.initial),
     n: String(c.n),
   });
+  if (c.weights) p.set("weights", c.weights.join(","));
   if (version) p.set("data", version);
   return "?" + p.toString();
 }
@@ -393,4 +400,21 @@ export function sampleStrategy(data: StockData | undefined, c: Config): Result {
     through = year;
   }
   return strategy(data, { ...c, start, end }, c.n, true);
+}
+
+export type YtdData = { schemaVersion:1; kind:"stocks-ytd"; year:number; asOf:string; version:string; returns:StockRow[] };
+export function strategyWithYtd(data: StockData | undefined, c: Config, ytd?: YtdData): Result {
+  const current = new Date().getUTCFullYear();
+  if (c.end !== current || !ytd || ytd.kind !== "stocks-ytd" || ytd.year !== current) return sampleStrategy(data,c);
+  if (!data) return sampleStrategy(data,c);
+  const combined = {...data, endYear: current, returns:{...data.returns,[current]:ytd.returns}};
+  const result = sampleStrategy(combined,c);
+  if (!result.error && result.end === current && result.final !== null) {
+    const elapsed = (Date.parse(ytd.asOf+"T00:00:00Z")-Date.UTC(current,0,1))/(Date.UTC(current+1,0,1)-Date.UTC(current,0,1));
+    const duration = current-result.start+elapsed;
+    if (!(elapsed > 0 && elapsed < 1)) throw new Error("Invalid YTD cutoff");
+    result.cagr = Math.pow(result.final/result.initial,1/duration)-1;
+    result.asOf = ytd.asOf;
+  }
+  return result;
 }

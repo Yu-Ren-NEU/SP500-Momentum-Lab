@@ -1,0 +1,73 @@
+{
+  "year": 2026,
+  "period": "ytd",
+  "asOf": "2026-10-15",
+  "status": "available-sample",
+  "sourceUrl": "https://www.kaggle.com/datasets/darkmatternet/s-and-p-500-stocks-25-years-of-data-updated-daily",
+  "sourceSha256": "ddd5fe693b3ee31d56e8f77811542159367277a007ca2d7ffd708766e507ebf6",
+  "basis": "close-ratio-adjustment-unverified",
+  "observedUniverseCount": 492,
+  "rows": [
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "return": 4.8759370097042245,
+      "rank": 1
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "return": 2.795045378272558,
+      "rank": 2
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "return": 2.26520114536653,
+      "rank": 3
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum",
+      "return": 1.9665918234621675,
+      "rank": 4
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "return": 1.8435725341977176,
+      "rank": 5
+    },
+    {
+      "ticker": "VLO",
+      "name": "Valero Energy",
+      "return": 1.7681882487587015,
+      "rank": 6
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "return": 1.6252800282717939,
+      "rank": 7
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "return": 1.5845528130858377,
+      "rank": 8
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "return": 1.5166618156283778,
+      "rank": 9
+    },
+    {
+      "ticker": "HPE",
+      "name": "Hewlett Packard Enterprise",
+      "return": 1.470040826900627,
+      "rank": 10
+    }
+  ],
+  "note": "Partial year; membership snapshot through 2026-08-18; not a full-universe or total-return ranking."
+}

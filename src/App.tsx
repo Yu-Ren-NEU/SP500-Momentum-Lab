@@ -6,10 +6,10 @@ import {
   rankingFor,
   readConfig,
   strategy,
-  sampleStrategy,
+  strategyWithYtd,
   validateConfig,
 } from "./engine";
-import type { Config, PublicData, Result, StockData } from "./engine";
+import type { Config, PublicData, Result, StockData, YtdData } from "./engine";
 import GrowthChart, { lineColors, seriesLabel } from "./GrowthChart";
 import { copy, formatMoney, formatPct, type Lang } from "./i18n";
 const repo = "https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab";
@@ -32,11 +32,15 @@ export default function App() {
     [base, setBase] = useState<StockData>(),
     [privateData, setPrivateData] = useState<StockData>(),
     [filename, setFilename] = useState("");
+  const [ytd, setYtd] = useState<YtdData>();
+  const [latestBaseVersion, setLatestBaseVersion] = useState<string>();
+  const [weightDraft, setWeightDraft] = useState<string[]>(["100"]);
+  const [hiddenLines, setHiddenLines] = useState<string[]>([]);
   const [config, setConfig] = useState<Config>(),
     [draft, setDraft] = useState({
       start: "2012",
       end: "2025",
-      initial: "10000",
+      initial: "1",
       n: "1",
     }),
     [error, setError] = useState(""),
@@ -48,8 +52,9 @@ export default function App() {
     const ctrl = new AbortController(),
       p = new URLSearchParams(location.search),
       v = p.get("data"),
-      b = p.get("base");
-    if ((v && !/^[a-f0-9]{16}$/.test(v)) || (b && !/^[a-f0-9]{16}$/.test(b))) {
+      b = p.get("base"),
+      ytdVersion = p.get("ytd");
+    if ((v && !/^[a-f0-9]{16}$/.test(v)) || (b && !/^[a-f0-9]{16}$/.test(b)) || (ytdVersion && !/^[a-f0-9]{16}$/.test(ytdVersion))) {
       setLoadError(true);
       return;
     }
@@ -66,8 +71,10 @@ export default function App() {
     Promise.all([
       get(v ? `/data/versions/${v}.json` : "/data/public.json"),
       get(b ? `/data/base-versions/${b}.json` : "/data/stocks-base.json", !b),
+      get(ytdVersion ? `/data/ytd-versions/${ytdVersion}.json` : "/data/stocks-ytd.json", !ytdVersion).catch(() => undefined),
+      get("/data/base-latest.json", true).catch(() => undefined),
     ])
-      .then(([d, s]: [PublicData, StockData | undefined]) => {
+      .then(([d, s, current, latest]) => {
         if (d.schemaVersion !== 1 || !d.benchmarks?.sp500)
           throw new Error("Invalid index data");
         if (
@@ -78,6 +85,8 @@ export default function App() {
             !s.returns)
         )
           throw new Error("Invalid stock base");
+        if (current?.kind === "stocks-ytd") setYtd(current);
+        if (latest?.kind === "stocks-base-manifest") setLatestBaseVersion(latest.version);
         setData(d);
         setBase(s);
         try {
@@ -87,6 +96,7 @@ export default function App() {
           if (!p.has("end")) c.end = s?.endYear ?? d.completeThrough;
           validateConfig(c);
           setConfig(c);
+          setWeightDraft(Array.from({length: c.n}, (_, i) => String((c.weights?.[i] ?? 1 / c.n) * 100)));
           setDraft({
             start: String(c.start),
             end: String(c.end),
@@ -111,14 +121,14 @@ export default function App() {
     if (!data || !config) return [];
     const selected: Result =
       !privateData && base?.quality === "exploratory"
-        ? sampleStrategy(base, config)
+        ? strategyWithYtd(base, config, ytd)
         : strategy(stocks, config);
     return [
       selected,
       benchmark("sp500", data, config),
       benchmark("nasdaq", data, config),
     ];
-  }, [data, config, stocks, base, privateData]);
+  }, [data, config, stocks, base, privateData, ytd]);
   const selected = results[0],
     sp = results[1],
     nas = results[2];
@@ -126,14 +136,20 @@ export default function App() {
     const p = new URLSearchParams(configSearch(c, data?.version));
     p.set("lang", lang);
     if (!privateData && base?.version) p.set("base", base.version);
+    if (c.end === new Date().getUTCFullYear() && ytd?.version) p.set("ytd", ytd.version);
     return location.origin + location.pathname + "?" + p.toString();
   }
-  function apply() {
+  function updateOptions(next: typeof draft, allocation?: string[]) {
+    setDraft(next);
+    const changedN = next.n !== draft.n;
+    const weights = allocation ?? (changedN ? Array.from({length: Number(next.n)}, () => String(100 / Number(next.n))) : weightDraft);
+    setWeightDraft(weights);
     const c = {
-      start: Number(draft.start),
-      end: Number(draft.end),
-      initial: Number(draft.initial),
-      n: Number(draft.n),
+      weights: weights.map(w => w.trim() === "" ? NaN : Number(w) / 100),
+      start: Number(next.start),
+      end: Number(next.end),
+      initial: Number(next.initial),
+      n: Number(next.n),
     };
     try {
       validateConfig(c);
@@ -163,17 +179,6 @@ export default function App() {
     try {
       localStorage.setItem("theme", next);
     } catch {}
-  }
-  async function share() {
-    if (!config) return;
-    const link = url(config);
-    history.replaceState(null, "", link);
-    try {
-      await navigator.clipboard.writeText(link);
-      setNotice(privateData ? t.localShare : t.copied);
-    } catch {
-      setNotice(t.copyFallback + ": " + link);
-    }
   }
   async function importFile(file?: File) {
     if (!file) return;
@@ -249,7 +254,7 @@ export default function App() {
       </main>
     );
   const years = Array.from(
-    { length: data.completeThrough - 1958 + 1 },
+    { length: new Date().getUTCFullYear() - 1958 + 1 },
     (_, i) => 1958 + i,
   );
   const allYears = config
@@ -296,16 +301,13 @@ export default function App() {
         <section className="plot-section" aria-label={t.chart}>
           <form
             className="controls"
-            onSubmit={(e) => {
-              e.preventDefault();
-              apply();
-            }}
+            onSubmit={(e) => e.preventDefault()}
           >
             <label>
               {t.start}
               <select
                 value={draft.start}
-                onChange={(e) => setDraft({ ...draft, start: e.target.value })}
+                onChange={(e) => updateOptions({ ...draft, start: e.target.value })}
               >
                 {years.map((y) => (
                   <option key={y}>{y}</option>
@@ -316,7 +318,7 @@ export default function App() {
               {t.end}
               <select
                 value={draft.end}
-                onChange={(e) => setDraft({ ...draft, end: e.target.value })}
+                onChange={(e) => updateOptions({ ...draft, end: e.target.value })}
               >
                 {years.map((y) => (
                   <option key={y}>{y}</option>
@@ -333,15 +335,19 @@ export default function App() {
                 step="any"
                 value={draft.initial}
                 onChange={(e) =>
-                  setDraft({ ...draft, initial: e.target.value })
+                  updateOptions({ ...draft, initial: e.target.value })
                 }
               />
             </label>
+
+
+          </form>
+          <div className="weight-controls" role="group" aria-label={lang === "zh" ? "按排名分配权重" : "Weights by prior-year rank"}>
             <label>
               {t.n}
               <select
                 value={draft.n}
-                onChange={(e) => setDraft({ ...draft, n: e.target.value })}
+                onChange={(e) => updateOptions({ ...draft, n: e.target.value })}
               >
                 {Array.from({ length: 10 }, (_, i) => (
                   <option key={i} value={i + 1}>
@@ -350,13 +356,19 @@ export default function App() {
                 ))}
               </select>
             </label>
-            <button type="submit" className="primary">
-              {t.run} →
-            </button>
-            <button type="button" onClick={share} disabled={!config}>
-              {t.share} ↗
-            </button>
-          </form>
+            <div className="weights-scroll">
+              <table className="weights-table">
+                <caption className="sr-only">{lang === "zh" ? "按上一年排名设置投资权重" : "Allocation by prior-year rank"}</caption>
+                <thead><tr><th scope="col">{lang === "zh" ? "排名" : "Rank"}</th>{weightDraft.map((_, i) => <th scope="col" key={i}>#{i + 1}</th>)}</tr></thead>
+                <tbody><tr><th scope="row">{lang === "zh" ? "权重 · %" : "Weight · %"}</th>{weightDraft.map((weight, i) => <td key={i}><input aria-label={`${lang === "zh" ? "第" : "Rank "}${i + 1}${lang === "zh" ? "名权重" : " weight"}`} type="number" min="0" max="100" step="any" value={weight} onChange={e => { const next = [...weightDraft]; next[i] = e.target.value; updateOptions(draft, next); }} /></td>)}</tr></tbody>
+              </table>
+            </div>
+            <button type="button" onClick={() => updateOptions(draft, Array.from({length: Number(draft.n)}, () => String(100 / Number(draft.n))))}>{lang === "zh" ? "恢复等权" : "Equal weights"}</button>
+            <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
+          </div>
+          {latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); p.set("base", latestBaseVersion); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
+          {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。两组指数基准暂截至 ${data.completeThrough}，不补造本年指数回报。` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. Both index benchmarks currently end in ${data.completeThrough}; no current-year index return is inferred.`}</p>}
+          {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{(base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 2023—2025 复权及分红口径待核实" : " · 2023–2025 adjustment/dividend treatment unverified")}</p>}
           {error && (
             <p role="alert" className="error">
               {t.parameterError}
@@ -365,7 +377,7 @@ export default function App() {
           <div className="plot-meta">
             <div className="legend">
               {results.map((r) => (
-                <span key={r.key} className={r.error ? "unavailable" : ""}>
+                <button type="button" key={r.key} disabled={!!r.error} aria-pressed={!hiddenLines.includes(r.key)} className={r.error ? "unavailable" : ""} onClick={() => setHiddenLines((keys) => keys.includes(r.key) ? keys.filter((key) => key !== r.key) : [...keys, r.key])}>
                   <i
                     style={{
                       background:
@@ -384,14 +396,14 @@ export default function App() {
                   />
                   {seriesLabel(r, lang)}
                   {r.error ? " · —" : ""}
-                </span>
+                </button>
               ))}
             </div>
             <span className="scale-label">USD / {t.linear}</span>
           </div>
           {config && (
             <GrowthChart
-              results={results}
+              results={results.filter((r) => !hiddenLines.includes(r.key))}
               config={config}
               lang={lang}
               theme={theme}
@@ -416,7 +428,7 @@ export default function App() {
               <span>{t.period}</span>
               <strong>
                 {selected && !selected.error
-                  ? `${selected.start}—${selected.end}`
+                  ? `${selected.start}—${selected.end}${selected.asOf ? " YTD " + selected.asOf : ""}`
                   : "—"}
               </strong>
             </div>
@@ -436,17 +448,20 @@ export default function App() {
             !selected.error &&
             config &&
             (selected.start !== config.start || selected.end !== config.end)
-              ? ` · ${t.strategyRange} ${selected.start}—${selected.end}${selected.coverageNote ? " · " + (lang === "zh" ? selected.coverageNote : "Stopped at the first missing holding return") : ""}`
+              ? ` · ${t.strategyRange} ${selected.start}—${selected.end}${selected.coverageNote ? " · " + selected.coverageNote : ""}`
               : ""}
           </div>
         </section>
         <section className="annual-section" aria-labelledby="annual-title">
+          <div className="annual-intro">
           <div className="section-title">
             <h2 id="annual-title">
               <span>01 / </span>
               {t.annual}
             </h2>
             <span className="minor">TOP {config?.n ?? 1}</span>
+          </div>
+          <p>{lang === "zh" ? `每年年初，将上一年末的全部资金，按上方权重买入上一年度涨幅前 ${config?.n ?? 1} 支股票。持有一年，年底换仓，本金与收益全部复投。首年使用你设定的初始资金。` : `At the start of each year, invest the entire previous year-end balance at your chosen rank weights in the prior year’s top ${config?.n ?? 1} stocks. Hold for one year, then rebalance and reinvest all proceeds. The first year starts with your initial investment.`}</p>
           </div>
           <div className="table-scroll">
             <table className="annual-table">
@@ -456,7 +471,7 @@ export default function App() {
                   <th>{t.year}</th>
                   <th>{t.picks}</th>
                   <th>{t.ret}</th>
-                  <th>{t.value}</th>
+                  <th>{config?.end === new Date().getUTCFullYear() ? (lang === "zh" ? "年末 / 最新资金" : "Year-end / latest value") : t.value}</th>
                   <th>{t.sp}</th>
                   <th>{t.nas}</th>
                   <th>{t.excess}</th>
@@ -486,6 +501,7 @@ export default function App() {
                       open={expanded === y}
                       toggle={() => setExpanded(expanded === y ? null : y)}
                       n={config?.n ?? 1}
+                      weights={config?.weights}
                     />
                   );
                 })}
@@ -553,6 +569,7 @@ export default function App() {
               <span>+</span>
             </summary>
             <div className="tool-buttons">
+              <a href={(() => { const p = new URLSearchParams(location.search); p.delete("base"); p.set("end", String(data.completeThrough)); return "?" + p.toString(); })()}>{lang === "zh" ? "加载最新静态样本 ↗" : "Load latest static sample ↗"}</a>
               <button onClick={exportCSV} disabled={!config}>
                 {t.export} ↓
               </button>
@@ -612,6 +629,7 @@ function YearRow({
   open,
   toggle,
   n,
+  weights,
 }: {
   year: number;
   a?: Result["annual"][number];
@@ -623,6 +641,7 @@ function YearRow({
   open: boolean;
   toggle: () => void;
   n: number;
+  weights?: number[];
 }) {
   const t = copy[lang];
   return (
@@ -636,7 +655,7 @@ function YearRow({
             aria-label={`${open ? t.collapse : t.expand} ${year}`}
           >
             <span>{open ? "−" : "+"}</span>
-            {year}
+            {year}{year === new Date().getUTCFullYear() ? " YTD" : ""}
           </button>
         </th>
         <td className="picks">
@@ -685,7 +704,7 @@ function YearRow({
                       <strong>{r.ticker}</strong>
                       <span>{formatPct(r.totalReturn)}</span>
                       <small>
-                        {i < n ? `${t.weight} ${formatPct(1 / n)}` : "—"}
+                        {i < n ? `${t.weight} ${formatPct(weights?.[i] ?? 1 / n)}` : "—"}
                       </small>
                     </div>
                   ))}

@@ -41,4 +41,23 @@ class AtomicSnapshotTests(unittest.TestCase):
             atomic_json(path,{'return':.1},compact=True)
             with self.assertRaises(ValueError):atomic_json(path,{'return':float('nan')},compact=True)
             self.assertEqual(json.loads(path.read_text()),{'return':.1})
+class YtdSnapshotTests(unittest.TestCase):
+    def test_published_ytd_is_separate_and_rejects_raw_or_future_data(self):
+        import json
+        from validate_public import validate_ytd
+        d=json.loads((ROOT/'public/data/stocks-ytd.json').read_text())
+        self.assertTrue(validate_ytd(d))
+        annual=json.loads((ROOT/'public/data/stocks-base.json').read_text())
+        self.assertNotIn(str(d['year']),annual['returns'])
+        bad=copy.deepcopy(d);bad['returns'][0]['close']=123
+        with self.assertRaises(ValueError):validate_ytd(bad)
+        bad=copy.deepcopy(d);bad['asOf']='2999-01-01'
+        with self.assertRaises(ValueError):validate_ytd(bad)
+    def test_reviewed_thc_move_restores_2010_but_other_flags_remain(self):
+        import json
+        d=json.loads((ROOT/'public/data/stocks-base.json').read_text())
+        row=next(r for r in d['returns']['2010'] if r['id']=='fnspid:THC')
+        self.assertAlmostEqual(row['totalReturn'],26.76000022888184/21.559999465942383-1)
+        self.assertNotIn('2010',d['quarantined'].get('THC',{}))
+        self.assertIn('2020',d['quarantined']['GE'])
 if __name__=='__main__':unittest.main()
