@@ -24,6 +24,8 @@ export type Ranking = {
 export type StockData = {
   schemaVersion: 1;
   quality?: "exploratory";
+  basis?: "split_adjusted_price_return";
+  partialListingPeriods?: Record<string, {from:string; to:string; source:string}>;
   version?: string;
   updatedAt?: string;
   startYear?: number;

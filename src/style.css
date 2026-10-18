@@ -607,3 +607,12 @@ footer {
 .weight-controls > span[role="status"] { flex-basis: 100%; }
 
 .weight-controls > label { width: 92px; flex: 0 0 92px; }
+
+.strategy-rules {
+  padding-left: 1.15em;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+.strategy-rules li + li { margin-top: .7em; }

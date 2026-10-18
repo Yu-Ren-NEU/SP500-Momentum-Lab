@@ -103,3 +103,29 @@ Historical snapshot mode excludes this unpinned local supplement. Annual index
 snapshots remain unchanged. YTD CAGR uses the elapsed fraction of the current year.
 The start-year menu follows stock coverage (currently 1997); older URLs are clamped
 to that first investable year. This does not certify complete universe coverage.
+
+### Unified stock price-return research mode
+
+Run `npm run update:price` locally to rebuild the separate price-only static base.
+The builder reads FNSPID `close` (never `adj close`), and independently fetches
+Yahoo Finance split-adjusted `Close` observations for available historical members.
+It recalculates both rankings and holding returns, rather than correcting only
+past winners. Year-end historical membership determines eligibility. New listings
+can rank using their first daily trading close in that listing year, checked
+against the provider's `firstTradeDate`. Partial listing periods are recorded and
+shown when the corresponding ranking is expanded. Missing prices remain missing;
+identity conflicts and unavailable terminal proceeds do not become zero returns.
+
+Annual endpoints use completed December bars. Current-year endpoints use daily
+observations at the stock cutoff; unfinished monthly bars are never used for YTD.
+Donor conventions cannot be mixed within an annual ratio. Old dividend-adjusted
+snapshots remain unchanged and are explicitly labeled as legacy data.
+
+The generated `stocks-price.local.json`, `stocks-price-ytd.local.json` and
+`price-integrity.local.json` are local research assets excluded from Git and
+production builds pending redistribution review. The app uses them when available
+outside historical snapshot mode. The storage field `totalReturn` is retained for
+engine compatibility; `basis=split_adjusted_price_return` identifies its actual
+price-only meaning. No cash dividend or distribution is added to those values.
+The S&P reference intentionally remains dividend-inclusive; Nasdaq remains a price
+reference, with the distinction explicitly stated in the rule bullets.

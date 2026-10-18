@@ -12,3 +12,6 @@ data/research/reported-evidence.json
 
 # Index YTD pending redistribution review (local development only)
 public/data/benchmarks-ytd.local.json
+
+# Unified price-only data remains local pending donor rights review
+public/data/*price*.local.json

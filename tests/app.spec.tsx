@@ -230,3 +230,16 @@ test("start-year choices match stock coverage and migrate unsupported older URLs
   expect(select.value).toBe("1997");
   expect(new URLSearchParams(location.search).get("start")).toBe("1997");
 });
+
+test("price-only base overrides the legacy sample and rules are separate bullets", async () => {
+  const base = {...fixture(),quality:"exploratory",basis:"split_adjusted_price_return",startYear:2000,endYear:2002,version:"0000000000000001"};
+  for (const rank of Object.values(base.rankings)) {rank.status="provisional";rank.universe="historical-members-available-sample";}
+  vi.mocked(fetch).mockImplementation(async input => ({ok:true,json:async()=>String(input).endsWith("stocks-price.local.json")?base:publicData}) as Response);
+  await mount();
+  const bullets = document.querySelectorAll(".strategy-rules li");
+  expect(bullets.length).toBe(6);
+  expect(bullets[2].textContent).toContain("不要求上市满一年");
+  expect(bullets[3].textContent).toContain("不计现金分红");
+  expect(document.querySelector(".summary-line")?.textContent).toContain("2001");
+  expect(screen.queryByText(/当前为旧版或导入数据/)).toBeNull();
+});

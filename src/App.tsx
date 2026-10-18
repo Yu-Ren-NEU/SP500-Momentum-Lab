@@ -79,8 +79,13 @@ export default function App() {
       get(ytdVersion ? `/data/ytd-versions/${ytdVersion}.json` : "/data/stocks-ytd.json", !ytdVersion).catch(() => undefined),
       get("/data/base-latest.json", true).catch(() => undefined),
       p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/benchmarks-ytd.local.json", true).catch(() => undefined),
+      p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/stocks-price.local.json", true).catch(() => undefined),
+      p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/stocks-price-ytd.local.json", true).catch(() => undefined),
     ])
-      .then(([d, s, current, latest, indices]) => {
+      .then(([d, legacyBase, legacyCurrent, latest, indices, priceBase, priceYtd]) => {
+        const priceMode = priceBase?.basis === "split_adjusted_price_return";
+        const s = priceMode ? priceBase : legacyBase;
+        const current = priceMode ? (priceYtd?.basis === "split_adjusted_price_return" ? priceYtd : undefined) : legacyCurrent;
         if (indices?.kind === "benchmarks-ytd") setIndexYtd(indices);
         if (d.schemaVersion !== 1 || !d.benchmarks?.sp500)
           throw new Error("Invalid index data");
@@ -281,6 +286,7 @@ export default function App() {
       )
     : [];
   const sampled = !privateData && base?.quality === "exploratory";
+  const priceOnly = stocks?.basis === "split_adjusted_price_return";
   const coverage =
     base?.coverage?.[
       String(config ? Math.max(config.start - 1, base.startYear ?? 0) : 0)
@@ -383,10 +389,10 @@ export default function App() {
             <button type="button" onClick={() => updateOptions(draft, Array.from({length: Number(draft.n)}, () => String(100 / Number(draft.n))))}>{lang === "zh" ? "恢复等权" : "Equal weights"}</button>
             <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
           </div>
-          {latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
+          {!priceOnly && latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
           <p className="minor">{lang === "zh" ? `当前策略最早支持 ${firstStartYear} 年，早期历史正在补充。` : `Strategy coverage starts in ${firstStartYear}; earlier history is being researched.`}</p>
           {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。标普（含股息）截至 ${sp?.asOf ?? data.completeThrough}；纳指（价格）截至 ${nas?.asOf ?? data.completeThrough}。${indexYtd ? "指数本年数据仅限本地研究。" : "本年指数数据暂不可得。"}` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. S&P 500 (dividends included): ${sp?.asOf ?? data.completeThrough}; Nasdaq (price): ${nas?.asOf ?? data.completeThrough}. ${indexYtd ? "Index YTD is for local research only." : "Current-year index data unavailable."}`}</p>}
-          {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{(base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 补充价格数据的复权及分红口径待核实" : " · Supplementary price adjustment/dividend treatment unverified")}</p>}
+          {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{!priceOnly && (base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 补充价格数据的复权及分红口径待核实" : " · Supplementary price adjustment/dividend treatment unverified")}</p>}
           {error && (
             <p role="alert" className="error">
               {t.parameterError}
@@ -479,7 +485,14 @@ export default function App() {
             </h2>
             <span className="minor">TOP {config?.n ?? 1}</span>
           </div>
-          <p>{lang === "zh" ? `每年年初，将上一年末的全部资金，按上方权重买入上一年度涨幅前 ${config?.n ?? 1} 支股票。持有一年，年底换仓，本金与收益全部复投。首年使用你设定的初始资金。` : `At the start of each year, invest the entire previous year-end balance at your chosen rank weights in the prior year’s top ${config?.n ?? 1} stocks. Hold for one year, then rebalance and reinvest all proceeds. The first year starts with your initial investment.`}</p>
+          <ul className="strategy-rules">
+            <li>{lang === "zh" ? `每年末，在当年末属于标普 500 的可用历史样本中，按价格涨幅选出前 ${config?.n ?? 1} 名。` : `At each year-end, rank available historical S&P 500 year-end members by price return and select the top ${config?.n ?? 1}.`}</li>
+            <li>{lang === "zh" ? "次年年初，将上一年末的全部资金按上方权重买入这些股票；持有至年末再换仓，全部资金复投。默认等权。" : "At the next year’s start, invest the entire prior year-end balance at the weights above. Hold to year-end, then rebalance and reinvest all proceeds. Equal weights by default."}</li>
+            <li>{lang === "zh" ? "当年新上市股票也可参与：核实上市起点后，以首个交易日收盘价至年末收盘价计算涨幅，不要求上市满一年。" : "New listings are eligible: after checking their listing endpoint, measure return from the first trading close to year-end. A full year of listing is not required."}</li>
+            <li>{priceOnly ? (lang === "zh" ? "个股选股与持仓统一使用拆股调整后的价格收益，不计现金分红、税费、手续费和滑点；不使用含分红的复权收益替代。" : "Stock ranking and holding returns both use split-adjusted price returns, excluding cash dividends, taxes, fees and slippage. Dividend-adjusted returns are not substituted.") : (lang === "zh" ? "当前为旧版或导入数据，尚未确认统一价格口径；不可与新版价格回测直接比较。" : "This legacy or imported dataset has not been confirmed as price-only; do not compare it directly with the new price-return backtest.")}</li>
+            <li>{lang === "zh" ? "本年按页面标明的截止日计算 YTD。标普参照线含分红，纳指参照线不含分红，各自口径单独标明。" : "The current year is YTD through the displayed cutoff. The S&P reference includes dividends; the Nasdaq reference excludes dividends, as labeled."}</li>
+            <li>{lang === "zh" ? "历史样本仍不完整；缺少持仓收益时停止曲线，不补零、不跳年。退市、收购及分拆等事件未核实的年份不视为完整回报。" : "Historical coverage remains incomplete. Missing holding returns stop the curve; years are never skipped or zero-filled. Unverified delistings, acquisitions and spin-offs are not treated as complete returns."}</li>
+          </ul>
           </div>
           <div className="table-scroll">
             <table className="annual-table">
@@ -512,6 +525,7 @@ export default function App() {
                       spReturn={s?.return}
                       nasReturn={n?.return}
                       ranks={ranks}
+                      partialPeriods={stocks?.partialListingPeriods}
                       lang={lang}
                       coverage={
                         sampled ? base?.coverage?.[String(y - 1)] : undefined
@@ -537,7 +551,7 @@ export default function App() {
             <p>{t.benchmarkNote}</p>
             {sampled && (
               <p>
-                {t.exploreNote}{" "}
+                {priceOnly ? (lang === "zh" ? "本地价格收益样本；不含现金分红，公开分发权限待核实。历史成分与退市事件覆盖仍不完整。" : "Local price-return sample, excluding cash dividends. Redistribution review pending; historical members and terminal events remain incomplete.") : t.exploreNote}{" "}
                 {coverage
                   ? `${coverage.available}/${coverage.members} ${lang === "zh" ? "只源表成员有完整年末价格端点" : "members in the source snapshot have complete annual endpoints"}.`
                   : ""}
@@ -545,7 +559,7 @@ export default function App() {
             )}
             {indexYtd && <p>{lang === "zh" ? "本年标普数据使用 S&P 500 Total Return；纳指使用 NASDAQCOM。指数 YTD 仅用于本地研究，公开分发权限待核实。" : "Index YTD uses S&P 500 Total Return and NASDAQCOM. Local research only; redistribution permission remains unestablished."} <a href="https://finance.yahoo.com/quote/%5ESP500TR/history/" target="_blank" rel="noreferrer">S&P 500 TR / Yahoo Finance ↗</a></p>}
             <p>{t.missingNote}</p>
-            <p>{lang === "zh" ? "完整历史母集尚未核验。" : "Full historical-universe completeness has not been verified."} <a href="/data/integrity.json" download>{lang === "zh" ? "下载逐年完整性审计 ↗" : "Download year-by-year integrity audit ↗"}</a></p>
+            <p>{lang === "zh" ? "完整历史母集尚未核验。" : "Full historical-universe completeness has not been verified."} <a href={priceOnly ? "/data/price-integrity.local.json" : "/data/integrity.json"} download>{lang === "zh" ? "下载逐年完整性审计 ↗" : "Download year-by-year integrity audit ↗"}</a></p>
             <div className="source-list">
               <a href={data.sources.nyu.url} target="_blank" rel="noreferrer">
                 S&P 500 / NYU Damodaran ↗
@@ -650,6 +664,7 @@ function YearRow({
   toggle,
   n,
   weights,
+  partialPeriods,
 }: {
   year: number;
   a?: Result["annual"][number];
@@ -662,6 +677,7 @@ function YearRow({
   toggle: () => void;
   n: number;
   weights?: number[];
+  partialPeriods?: StockData["partialListingPeriods"];
 }) {
   const t = copy[lang];
   return (
@@ -717,6 +733,10 @@ function YearRow({
                     {coverage.missing.join(", ")}
                   </p>
                 )}
+                {ranks.some(r => partialPeriods?.[`${year-1}:${r.id.replace("fnspid:", "")}`]) && <p className="minor">{ranks.filter(r => partialPeriods?.[`${year-1}:${r.id.replace("fnspid:", "")}`]).map(r => {
+                  const period = partialPeriods![`${year-1}:${r.id.replace("fnspid:", "")}`];
+                  return `${r.ticker}: ${period.from} → ${period.to} (${lang === "zh" ? "上市以来，非完整自然年" : "since listing, partial calendar year"})`;
+                }).join(" · ")}</p>}
                 <div className="rank-list">
                   {ranks.map((r, i) => (
                     <div key={r.id}>
