@@ -140,3 +140,13 @@ proxy statements, allowing the selected Top 1–10 paths from 2012 through the
 current cutoff to continue. This closes a holding-path gap, not historical
 full-universe coverage. Issuer PDFs that returned HTTP 403 are not claimed as
 downloaded; the review records the actual web verification method.
+
+
+## Public hosting
+
+The free public sample site is deployed by GitHub Pages at
+https://yu-ren-neu.github.io/SP500-Momentum-Lab/ . Main pushes deploy automatically.
+The monthly workflow runs on the first day at 11:17 Asia/Shanghai and supports
+manual dispatch. See [deployment and update details](docs/DEPLOYMENT.md).
+The hosted edition currently uses the redistributable research sample, with an
+explicit notice; it does not publish the local price-only or local index-YTD files.

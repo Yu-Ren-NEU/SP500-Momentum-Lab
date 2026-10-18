@@ -22,7 +22,9 @@
     "audit:data": "python3 scripts/audit_integrity.py",
     "supplement:history": "python3 scripts/supplement_history.py",
     "update:benchmarks-ytd": "python3 scripts/update_benchmark_ytd.py --download",
-    "update:price": "python3 scripts/build_price_base.py"
+    "update:price": "python3 scripts/build_price_base.py",
+    "update:monthly": "python3 scripts/monthly_update.py",
+    "audit:release": "python3 scripts/check_release.py"
   },
   "dependencies": {
     "echarts": "6.1.0",

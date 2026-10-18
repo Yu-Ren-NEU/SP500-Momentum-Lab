@@ -65,7 +65,7 @@ export default function App() {
       return;
     }
     const get = async (path: string, optional = false) => {
-      const r = await fetch(path, { signal: ctrl.signal });
+      const r = await fetch(import.meta.env.BASE_URL + path.replace(/^\//, ""), { signal: ctrl.signal });
       if (!r.ok) {
         if (optional && r.status === 404) return undefined;
         throw new Error("Snapshot unavailable");
@@ -276,7 +276,7 @@ export default function App() {
       <main className="loading">
         <h1>{t.errorTitle}</h1>
         <p role="alert">{t.unknownVersion}</p>
-        <a href="/">{t.retry}</a>
+        <a href={import.meta.env.BASE_URL}>{t.retry}</a>
       </main>
     );
   if (!data)
@@ -340,6 +340,7 @@ export default function App() {
           </div>
         </header>
         <section className="plot-section" aria-label={t.chart}>
+          {import.meta.env.PROD && !priceOnly && !privateData && <p className="publication-notice" role="note">{lang === "zh" ? "公开研究样本版：个股分红与复权口径尚未统一，数据覆盖不完整；与本地价格研究版不同。未获公开许可的本地数据未发布。" : "Public research sample: stock dividend/adjustment conventions remain unverified and coverage is incomplete. Results differ from the local price research edition. Local-only data is excluded."}</p>}
           <form
             className="controls"
             onSubmit={(e) => e.preventDefault()}
@@ -385,7 +386,7 @@ export default function App() {
           </form>
           {!priceOnly && latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
           <p className="minor">{lang === "zh" ? `当前策略最早支持 ${firstStartYear} 年，早期历史正在补充。` : `Strategy coverage starts in ${firstStartYear}; earlier history is being researched.`}</p>
-          {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。标普（含股息）截至 ${sp?.asOf ?? data.completeThrough}；纳指（价格）截至 ${nas?.asOf ?? data.completeThrough}。${indexYtd ? "指数本年数据仅限本地研究。" : "本年指数数据暂不可得。"}` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. S&P 500 (dividends included): ${sp?.asOf ?? data.completeThrough}; Nasdaq (price): ${nas?.asOf ?? data.completeThrough}. ${indexYtd ? "Index YTD is for local research only." : "Current-year index data unavailable."}`}</p>}
+          {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${(ytd?.year === new Date().getUTCFullYear() ? ytd.asOf : "暂不可得")}。标普（含股息）截至 ${sp?.asOf ?? data.completeThrough}；纳指（价格）截至 ${nas?.asOf ?? data.completeThrough}。${indexYtd ? "指数本年数据仅限本地研究。" : "本年指数数据暂不可得。"}` : `Current year is YTD; stock cutoff: ${(ytd?.year === new Date().getUTCFullYear() ? ytd.asOf : "unavailable")}. S&P 500 (dividends included): ${sp?.asOf ?? data.completeThrough}; Nasdaq (price): ${nas?.asOf ?? data.completeThrough}. ${indexYtd ? "Index YTD is for local research only." : "Current-year index data unavailable."}`}</p>}
           {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{!priceOnly && (base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 补充价格数据的复权及分红口径待核实" : " · Supplementary price adjustment/dividend treatment unverified")}</p>}
           {error && (
             <p role="alert" className="error">
@@ -583,7 +584,7 @@ export default function App() {
             )}
             {indexYtd && <p>{lang === "zh" ? "本年标普数据使用 S&P 500 Total Return；纳指使用 NASDAQCOM。指数 YTD 仅用于本地研究，公开分发权限待核实。" : "Index YTD uses S&P 500 Total Return and NASDAQCOM. Local research only; redistribution permission remains unestablished."} <a href="https://finance.yahoo.com/quote/%5ESP500TR/history/" target="_blank" rel="noreferrer">S&P 500 TR / Yahoo Finance ↗</a></p>}
             <p>{t.missingNote}</p>
-            <p>{lang === "zh" ? "完整历史母集尚未核验。" : "Full historical-universe completeness has not been verified."} <a href={priceOnly ? "/data/price-integrity.local.json" : "/data/integrity.json"} download>{lang === "zh" ? "下载逐年完整性审计 ↗" : "Download year-by-year integrity audit ↗"}</a></p>
+            <p>{lang === "zh" ? "完整历史母集尚未核验。" : "Full historical-universe completeness has not been verified."} <a href={import.meta.env.BASE_URL + (priceOnly ? "data/price-integrity.local.json" : "data/integrity.json")} download>{lang === "zh" ? "下载逐年完整性审计 ↗" : "Download year-by-year integrity audit ↗"}</a></p>
             <div className="source-list">
               <a href={data.sources.nyu.url} target="_blank" rel="noreferrer">
                 S&P 500 / NYU Damodaran ↗
@@ -634,7 +635,7 @@ export default function App() {
               <button onClick={() => fileInput.current?.click()}>
                 {t.import}
               </button>
-              <a href="/data/stock-schema.json" download>
+              <a href={import.meta.env.BASE_URL + "data/stock-schema.json"} download>
                 {t.downloadSchema} ↗
               </a>
               <input

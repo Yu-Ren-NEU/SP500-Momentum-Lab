@@ -1,5 +1,6 @@
 """Publish a fail-closed coverage audit without claiming historical completeness."""
 import csv
+import datetime as dt
 import json
 from pathlib import Path
 from update import atomic_json
@@ -12,7 +13,7 @@ def build():
     supplemental=ROOT/'data/research/supplement-audit.json'
     review=json.loads(supplemental.read_text()) if supplemental.exists() else {}
     gaps=[];years=[]
-    for year in range(1958,2027):
+    for year in range(1958,dt.datetime.now(dt.timezone.utc).year+1):
         rank=base['rankings'].get(str(year));coverage=base['coverage'].get(str(year),{})
         next_year=year+1
         holding_rows=base['returns'].get(str(next_year),ytd.get('returns',[]) if next_year==ytd.get('year') else [])

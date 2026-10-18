@@ -697,3 +697,5 @@ footer {
   .mobile-scroll-hint { display: none; }
   .weights-table input { width: 84px; }
 }
+
+.publication-notice { font-size: 12px; line-height: 1.8; color: var(--muted); margin-bottom: 16px; max-width: 90ch; }

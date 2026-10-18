@@ -14,7 +14,9 @@ from validate_public import validate_base
 
 URL = 'https://www.kaggle.com/datasets/darkmatternet/s-and-p-500-stocks-25-years-of-data-updated-daily'
 
-def build():
+def build(freeze_history=False):
+    base = json.loads((PUBLIC/"stocks-base.json").read_text())
+    current_year = dt.datetime.now(dt.timezone.utc).year
     meta = json.loads((RAW/'kaggle-metadata.json').read_text())
     if meta.get('licenseName') != 'CC0: Public Domain':
         raise ValueError('Dataset license changed; review before publishing')
@@ -48,15 +50,18 @@ def build():
                 if date == ends.get(year): close.setdefault(symbol, {})[year] = value
     # Keep partial 2026 in the research catalogue, never the full-year engine.
     latest = max(date for date, _ in previous.values())
-    if not latest.startswith('2026-'):
-        raise ValueError('Current-year schema must be reviewed before a year rollover')
+    observation_year = int(latest[:4])
+    if observation_year != current_year and not (observation_year == current_year-1 and dt.datetime.now(dt.timezone.utc).month == 1):
+        raise ValueError('Source cutoff is stale; preserve the previous snapshot')
+    if latest > dt.datetime.now(dt.timezone.utc).date().isoformat():
+        raise ValueError('Source cutoff is in the future')
     ytd_rows = []
     cohort_ytd = set(members[-1]['tickers'].split(','))
     for symbol, (date, value) in previous.items():
-        if date != latest or symbol not in cohort_ytd or 2025 not in close.get(symbol, {}) or 2026 in invalid.get(symbol, set()): continue
-        ytd_rows.append({'ticker':symbol,'name':names.get(symbol,symbol),'return':value/close[symbol][2025]-1})
+        if date != latest or symbol not in cohort_ytd or observation_year-1 not in close.get(symbol, {}) or observation_year in invalid.get(symbol, set()): continue
+        ytd_rows.append({'ticker':symbol,'name':names.get(symbol,symbol),'return':value/close[symbol][observation_year-1]-1})
     ytd_rows.sort(key=lambda r:(-r['return'],r['ticker']))
-    ytd = {'year':2026,'period':'ytd','asOf':latest,'status':'available-sample',
+    ytd = {'year':observation_year,'period':'ytd','asOf':latest,'status':'available-sample',
            'sourceUrl':URL,'sourceSha256':digest(RAW/'kaggle-recent.zip'),
            'basis':'close-ratio-adjustment-unverified','observedUniverseCount':len(ytd_rows),
            'rows':[dict(row,rank=i+1) for i,row in enumerate(ytd_rows[:10])],
@@ -64,11 +69,11 @@ def build():
     atomic_json(ROOT/'data/research/current-year-sample.json',ytd)
     holding_returns = []
     for symbol, (date, value) in previous.items():
-        if date != latest or 2025 not in close.get(symbol,{}) or 2026 in invalid.get(symbol,set()): continue
+        if date != latest or observation_year-1 not in close.get(symbol,{}) or observation_year in invalid.get(symbol,set()): continue
         holding_returns.append({'id':'fnspid:'+ALIASES.get(symbol,symbol.replace('.','-')),'ticker':symbol,
-                                'name':names.get(symbol,symbol),'totalReturn':value/close[symbol][2025]-1,
+                                'name':names.get(symbol,symbol),'totalReturn':value/close[symbol][observation_year-1]-1,
                                 'source':'kaggle-close-ratio-adjustment-unverified'})
-    current = {'schemaVersion':1,'kind':'stocks-ytd','year':2026,'asOf':latest,
+    current = {'schemaVersion':1,'kind':'stocks-ytd','year':observation_year,'asOf':latest,
                'sourceUrl':URL,'sourceSha256':ytd['sourceSha256'],'license':'Uploader declares CC0: Public Domain',
                'basis':'close-ratio-adjustment-unverified','returns':holding_returns}
     current['version'] = hashlib.sha256(json.dumps(current,sort_keys=True).encode()).hexdigest()[:16]
@@ -76,7 +81,7 @@ def build():
     atomic_json(PUBLIC/'ytd-versions'/(current['version']+'.json'),current,compact=True)
 
     rankings, returns, coverage = {}, {}, {}
-    for year in range(2023, 2026):
+    for year in range(max(2023, base["endYear"]+1) if freeze_history else 2023, current_year):
         cohort = set([r for r in members if r['date'] <= f'{year}-12-31'][-1]['tickers'].split(','))
         annual = {}
         for symbol, prices in close.items():
@@ -93,7 +98,6 @@ def build():
         rankings[key] = {'status':'provisional','asOf':key+'-12-31','universe':'historical-members-available-sample',
                          'source':'Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified', 'count':len(rows),'rows':rows}
         returns[key] = list(annual.values())
-    base = json.loads((PUBLIC/'stocks-base.json').read_text())
     # Original FNSPID flags apply to that source only. New source has separate filtering above.
     quarantined = {t:{y:v for y,v in ys.items() if y not in rankings} for t,ys in base.get('quarantined',{}).items()}
     source = {'name':'Darkmatternet S&P 500 daily data, Kaggle version '+str(meta['currentVersionNumber']),

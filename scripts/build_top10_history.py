@@ -1,5 +1,6 @@
 """Build an explicit year-by-year research catalogue, separate from backtest inputs."""
 import json
+import datetime as dt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -7,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 def build():
     base = json.loads((ROOT / 'public/data/stocks-base.json').read_text())
     years = {}
-    for year in range(1958, 2027):
+    for year in range(1958, dt.datetime.now(dt.timezone.utc).year+1):
         rank = base['rankings'].get(str(year))
         years[str(year)] = {
-            'period': 'ytd' if year == 2026 else 'calendar-year',
+            'period': 'ytd' if year == dt.datetime.now(dt.timezone.utc).year else 'calendar-year',
             'status': 'available-sample' if rank else 'missing',
             'asOf': rank['asOf'] if rank else None,
             'eligibleForVerifiedBacktest': False,
@@ -45,7 +46,14 @@ def build():
     if evidence_path.exists():
         for observation in json.loads(evidence_path.read_text())['observations']:
             years[str(observation['year'])]['evidence'].append({k:v for k,v in observation.items() if k != 'rows'})
-    result = {'schemaVersion': 1, 'range': [1958, 2026],
+    target = ROOT / 'data/research/top10-history.json'
+    if target.exists() and not evidence_path.exists():
+        previous = json.loads(target.read_text())
+        for year, record in years.items():
+            for evidence in previous.get('years',{}).get(year,{}).get('evidence',[]):
+                safe={k:v for k,v in evidence.items() if k!='rows'}
+                if safe not in record['evidence']:record['evidence'].append(safe)
+    result = {'schemaVersion': 1, 'range': [1958, dt.datetime.now(dt.timezone.utc).year],
               'purpose': 'Research catalogue; sample rankings are not full historical S&P 500 rankings.',
               'baseVersion': base['version'],
               'updatePolicy': 'Current-year YTD requires explicit source cutoff. Freeze only after final trading day and source reconciliation; corrections require a documented revision. Never overwrite history with current membership.',
@@ -54,7 +62,7 @@ def build():
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     from audit_integrity import build as audit
     audit()
-    print('Built 69 annual catalogue records; sample years:', sum(y['status'] == 'available-sample' for y in years.values()))
+    print('Built '+str(len(years))+' annual catalogue records; sample years:', sum(y['status'] == 'available-sample' for y in years.values()))
 
 if __name__ == '__main__':
     build()
