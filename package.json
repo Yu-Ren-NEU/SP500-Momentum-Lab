@@ -20,7 +20,8 @@
     "update:recent": "python3 scripts/extend_recent.py",
     "update:catalogue": "python3 scripts/build_top10_history.py",
     "audit:data": "python3 scripts/audit_integrity.py",
-    "supplement:history": "python3 scripts/supplement_history.py"
+    "supplement:history": "python3 scripts/supplement_history.py",
+    "update:benchmarks-ytd": "python3 scripts/update_benchmark_ytd.py --download"
   },
   "dependencies": {
     "echarts": "6.1.0",

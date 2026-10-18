@@ -184,6 +184,7 @@ export function benchmark(
   key: "sp500" | "nasdaq",
   data: PublicData,
   c: Config,
+  ytd?: BenchmarkYtd,
 ): Result {
   validateConfig(c);
   const label = key === "sp500" ? "标普 500 · 含股息" : "纳斯达克综合 · 价格";
@@ -191,7 +192,13 @@ export function benchmark(
     .map(Number)
     .sort((a, b) => a - b);
   const start = Math.max(c.start, available[0] ?? c.start);
-  if (start > Math.min(c.end, available.at(-1) ?? c.end))
+  const current = new Date().getUTCFullYear();
+  const partial = c.end === current && ytd?.kind === "benchmarks-ytd" && ytd.year === current ? ytd.benchmarks[key] : undefined;
+  const last = available.at(-1) ?? c.end;
+  const includeYtd = partial && last === current - 1 && ytd?.asOf === partial.to &&
+    partial.from.startsWith(`${current - 1}-12-`) && partial.to.startsWith(`${current}-`) &&
+    partial.basis === (key === "sp500" ? "total_return" : "price_return") && validReturn(partial.return);
+  if (start > Math.min(c.end, last) && !includeYtd)
     return {
       key,
       label,
@@ -204,11 +211,19 @@ export function benchmark(
       maxDrawdown: null,
       error: "所选区间尚无完整自然年数据（纳指完整年度始于 1972 年）",
     };
-  return series(key, label, start, Math.min(c.end, available.at(-1) ?? c.end), c.initial, (y) => {
+  const result = series(key, label, start, includeYtd ? current : Math.min(c.end, last), c.initial, (y) => {
+    if (y === current && includeYtd) return {return: partial.return};
     const r = data.benchmarks[key][y];
     if (!r) throw new Error(`${y} 年基准数据不可得；未补零或推算`);
     return { return: r.return };
   });
+  if (includeYtd && !result.error && result.final !== null) {
+    const elapsed = (Date.parse(partial.to + "T00:00:00Z") - Date.UTC(current,0,1)) / (Date.UTC(current+1,0,1)-Date.UTC(current,0,1));
+    if (!(elapsed > 0 && elapsed < 1)) throw new Error("Invalid benchmark YTD cutoff");
+    result.cagr = Math.pow(result.final / c.initial, 1 / (current-start+elapsed)) - 1;
+    result.asOf = partial.to;
+  }
+  return result;
 }
 export function rankingFor(
   data: StockData | undefined,
@@ -418,3 +433,8 @@ export function strategyWithYtd(data: StockData | undefined, c: Config, ytd?: Yt
   }
   return result;
 }
+
+export type BenchmarkYtd = {
+  schemaVersion: 1; kind: "benchmarks-ytd"; year: number; asOf: string;
+  benchmarks: Record<"sp500" | "nasdaq", {return:number; from:string; to:string; basis:string}>;
+};

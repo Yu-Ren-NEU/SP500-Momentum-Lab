@@ -91,3 +91,15 @@ Reported market data without established redistribution permission stays in igno
 Local imports remain in the tab's memory: no upload, URL embedding or localStorage persistence. See [stock import format](docs/STOCK-IMPORT.md), [source research](docs/DATA-RESEARCH.md), [acceptance checks](docs/LOCAL-ACCEPTANCE.md), [catalogue notes](docs/TOP10-CATALOGUE.md) and [delivery checklist](docs/CHECKLIST.md).
 
 Synthetic tests verify arithmetic and safeguards; they do not validate historical market truth. The complete 1958-present, delisting-aware strategy and public deployment remain outstanding.
+
+Current-year benchmark data can be built locally with `npm run update:benchmarks-ytd`.
+The script uses S&P 500 Total Return (`^SP500TR`) via Yahoo Finance and Nasdaq
+Composite (`NASDAQCOM`) via FRED, requiring a common date matching the stock YTD
+cutoff and a prior December year-end endpoint. Run without `--download` to rebuild
+from cached raw files. Missing endpoints fail without replacing the previous file.
+The resulting `public/data/benchmarks-ytd.local.json` is ignored by Git and removed
+from production builds while redistribution permission remains unestablished.
+Historical snapshot mode excludes this unpinned local supplement. Annual index
+snapshots remain unchanged. YTD CAGR uses the elapsed fraction of the current year.
+The start-year menu follows stock coverage (currently 1997); older URLs are clamped
+to that first investable year. This does not certify complete universe coverage.

@@ -239,3 +239,24 @@ test("YTD uses prior-year signals and fractional-year CAGR without extending ben
   assert.equal(reference.end,year-1);
   assert.equal(reference.annual.length,1);
 });
+
+test("benchmark YTD compounds once, uses fractional CAGR, and supports a current-year-only window", () => {
+  const year = new Date().getUTCFullYear();
+  const data = {benchmarks:{sp500:{[year-1]:{return:0.1}},nasdaq:{[year-1]:{return:0.2}}}};
+  const ytd = {kind:"benchmarks-ytd",year,asOf:`${year}-06-30`,benchmarks:{
+    sp500:{return:0.05,from:`${year-1}-12-31`,to:`${year}-06-30`,basis:"total_return"},
+    nasdaq:{return:-0.1,from:`${year-1}-12-31`,to:`${year}-06-30`,basis:"price_return"},
+  }};
+  const config = {start:year-1,end:year,initial:100,n:1};
+  const sp = benchmark("sp500",data,config,ytd);
+  assert.equal(sp.error,undefined);
+  assert.ok(Math.abs(sp.final-115.5)<1e-10);
+  assert.equal(sp.asOf,ytd.asOf);
+  const fraction=(Date.parse(ytd.asOf+"T00:00:00Z")-Date.UTC(year,0,1))/(Date.UTC(year+1,0,1)-Date.UTC(year,0,1));
+  assert.ok(Math.abs(sp.cagr-(1.155**(1/(1+fraction))-1))<1e-12);
+  assert.equal(benchmark("nasdaq",data,{...config,start:year},ytd).final,90);
+  assert.equal(benchmark("sp500",data,config).end,year-1);
+  assert.equal(benchmark("sp500",data,config,{...ytd,year:year-1}).end,year-1);
+  assert.equal(benchmark("sp500",data,{...config,end:year-1},ytd).annual.length,1);
+  assert.equal(benchmark("sp500",data,config,{...ytd,benchmarks:{...ytd.benchmarks,sp500:{...ytd.benchmarks.sp500,basis:"price_return"}}}).end,year-1);
+});

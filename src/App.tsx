@@ -9,7 +9,7 @@ import {
   strategyWithYtd,
   validateConfig,
 } from "./engine";
-import type { Config, PublicData, Result, StockData, YtdData } from "./engine";
+import type { BenchmarkYtd, Config, PublicData, Result, StockData, YtdData } from "./engine";
 import GrowthChart, { lineColors, seriesLabel } from "./GrowthChart";
 import { copy, formatMoney, formatPct, type Lang } from "./i18n";
 const repo = "https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab";
@@ -33,6 +33,7 @@ export default function App() {
     [privateData, setPrivateData] = useState<StockData>(),
     [filename, setFilename] = useState("");
   const [ytd, setYtd] = useState<YtdData>();
+  const [indexYtd, setIndexYtd] = useState<BenchmarkYtd>();
   const [latestBaseVersion, setLatestBaseVersion] = useState<string>();
   const [weightDraft, setWeightDraft] = useState<string[]>(["100"]);
   const [hiddenLines, setHiddenLines] = useState<string[]>([]);
@@ -77,8 +78,10 @@ export default function App() {
       get(b ? `/data/base-versions/${b}.json` : "/data/stocks-base.json", !b),
       get(ytdVersion ? `/data/ytd-versions/${ytdVersion}.json` : "/data/stocks-ytd.json", !ytdVersion).catch(() => undefined),
       get("/data/base-latest.json", true).catch(() => undefined),
+      p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/benchmarks-ytd.local.json", true).catch(() => undefined),
     ])
-      .then(([d, s, current, latest]) => {
+      .then(([d, s, current, latest, indices]) => {
+        if (indices?.kind === "benchmarks-ytd") setIndexYtd(indices);
         if (d.schemaVersion !== 1 || !d.benchmarks?.sp500)
           throw new Error("Invalid index data");
         if (
@@ -98,6 +101,13 @@ export default function App() {
           if (!p.has("start"))
             c.start = s?.startYear ? Math.max(s.startYear + 1, 2012) : 2012;
           if (!p.has("end")) c.end = s?.endYear ?? d.completeThrough;
+          const firstYear = (s?.startYear ?? 1996) + 1;
+          if (c.start < firstYear) {
+            c.start = firstYear;
+            c.end = Math.max(c.end, firstYear);
+            p.set("start", String(c.start)); p.set("end", String(c.end));
+            history.replaceState(null, "", "?" + p.toString() + location.hash);
+          }
           validateConfig(c);
           setConfig(c);
           setWeightDraft(Array.from({length: c.n}, (_, i) => String((c.weights?.[i] ?? 1 / c.n) * 100)));
@@ -129,10 +139,10 @@ export default function App() {
         : strategy(stocks, config);
     return [
       selected,
-      benchmark("sp500", data, config),
-      benchmark("nasdaq", data, config),
+      benchmark("sp500", data, config, indexYtd),
+      benchmark("nasdaq", data, config, indexYtd),
     ];
-  }, [data, config, stocks, base, privateData, ytd]);
+  }, [data, config, stocks, base, privateData, ytd, indexYtd]);
   const selected = results[0],
     sp = results[1],
     nas = results[2];
@@ -263,6 +273,7 @@ export default function App() {
     { length: new Date().getUTCFullYear() - 1958 + 1 },
     (_, i) => 1958 + i,
   );
+  const firstStartYear = privateData ? (privateData.startYear ?? 1957) + 1 : (base?.startYear ?? 1996) + 1;
   const allYears = config
     ? Array.from(
         { length: config.end - config.start + 1 },
@@ -315,7 +326,7 @@ export default function App() {
                 value={draft.start}
                 onChange={(e) => updateOptions({ ...draft, start: e.target.value })}
               >
-                {years.map((y) => (
+                {years.filter(y => y >= firstStartYear).map((y) => (
                   <option key={y}>{y}</option>
                 ))}
               </select>
@@ -326,7 +337,7 @@ export default function App() {
                 value={draft.end}
                 onChange={(e) => updateOptions({ ...draft, end: e.target.value })}
               >
-                {years.map((y) => (
+                {years.filter(y => y >= Math.max(firstStartYear, Number(draft.start))).map((y) => (
                   <option key={y}>{y}</option>
                 ))}
               </select>
@@ -373,7 +384,8 @@ export default function App() {
             <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
           </div>
           {latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
-          {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。两组指数基准暂截至 ${data.completeThrough}，不补造本年指数回报。` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. Both index benchmarks currently end in ${data.completeThrough}; no current-year index return is inferred.`}</p>}
+          <p className="minor">{lang === "zh" ? `当前策略最早支持 ${firstStartYear} 年，早期历史正在补充。` : `Strategy coverage starts in ${firstStartYear}; earlier history is being researched.`}</p>
+          {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。标普（含股息）截至 ${sp?.asOf ?? data.completeThrough}；纳指（价格）截至 ${nas?.asOf ?? data.completeThrough}。${indexYtd ? "指数本年数据仅限本地研究。" : "本年指数数据暂不可得。"}` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. S&P 500 (dividends included): ${sp?.asOf ?? data.completeThrough}; Nasdaq (price): ${nas?.asOf ?? data.completeThrough}. ${indexYtd ? "Index YTD is for local research only." : "Current-year index data unavailable."}`}</p>}
           {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{(base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 补充价格数据的复权及分红口径待核实" : " · Supplementary price adjustment/dividend treatment unverified")}</p>}
           {error && (
             <p role="alert" className="error">
@@ -531,6 +543,7 @@ export default function App() {
                   : ""}
               </p>
             )}
+            {indexYtd && <p>{lang === "zh" ? "本年标普数据使用 S&P 500 Total Return；纳指使用 NASDAQCOM。指数 YTD 仅用于本地研究，公开分发权限待核实。" : "Index YTD uses S&P 500 Total Return and NASDAQCOM. Local research only; redistribution permission remains unestablished."} <a href="https://finance.yahoo.com/quote/%5ESP500TR/history/" target="_blank" rel="noreferrer">S&P 500 TR / Yahoo Finance ↗</a></p>}
             <p>{t.missingNote}</p>
             <p>{lang === "zh" ? "完整历史母集尚未核验。" : "Full historical-universe completeness has not been verified."} <a href="/data/integrity.json" download>{lang === "zh" ? "下载逐年完整性审计 ↗" : "Download year-by-year integrity audit ↗"}</a></p>
             <div className="source-list">

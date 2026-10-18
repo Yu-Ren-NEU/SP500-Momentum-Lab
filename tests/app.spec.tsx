@@ -201,7 +201,7 @@ test("pinned old stock snapshot has a visible latest-data link", async () => {
   const link=screen.getByRole("link",{name:"加载最新数据 ↗"});
   expect(link.getAttribute("href")).not.toContain("base=");
   expect(link.getAttribute("href")).not.toContain("snapshot=");
-  expect(link.getAttribute("href")).toContain("start=1996");
+  expect(link.getAttribute("href")).toContain("start=1997");
 });
 
 
@@ -218,4 +218,15 @@ test("legacy stock URL loads the latest sample and continues beyond 2010", async
   expect(new URLSearchParams(location.search).get("base")).toBeNull();
   expect(document.querySelector(".summary-line")?.textContent).toContain("2026");
   expect(document.body.textContent).toContain("2025");
+});
+
+test("start-year choices match stock coverage and migrate unsupported older URLs", async () => {
+  const base = JSON.parse(readFileSync("public/data/stocks-base.json", "utf8"));
+  history.replaceState(null, "", "/?start=1958&end=2025&lang=en");
+  vi.mocked(fetch).mockImplementation(async input => ({ok:true,json:async()=>String(input).endsWith("stocks-base.json")?base:publicData}) as Response);
+  await mount();
+  const select = screen.getByRole("combobox",{name:"Start year"}) as HTMLSelectElement;
+  expect(select.options[0].value).toBe("1997");
+  expect(select.value).toBe("1997");
+  expect(new URLSearchParams(location.search).get("start")).toBe("1997");
 });

@@ -9,3 +9,6 @@ dist/
 
 # Reported market observations without established redistribution rights
 data/research/reported-evidence.json
+
+# Index YTD pending redistribution review (local development only)
+public/data/benchmarks-ytd.local.json
