@@ -23,7 +23,7 @@ Open http://127.0.0.1:5173. Keep the development server running, as explicitly r
 ## Backtest behavior
 
 - Initial capital defaults to USD 1. Top N defaults to 1 and accepts 1 through 10.
-- Changes update results immediately. The first row contains dates and capital; the second contains Top N and an editable rank-weight table. Weights default to equal allocation and must sum to 100%.
+- Changes update results immediately. Compact controls above the chart contain dates and capital; the curve builder below the chart contains Top N and an editable rank-weight table. Weights default to equal allocation and must sum to 100%.
 - At each year boundary, invest the entire portfolio balance in the previous year's top N stocks at the chosen rank weights. Hold for a year, then rebalance and reinvest all proceeds.
 - Fixed equal-weight Top 1 and Top 3 curves and both index references are shown by default. Set Top N and weights, then click Add curve to retain that allocation for comparison (up to five added curves). Added allocations do not change when draft weights are edited; all curves follow the global dates and initial capital. Each added curve has its own color and can be hidden or deleted from the legend. Deletion frees a slot. No custom curve is shown until added. The annual table and metrics preview the current settings, defaulting to Top 1 at 100%. Added comparison curves are retained for the current page session.
 - Annual details show positions, weights, returns, portfolio value, index returns and excess performance. Expand a year to inspect the preceding year's sample ranking, coverage and missing symbols.

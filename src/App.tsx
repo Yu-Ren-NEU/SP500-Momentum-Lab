@@ -383,32 +383,6 @@ export default function App() {
 
 
           </form>
-          <p className="minor">{lang === "zh" ? "设置 Top N 与权重后点击添加曲线，最多保留 5 条；已添加曲线的权重不随之后的编辑变化。" : "Set Top N and weights, then add a curve (up to 5). Added allocations stay fixed when you edit the controls."}</p>
-          <div className="weight-controls" role="group" aria-label={lang === "zh" ? "按排名分配权重" : "Weights by prior-year rank"}>
-            <label>
-              {t.n}
-              <select
-                value={draft.n}
-                onChange={(e) => updateOptions({ ...draft, n: e.target.value })}
-              >
-                {Array.from({ length: 10 }, (_, i) => (
-                  <option key={i} value={i + 1}>
-                    {i + 1}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <div className="weights-scroll">
-              <table className="weights-table">
-                <caption className="sr-only">{lang === "zh" ? "按上一年排名设置投资权重" : "Allocation by prior-year rank"}</caption>
-                <thead><tr><th scope="col">{lang === "zh" ? "排名" : "Rank"}</th>{weightDraft.map((_, i) => <th scope="col" key={i}>#{i + 1}</th>)}</tr></thead>
-                <tbody><tr><th scope="row">{lang === "zh" ? "权重 · %" : "Weight · %"}</th>{weightDraft.map((weight, i) => <td key={i}><input aria-label={`${lang === "zh" ? "第" : "Rank "}${i + 1}${lang === "zh" ? "名权重" : " weight"}`} type="number" min="0" max="100" step="any" value={weight} onChange={e => { const next = [...weightDraft]; next[i] = e.target.value; updateOptions(draft, next); }} /></td>)}</tr></tbody>
-              </table>
-            </div>
-            <button type="button" onClick={() => updateOptions(draft, Array.from({length: Number(draft.n)}, () => String(100 / Number(draft.n))))}>{lang === "zh" ? "恢复等权" : "Equal weights"}</button>
-            <button type="button" onClick={addCurve} disabled={!!error || !config || addedCurves.length>=5}>{lang === "zh" ? "添加曲线" : "Add curve"} ({addedCurves.length}/5)</button>
-            <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
-          </div>
           {!priceOnly && latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
           <p className="minor">{lang === "zh" ? `当前策略最早支持 ${firstStartYear} 年，早期历史正在补充。` : `Strategy coverage starts in ${firstStartYear}; earlier history is being researched.`}</p>
           {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。标普（含股息）截至 ${sp?.asOf ?? data.completeThrough}；纳指（价格）截至 ${nas?.asOf ?? data.completeThrough}。${indexYtd ? "指数本年数据仅限本地研究。" : "本年指数数据暂不可得。"}` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. S&P 500 (dividends included): ${sp?.asOf ?? data.completeThrough}; Nasdaq (price): ${nas?.asOf ?? data.completeThrough}. ${indexYtd ? "Index YTD is for local research only." : "Current-year index data unavailable."}`}</p>}
@@ -455,6 +429,34 @@ export default function App() {
               theme={theme}
             />
           )}
+          <div className="curve-builder">
+          <p className="minor">{lang === "zh" ? "设置 Top N 与权重后点击添加曲线，最多保留 5 条；已添加曲线的权重不随之后的编辑变化。" : "Set Top N and weights, then add a curve (up to 5). Added allocations stay fixed when you edit the controls."}</p>
+          <div className="weight-controls" role="group" aria-label={lang === "zh" ? "按排名分配权重" : "Weights by prior-year rank"}>
+            <label>
+              {t.n}
+              <select
+                value={draft.n}
+                onChange={(e) => updateOptions({ ...draft, n: e.target.value })}
+              >
+                {Array.from({ length: 10 }, (_, i) => (
+                  <option key={i} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="weights-scroll">
+              <table className="weights-table">
+                <caption className="sr-only">{lang === "zh" ? "按上一年排名设置投资权重" : "Allocation by prior-year rank"}</caption>
+                <thead><tr><th scope="col">{lang === "zh" ? "排名" : "Rank"}</th>{weightDraft.map((_, i) => <th scope="col" key={i}>#{i + 1}</th>)}</tr></thead>
+                <tbody><tr><th scope="row">{lang === "zh" ? "权重 · %" : "Weight · %"}</th>{weightDraft.map((weight, i) => <td key={i}><input aria-label={`${lang === "zh" ? "第" : "Rank "}${i + 1}${lang === "zh" ? "名权重" : " weight"}`} type="number" min="0" max="100" step="any" value={weight} onChange={e => { const next = [...weightDraft]; next[i] = e.target.value; updateOptions(draft, next); }} /></td>)}</tr></tbody>
+              </table>
+            </div>
+            <button type="button" onClick={() => updateOptions(draft, Array.from({length: Number(draft.n)}, () => String(100 / Number(draft.n))))}>{lang === "zh" ? "恢复等权" : "Equal weights"}</button>
+            <button type="button" onClick={addCurve} disabled={!!error || !config || addedCurves.length>=5}>{lang === "zh" ? "添加曲线" : "Add curve"} ({addedCurves.length}/5)</button>
+            <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
+          </div>
+          </div>
           <div className="summary-line">
             <div>
               <span>
