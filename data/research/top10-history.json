@@ -5,7 +5,7 @@
     2026
   ],
   "purpose": "Research catalogue; sample rankings are not full historical S&P 500 rankings.",
-  "baseVersion": "dfa68874e9975e30",
+  "baseVersion": "9c777259a931d77b",
   "updatePolicy": "Current-year YTD requires explicit source cutoff. Freeze only after final trading day and source reconciliation; corrections require a documented revision. Never overwrite history with current membership.",
   "years": {
     "1958": {
@@ -2484,7 +2484,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "fnspid + fja05680 historical snapshot",
-      "observedUniverseCount": 458,
+      "observedUniverseCount": 457,
       "rows": [
         {
           "id": "fnspid:AMD",
@@ -2576,7 +2576,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "fnspid + fja05680 historical snapshot",
-      "observedUniverseCount": 470,
+      "observedUniverseCount": 469,
       "rows": [
         {
           "id": "fnspid:AMD",
@@ -2619,20 +2619,12 @@
           "rank": 5
         },
         {
-          "id": "fnspid:IR",
-          "ticker": "IR",
-          "name": "IR",
-          "totalReturn": 0.9280330838034936,
-          "source": "fnspid-adjusted-close",
-          "rank": 6
-        },
-        {
           "id": "fnspid:QRVO",
           "ticker": "QRVO",
           "name": "QRVO",
           "totalReturn": 0.9138811828262616,
           "source": "fnspid-adjusted-close",
-          "rank": 7
+          "rank": 6
         },
         {
           "id": "fnspid:CPRT",
@@ -2640,7 +2632,7 @@
           "name": "CPRT",
           "totalReturn": 0.9033069226617607,
           "source": "fnspid-adjusted-close",
-          "rank": 8
+          "rank": 7
         },
         {
           "id": "fnspid:AMAT",
@@ -2648,13 +2640,21 @@
           "name": "AMAT",
           "totalReturn": 0.8985514905308718,
           "source": "fnspid-adjusted-close",
-          "rank": 9
+          "rank": 8
         },
         {
           "id": "fnspid:AAPL",
           "ticker": "AAPL",
           "name": "AAPL",
           "totalReturn": 0.8895780055178322,
+          "source": "fnspid-adjusted-close",
+          "rank": 9
+        },
+        {
+          "id": "fnspid:LDOS",
+          "ticker": "LDOS",
+          "name": "LDOS",
+          "totalReturn": 0.8882308164266925,
           "source": "fnspid-adjusted-close",
           "rank": 10
         }
@@ -2668,86 +2668,86 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "fnspid + fja05680 historical snapshot",
-      "observedUniverseCount": 329,
+      "observedUniverseCount": 416,
       "rows": [
+        {
+          "id": "fnspid:TSLA",
+          "ticker": "TSLA",
+          "name": "TSLA",
+          "totalReturn": 7.434369946079432,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 1
+        },
         {
           "id": "fnspid:NVDA",
           "ticker": "NVDA",
           "name": "NVDA",
-          "totalReturn": 1.2229569738049229,
-          "source": "fnspid-adjusted-close",
-          "rank": 1
+          "totalReturn": 1.2229570583304046,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 2
         },
         {
           "id": "fnspid:PYPL",
           "ticker": "PYPL",
           "name": "PYPL",
           "totalReturn": 1.1651104826909298,
-          "source": "fnspid-adjusted-close",
-          "rank": 2
-        },
-        {
-          "id": "fnspid:AMD",
-          "ticker": "AMD",
-          "name": "AMD",
-          "totalReturn": 0.9997818984714926,
-          "source": "fnspid-adjusted-close",
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
           "rank": 3
         },
         {
           "id": "fnspid:ALB",
           "ticker": "ALB",
           "name": "ALB",
-          "totalReturn": 0.9841622082286776,
-          "source": "fnspid-adjusted-close",
+          "totalReturn": 1.053850081574947,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
           "rank": 4
+        },
+        {
+          "id": "fnspid:AMD",
+          "ticker": "AMD",
+          "name": "AMD",
+          "totalReturn": 0.9997818984714926,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 5
+        },
+        {
+          "id": "fnspid:FCX",
+          "ticker": "FCX",
+          "name": "FCX",
+          "totalReturn": 0.9905879684577479,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 6
         },
         {
           "id": "fnspid:CDNS",
           "ticker": "CDNS",
           "name": "CDNS",
           "totalReturn": 0.9669837294583283,
-          "source": "fnspid-adjusted-close",
-          "rank": 5
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 7
         },
         {
           "id": "fnspid:NOW",
           "ticker": "NOW",
           "name": "NOW",
           "totalReturn": 0.9496669679654077,
-          "source": "fnspid-adjusted-close",
-          "rank": 6
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 8
         },
         {
           "id": "fnspid:ALGN",
           "ticker": "ALGN",
           "name": "ALGN",
           "totalReturn": 0.9150658992213447,
-          "source": "fnspid-adjusted-close",
-          "rank": 7
-        },
-        {
-          "id": "fnspid:WST",
-          "ticker": "WST",
-          "name": "WST",
-          "totalReturn": 0.8755717227913447,
-          "source": "fnspid-adjusted-close",
-          "rank": 8
-        },
-        {
-          "id": "fnspid:CTLT",
-          "ticker": "CTLT",
-          "name": "CTLT",
-          "totalReturn": 0.84849025053482,
-          "source": "fnspid-adjusted-close",
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
           "rank": 9
         },
         {
-          "id": "fnspid:PWR",
-          "ticker": "PWR",
-          "name": "PWR",
-          "totalReturn": 0.7635923706443155,
-          "source": "fnspid-adjusted-close",
+          "id": "fnspid:IDXX",
+          "ticker": "IDXX",
+          "name": "IDXX",
+          "totalReturn": 0.9142572120025598,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
           "rank": 10
         }
       ],
@@ -2760,7 +2760,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "fnspid + fja05680 historical snapshot",
-      "observedUniverseCount": 354,
+      "observedUniverseCount": 466,
       "rows": [
         {
           "id": "fnspid:DVN",
@@ -2779,12 +2779,20 @@
           "rank": 2
         },
         {
+          "id": "fnspid:MRNA",
+          "ticker": "MRNA",
+          "name": "MRNA",
+          "totalReturn": 1.4311284843481662,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 3
+        },
+        {
           "id": "fnspid:FTNT",
           "ticker": "FTNT",
           "name": "FTNT",
           "totalReturn": 1.419713147755186,
           "source": "fnspid-adjusted-close",
-          "rank": 3
+          "rank": 4
         },
         {
           "id": "fnspid:F",
@@ -2792,7 +2800,15 @@
           "name": "F",
           "totalReturn": 1.3748101594116608,
           "source": "fnspid-adjusted-close",
-          "rank": 4
+          "rank": 5
+        },
+        {
+          "id": "fnspid:BBWI",
+          "ticker": "BBWI",
+          "name": "BBWI",
+          "totalReturn": 1.3370327556224715,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 6
         },
         {
           "id": "fnspid:FANG",
@@ -2800,7 +2816,7 @@
           "name": "FANG",
           "totalReturn": 1.2750975929769486,
           "source": "fnspid-adjusted-close",
-          "rank": 5
+          "rank": 7
         },
         {
           "id": "fnspid:NVDA",
@@ -2808,7 +2824,7 @@
           "name": "NVDA",
           "totalReturn": 1.2548205432539805,
           "source": "fnspid-adjusted-close",
-          "rank": 6
+          "rank": 8
         },
         {
           "id": "fnspid:NUE",
@@ -2816,30 +2832,14 @@
           "name": "NUE",
           "totalReturn": 1.1844646385065745,
           "source": "fnspid-adjusted-close",
-          "rank": 7
-        },
-        {
-          "id": "fnspid:EXR",
-          "ticker": "EXR",
-          "name": "EXR",
-          "totalReturn": 1.0098226560794479,
-          "source": "fnspid-adjusted-close",
-          "rank": 8
-        },
-        {
-          "id": "fnspid:ANET",
-          "ticker": "ANET",
-          "name": "ANET",
-          "totalReturn": 0.9788690694370721,
-          "source": "fnspid-adjusted-close",
           "rank": 9
         },
         {
-          "id": "fnspid:APA",
-          "ticker": "APA",
-          "name": "APA",
-          "totalReturn": 0.9075946849205148,
-          "source": "fnspid-adjusted-close",
+          "id": "fnspid:IT",
+          "ticker": "IT",
+          "name": "IT",
+          "totalReturn": 1.0870216756910605,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
           "rank": 10
         }
       ],
@@ -2852,7 +2852,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "fnspid + fja05680 historical snapshot",
-      "observedUniverseCount": 363,
+      "observedUniverseCount": 484,
       "rows": [
         {
           "id": "fnspid:OXY",
@@ -2879,12 +2879,28 @@
           "rank": 3
         },
         {
+          "id": "fnspid:MPC",
+          "ticker": "MPC",
+          "name": "MPC",
+          "totalReturn": 0.8662282148365725,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 4
+        },
+        {
+          "id": "fnspid:SLB",
+          "ticker": "SLB",
+          "name": "SLB",
+          "totalReturn": 0.8115249214711178,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 5
+        },
+        {
           "id": "fnspid:APA",
           "ticker": "APA",
           "name": "APA",
           "totalReturn": 0.7644056034255406,
           "source": "fnspid-adjusted-close",
-          "rank": 4
+          "rank": 6
         },
         {
           "id": "fnspid:VLO",
@@ -2892,7 +2908,7 @@
           "name": "VLO",
           "totalReturn": 0.7495389676919777,
           "source": "fnspid-adjusted-close",
-          "rank": 5
+          "rank": 7
         },
         {
           "id": "fnspid:HAL",
@@ -2900,7 +2916,7 @@
           "name": "HAL",
           "totalReturn": 0.7445347845602595,
           "source": "fnspid-adjusted-close",
-          "rank": 6
+          "rank": 8
         },
         {
           "id": "fnspid:FSLR",
@@ -2908,29 +2924,13 @@
           "name": "FSLR",
           "totalReturn": 0.7185634120303537,
           "source": "fnspid-adjusted-close",
-          "rank": 7
+          "rank": 9
         },
         {
           "id": "fnspid:COP",
           "ticker": "COP",
           "name": "COP",
           "totalReturn": 0.716917687750197,
-          "source": "fnspid-adjusted-close",
-          "rank": 8
-        },
-        {
-          "id": "fnspid:MRO",
-          "ticker": "MRO",
-          "name": "MRO",
-          "totalReturn": 0.6691159546745549,
-          "source": "fnspid-adjusted-close",
-          "rank": 9
-        },
-        {
-          "id": "fnspid:CVX",
-          "ticker": "CVX",
-          "name": "CVX",
-          "totalReturn": 0.5846233551971853,
           "source": "fnspid-adjusted-close",
           "rank": 10
         }
@@ -2944,7 +2944,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified",
-      "observedUniverseCount": 442,
+      "observedUniverseCount": 473,
       "rows": [
         {
           "id": "fnspid:NVDA",
@@ -2971,12 +2971,20 @@
           "rank": 3
         },
         {
+          "id": "fnspid:BLDR",
+          "ticker": "BLDR",
+          "name": "BLDR",
+          "totalReturn": 1.5730580996997747,
+          "source": "chickenrobot-close-ratio-adjustment-unverified",
+          "rank": 4
+        },
+        {
           "id": "fnspid:UBER",
           "ticker": "UBER",
           "name": "Uber",
           "totalReturn": 1.4896886710276283,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 4
+          "rank": 5
         },
         {
           "id": "fnspid:CCL",
@@ -2984,7 +2992,7 @@
           "name": "Carnival Corporation",
           "totalReturn": 1.3002483512130376,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 5
+          "rank": 6
         },
         {
           "id": "fnspid:PHM",
@@ -2992,7 +3000,7 @@
           "name": "PulteGroup",
           "totalReturn": 1.2876194170571962,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 6
+          "rank": 7
         },
         {
           "id": "fnspid:AMD",
@@ -3000,7 +3008,7 @@
           "name": "Advanced Micro Devices",
           "totalReturn": 1.2758995106091229,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 7
+          "rank": 8
         },
         {
           "id": "fnspid:PANW",
@@ -3008,21 +3016,13 @@
           "name": "Palo Alto Networks",
           "totalReturn": 1.1132293182653967,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 8
+          "rank": 9
         },
         {
           "id": "fnspid:AVGO",
           "ticker": "AVGO",
           "name": "Broadcom",
           "totalReturn": 1.041842628928935,
-          "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 9
-        },
-        {
-          "id": "fnspid:TSLA",
-          "ticker": "TSLA",
-          "name": "Tesla, Inc.",
-          "totalReturn": 1.0172105464518206,
           "source": "kaggle-close-ratio-adjustment-unverified",
           "rank": 10
         }
@@ -3044,7 +3044,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified",
-      "observedUniverseCount": 458,
+      "observedUniverseCount": 486,
       "rows": [
         {
           "id": "fnspid:PLTR",

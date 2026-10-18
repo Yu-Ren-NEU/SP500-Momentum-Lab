@@ -21,7 +21,7 @@ Research date: 2026-10-18, Asia/Shanghai. Downloads and development run on the u
 
 ## Coverage and quality
 
-Annual sample rankings cover 1996-2025. The recent extension observes 442, 458 and 477 source members in 2023, 2024 and 2025. Current-year close ratios are stored separately with their actual source cutoff, 2026-10-15. No final 2026 annual return is asserted.
+Annual sample rankings cover 1996-2025. The recent extension observes 473, 486 and 477 source members in 2023, 2024 and 2025. Current-year close ratios are stored separately with their actual source cutoff, 2026-10-15. No final 2026 annual return is asserted.
 
 Exact year-end endpoints are required. Missing securities are disclosed rather than replaced. Current membership is never presented as historical membership; a source containing only survivors remains an incomplete sample even after the historical intersection.
 
@@ -34,3 +34,9 @@ The initial sample stops before the last trading day in much of 2023, so those o
 The complete 1957 signal universe and 1958-present historical stock rankings remain unavailable. Full delisting, merger, bankruptcy, spinoff, permanent-identifier and cash-settlement handling is unresolved. Partial reported lists and long-period winners must not be promoted into complete annual rankings. No today's-constituent backfill, invented returns, zero filling or arbitrary delisting assumptions are allowed.
 
 Source hashes, conventions and coverage accompany snapshots. Research observations with unresolved redistribution rights remain local; the public repository keeps links and methodological notes. Index arithmetic and synthetic strategy tests can be reproduced, but they do not establish the validity of a full historical strategy.
+
+## Additional historical donor and review
+
+The [Chickenrobot historical snapshot](https://www.kaggle.com/datasets/chickenrobot/historical-stocks-of-companies-of-the-sp-and-500) was downloaded with its uploader CC0 declaration. It supplies exact endpoints missing from the newer survivor dataset, including HES and BLDR. Its columns pack OHLCV, dividends and split fields into strings; zero/empty cells are missing observations, never actual zero prices.
+
+The [Andrew MVD dataset](https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks) was also downloaded. Its QRVO year-end rows contain empty prices, so it does not fill that holding gap. No number was inferred from the row dates alone. See [integrity review](INTEGRITY-REVIEW.md).

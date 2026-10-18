@@ -1,0 +1,5339 @@
+{
+  "sourceUrl": "https://www.kaggle.com/datasets/chickenrobot/historical-stocks-of-companies-of-the-sp-and-500",
+  "sourceSha256": "7eedbf978fab3b203760bd71db60f870d5aac5e4cdac768c4f0a7b3cc9fc609a",
+  "added": [
+    {
+      "year": 2020,
+      "ticker": "AAPL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AMZN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GOOGL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GOOG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "META",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "TSLA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "UNH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CSCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MCD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NFLX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "INTU",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NEE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BMY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SPGI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "RTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HON",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SBUX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ELV",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "MDT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BLK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ISRG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MDLZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SCHW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CVS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SLB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BDX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "SO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EQIX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PANW",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "SNPS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ITW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LULU",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "SHW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CSX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MPC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MCK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FCX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MMM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MAR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "APH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NXPI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "EW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TDG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ANET",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SRE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MCHP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WMB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "STZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IDXX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TEL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MET",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IQV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DXCM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HLT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "O",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FTNT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DLR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MRNA",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "CPRT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "YUM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CNC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AMP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CSGP",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "PPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HSY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KDP",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "WBD",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "IR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CDW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MLM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WEC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CBRE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SBAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KEYS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "STT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "STE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WTW",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "CTRA",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "MKC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "INVH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "TDY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MOH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "PPL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NDAQ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HWM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IRM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EXPD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IEX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MAA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IFF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BALL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "STLD",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "UAL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "OMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CCL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EG",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "TXT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SJM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PTC",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "RVTY",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "AMCR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PAYC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SNA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AXON",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "SYF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VTRS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LKQ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MGM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MAS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "STX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KMX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TECH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "WRB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "UDR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GEN",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "JKHY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CZR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "NI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TKO",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "WYNN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MKTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DELL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "HII",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BBWI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "PARA",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "SMCI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "IVZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MHK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MSFT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NVDA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LLY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "JPM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "XOM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "JNJ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "V",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AVGO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CVX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MRK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ABBV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PEP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "COST",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ADBE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WMT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TMO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PFE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CRM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ACN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CMCSA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LIN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ABT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ORCL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DHR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AMD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WFC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DIS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TXN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "COP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CAT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AMGN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "INTC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "UNP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LOW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "IBM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "UPS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "QCOM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AMAT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NKE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PLD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NOW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BKNG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ADP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LMT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TJX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "T",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GILD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AXP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SYK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "REGN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VRTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ETN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LRCX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ADI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ZTS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AMT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "C",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PGR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TMUS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EOG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BSX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CME",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MU",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DUK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PYPL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AON",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KLAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ICE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "APD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CDNS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NOC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HUM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FDX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TGT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ORLY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HCA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EMR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ROP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CMG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PSX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "USB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AJG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NSC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PNC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VLO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "F",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MSI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AZO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ADSK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ECL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PCAR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ADM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MNST",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KMB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PSA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CCI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CHTR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MSCI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CTAS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AIG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HES",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NUE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ROST",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AFL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AEP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "D",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "JCI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GIS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EXC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WELL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ON",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "COF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PAYX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TFC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BIIB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DOW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TRV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ODFL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DHI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CTSH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AME",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BKR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SYY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "A",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CTVA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HAL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ROK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PRU",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KMI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VRSK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LHX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FIS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CMI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FAST",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GPN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GWW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "XEL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DVN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NEM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ED",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "URI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VICI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "PEG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "RSG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LEN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PWR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WST",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "COR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "OKE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ACGL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "ALL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FANG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PCG",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "DAL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EXR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FTV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AWK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "KHC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HPQ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EIX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "APTV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ANSS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MTD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DLTR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AVB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GDDY",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "ALGN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LYB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TROW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GLW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EFX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ZBH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "XYL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "RMD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TSCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EBAY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CHD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HIG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ALB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ES",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TTWO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MPWR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "CAH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EQR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "RCL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HPE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DTE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GPC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ULTA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FICO",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "BAX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AEE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MTB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ETR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WAB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DOV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "RJF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CLX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DRI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HOLX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VRSN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LUV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ARE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NVR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "COO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WBA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PHM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "RF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CNP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LVS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FITB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "VTR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FSLR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "PFG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BRO",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "WDAY",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "BG",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "ATO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FDS",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "ENPH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "CMS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SWKS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CINF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NTAP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WAT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TER",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "JBHT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TPL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "TYL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HBAN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "K",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GRMN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CBOE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NTRS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TSN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AKAM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ESS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EQT",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "EXPE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DGX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AVY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BBY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CAG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EPAM",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "LW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "POOL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "SWK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ZBRA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DPZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PKG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CFG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LDOS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PODD",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "MOS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EVRG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TRMB",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "NDSN",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "WDC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "LNT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "MTCH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "LYV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AES",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "WSM",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "INCY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "L",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TAP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CPT",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "KIM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HRL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HST",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "PNR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CHRW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HSIC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CRL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "REG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "APO",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "KEY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "EMN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ALLE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FFIV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BXP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ROL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "DDOG",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "PNW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BLDR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "FOXA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AOS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "HAS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NRG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CPB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "UHS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "ERIE",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "KKR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "LII",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "NWSA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "TPR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BEN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "AIZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "NCLH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "GNRC",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "FRT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "CRWD",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "DVA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "JBL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "HUBB",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "DECK",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "UBER",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "RL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "FOX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2020,
+      "ticker": "BX",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2020,
+      "ticker": "NWS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "GOOGL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "FB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "UNH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "HD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CSCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MCD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "BAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "NFLX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "VZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "INTU",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "BMY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SPGI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "RTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "HON",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SBUX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "ELV",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "MDT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "BLK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "ISRG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MDLZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SCHW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CVS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SLB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "BDX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "EQIX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SNPS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "ITW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "LULU",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "SHW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MPC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "WM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MCK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "FCX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MMM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MAR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "GD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "NXPI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "TDG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SRE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MCHP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "WMB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "STZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IDXX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "TEL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MET",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IQV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "HLT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "O",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "DLR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MRNA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "YUM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CNC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "AMP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "DG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "HSY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "KR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "KDP",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "WBD",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "IR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CDW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MLM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "WEC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CBRE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SBAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "KEYS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "STT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "STE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "WTW",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "MKC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "FE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "INVH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "TDY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MOH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "PPL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "HWM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IRM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "EXPD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IEX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MAA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IFF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "BALL",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "STLD",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "UAL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "OMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "CCL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "EG",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "TXT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SJM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PTC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "RVTY",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "AMCR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PAYC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "SNA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "AXON",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "SYF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "VTRS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "LKQ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MGM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MAS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "STX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "KMX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "WRB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "IP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "UDR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "JKHY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "NI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "TKO",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "WYNN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MKTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "HII",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "BBWI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PARA",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "SMCI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "IVZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "MHK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2021,
+      "ticker": "PLTR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "DASH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2021,
+      "ticker": "ABNB",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "GOOGL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "META",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "UNH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "HD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CSCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MCD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "BAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "NFLX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "VZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "INTU",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "BMY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SPGI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "RTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "HON",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SBUX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "ELV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MDT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "BLK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "ISRG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MDLZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SCHW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CVS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SLB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "BDX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "EQIX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SNPS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "ITW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "LULU",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "SHW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MPC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "WM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MCK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "FCX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MMM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MCO",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MAR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "GD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "NXPI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "TDG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SRE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MCHP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "WMB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "STZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IDXX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "TEL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MET",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IQV",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "HLT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "O",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "DLR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MRNA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "YUM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CNC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "AMP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "DG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "HSY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "KR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "KDP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "WBD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CDW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MLM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "WEC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CBRE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SBAC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "KEYS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "STT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "STE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "WTW",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MKC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "FE",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "INVH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "TDY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MOH",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PPL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "HWM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IRM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "EXPD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IEX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MAA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IFF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "BALL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "STLD",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "UAL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "OMC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "CCL",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "EG",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "TXT",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SJM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PTC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "RVTY",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "AMCR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PAYC",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SNA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "AXON",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "SYF",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "VTRS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "LKQ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MGM",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MAS",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IPG",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "STX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "KMX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "WRB",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "IP",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "UDR",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "JKHY",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "NI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "TKO",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "WYNN",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MKTX",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "HII",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "BBWI",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PARA",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "SMCI",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "IVZ",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "MHK",
+      "inHistoricalYearEndUniverse": true
+    },
+    {
+      "year": 2022,
+      "ticker": "PLTR",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "DASH",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "ABNB",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "COIN",
+      "inHistoricalYearEndUniverse": false
+    },
+    {
+      "year": 2022,
+      "ticker": "EXE",
+      "inHistoricalYearEndUniverse": false
+    }
+  ],
+  "crossSourceConflicts": [
+    {
+      "year": 2023,
+      "ticker": "CTAS",
+      "differencePercentagePoints": 1.0417672658279864
+    },
+    {
+      "year": 2023,
+      "ticker": "FAST",
+      "differencePercentagePoints": 2.816577065205217
+    },
+    {
+      "year": 2023,
+      "ticker": "ETR",
+      "differencePercentagePoints": 3.053429855581802
+    },
+    {
+      "year": 2024,
+      "ticker": "CTAS",
+      "differencePercentagePoints": 0.52166307634125
+    },
+    {
+      "year": 2024,
+      "ticker": "FAST",
+      "differencePercentagePoints": 1.898483756841296
+    },
+    {
+      "year": 2024,
+      "ticker": "TSCO",
+      "differencePercentagePoints": 1.568690519624072
+    },
+    {
+      "year": 2024,
+      "ticker": "ETR",
+      "differencePercentagePoints": 6.099146013810608
+    },
+    {
+      "year": 2024,
+      "ticker": "CBOE",
+      "differencePercentagePoints": 1.312479982787762
+    },
+    {
+      "year": 2020,
+      "ticker": "MSFT",
+      "differencePercentagePoints": 4.424088855821151,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LLY",
+      "differencePercentagePoints": 6.193798248388127,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JPM",
+      "differencePercentagePoints": 8.517021264466361,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "XOM",
+      "differencePercentagePoints": 10.269038667889841,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JNJ",
+      "differencePercentagePoints": 9.970668932618887,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "V",
+      "differencePercentagePoints": 2.8444818259475646,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AVGO",
+      "differencePercentagePoints": 15.2512902097933,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CVX",
+      "differencePercentagePoints": 11.483029967826997,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MRK",
+      "differencePercentagePoints": 13.47511681723037,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ABBV",
+      "differencePercentagePoints": 19.441444424776,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PEP",
+      "differencePercentagePoints": 10.401216795541846,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COST",
+      "differencePercentagePoints": 9.771340392317862,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KO",
+      "differencePercentagePoints": 10.409961788995325,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WMT",
+      "differencePercentagePoints": 7.537466208364907,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PFE",
+      "differencePercentagePoints": 17.601735720508373,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ACN",
+      "differencePercentagePoints": 6.585683773944218,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CMCSA",
+      "differencePercentagePoints": 9.586850663916312,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LIN",
+      "differencePercentagePoints": 7.383000314305943,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ABT",
+      "differencePercentagePoints": 7.8408014144532245,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ORCL",
+      "differencePercentagePoints": 6.746879851382714,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DHR",
+      "differencePercentagePoints": 18.448769760223072,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WFC",
+      "differencePercentagePoints": 5.920093329471554,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TXN",
+      "differencePercentagePoints": 13.840536298891703,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COP",
+      "differencePercentagePoints": 8.94984240011426,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CAT",
+      "differencePercentagePoints": 9.494704934277065,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AMGN",
+      "differencePercentagePoints": 10.719742721073489,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "INTC",
+      "differencePercentagePoints": 8.242613919987352,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "UNP",
+      "differencePercentagePoints": 8.623527825239119,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LOW",
+      "differencePercentagePoints": 8.019141936794005,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "IBM",
+      "differencePercentagePoints": 20.43832309176532,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "UPS",
+      "differencePercentagePoints": 14.852716103962994,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "QCOM",
+      "differencePercentagePoints": 12.907420469259613,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AMAT",
+      "differencePercentagePoints": 5.038085558327721,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NKE",
+      "differencePercentagePoints": 4.881843622317317,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PLD",
+      "differencePercentagePoints": 9.297365654638835,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MS",
+      "differencePercentagePoints": 15.524131447386115,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GS",
+      "differencePercentagePoints": 9.691493185133249,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DE",
+      "differencePercentagePoints": 7.421082482391128,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ADP",
+      "differencePercentagePoints": 7.944175451766011,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LMT",
+      "differencePercentagePoints": 8.520708696254143,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TJX",
+      "differencePercentagePoints": 5.266694754933576,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "T",
+      "differencePercentagePoints": 34.91406844540348,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GILD",
+      "differencePercentagePoints": 12.676367421580792,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AXP",
+      "differencePercentagePoints": 4.6193067445274405,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SYK",
+      "differencePercentagePoints": 4.474072670739049,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ETN",
+      "differencePercentagePoints": 9.193381898841535,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LRCX",
+      "differencePercentagePoints": 5.736822747029824,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ADI",
+      "differencePercentagePoints": 8.476859056009879,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ZTS",
+      "differencePercentagePoints": 3.0483086979871343,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CI",
+      "differencePercentagePoints": 5.193622033707356,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AMT",
+      "differencePercentagePoints": 9.267387065989574,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "C",
+      "differencePercentagePoints": 11.018254687953387,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PGR",
+      "differencePercentagePoints": 14.035768901355494,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TMUS",
+      "differencePercentagePoints": 0.7474373442421856,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EOG",
+      "differencePercentagePoints": 11.391864390414796,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CME",
+      "differencePercentagePoints": 13.310771811804544,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MU",
+      "differencePercentagePoints": 2.181755069942759,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DUK",
+      "differencePercentagePoints": 14.909557992631129,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AON",
+      "differencePercentagePoints": 3.0350360126586318,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KLAC",
+      "differencePercentagePoints": 6.465316717011227,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "APD",
+      "differencePercentagePoints": 9.147008985159033,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NOC",
+      "differencePercentagePoints": 5.016895308373748,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CL",
+      "differencePercentagePoints": 10.884068021171922,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HUM",
+      "differencePercentagePoints": 2.6495493691703675,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FDX",
+      "differencePercentagePoints": 10.52332419835702,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TGT",
+      "differencePercentagePoints": 10.211677190695333,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HCA",
+      "differencePercentagePoints": 3.6948211237997297,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EMR",
+      "differencePercentagePoints": 9.521652174565654,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROP",
+      "differencePercentagePoints": 2.3671770066337805,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PSX",
+      "differencePercentagePoints": 9.55173636906681,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PH",
+      "differencePercentagePoints": 7.127785175386525,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "USB",
+      "differencePercentagePoints": 11.209875098781307,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AJG",
+      "differencePercentagePoints": 5.646479344352806,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NSC",
+      "differencePercentagePoints": 8.370094152740837,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VLO",
+      "differencePercentagePoints": 9.392844171667047,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "F",
+      "differencePercentagePoints": 12.302508779615495,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MSI",
+      "differencePercentagePoints": 5.06574863502629,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GM",
+      "differencePercentagePoints": 1.732741576266661,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TT",
+      "differencePercentagePoints": 38.022675650695284,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ECL",
+      "differencePercentagePoints": 4.597863486584153,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ADM",
+      "differencePercentagePoints": 9.785844053939762,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MNST",
+      "differencePercentagePoints": 72.76160855010828,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KMB",
+      "differencePercentagePoints": 11.555292471108125,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PSA",
+      "differencePercentagePoints": 15.943795775137037,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CCI",
+      "differencePercentagePoints": 15.592332848506274,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MSCI",
+      "differencePercentagePoints": 6.0566440341220495,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CTAS",
+      "differencePercentagePoints": 5.217470331491847,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AIG",
+      "differencePercentagePoints": 7.39490278699555,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HES",
+      "differencePercentagePoints": 3.805013054991324,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NUE",
+      "differencePercentagePoints": 6.057631636283145,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROST",
+      "differencePercentagePoints": 3.630902401719349,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AFL",
+      "differencePercentagePoints": 7.856497312100307,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AEP",
+      "differencePercentagePoints": 11.429323413792215,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "D",
+      "differencePercentagePoints": 13.527122033643357,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JCI",
+      "differencePercentagePoints": 8.924553442095151,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GIS",
+      "differencePercentagePoints": 11.686840810942334,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EXC",
+      "differencePercentagePoints": 35.939830324608394,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COF",
+      "differencePercentagePoints": 6.596690443120279,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PAYX",
+      "differencePercentagePoints": 10.40613228795484,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TFC",
+      "differencePercentagePoints": 12.755345239570948,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DOW",
+      "differencePercentagePoints": 17.234104071800605,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TRV",
+      "differencePercentagePoints": 8.099718923391052,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ODFL",
+      "differencePercentagePoints": 1.9943535952147373,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DHI",
+      "differencePercentagePoints": 5.034170301122165,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CTSH",
+      "differencePercentagePoints": 7.250353983738256,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AME",
+      "differencePercentagePoints": 3.0063962455452398,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BKR",
+      "differencePercentagePoints": 9.230675679054666,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SYY",
+      "differencePercentagePoints": 7.035331933072464,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "A",
+      "differencePercentagePoints": 3.183961198056129,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CTVA",
+      "differencePercentagePoints": 5.503643646392242,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EL",
+      "differencePercentagePoints": 4.6747747585518695,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HAL",
+      "differencePercentagePoints": 4.551641345164404,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROK",
+      "differencePercentagePoints": 7.341324601949983,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PRU",
+      "differencePercentagePoints": 14.414882853914612,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DD",
+      "differencePercentagePoints": 7.828814761056835,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KMI",
+      "differencePercentagePoints": 15.264790193854394,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VRSK",
+      "differencePercentagePoints": 3.057998142212437,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LHX",
+      "differencePercentagePoints": 7.106852621389392,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FIS",
+      "differencePercentagePoints": 7.640161395552802,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CMI",
+      "differencePercentagePoints": 12.253537253633716,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FAST",
+      "differencePercentagePoints": 17.08290481399728,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GPN",
+      "differencePercentagePoints": 3.1574654411473,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GWW",
+      "differencePercentagePoints": 5.602300477736422,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BK",
+      "differencePercentagePoints": 9.803049758854032,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "XEL",
+      "differencePercentagePoints": 10.42340260042357,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DVN",
+      "differencePercentagePoints": 14.136374685088803,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EA",
+      "differencePercentagePoints": 2.401826422575848,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NEM",
+      "differencePercentagePoints": 17.24862083370131,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ED",
+      "differencePercentagePoints": 10.911363483482905,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "URI",
+      "differencePercentagePoints": 1.93921376299393,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VICI",
+      "differencePercentagePoints": 16.94144837002176,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PEG",
+      "differencePercentagePoints": 11.758168573527627,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RSG",
+      "differencePercentagePoints": 5.780065643231946,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LEN",
+      "differencePercentagePoints": 6.374916991958646,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PWR",
+      "differencePercentagePoints": 1.383143375326057,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WST",
+      "differencePercentagePoints": 1.4922537157732174,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COR",
+      "differencePercentagePoints": 32.222264015625555,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "OKE",
+      "differencePercentagePoints": 12.749709894828442,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VMC",
+      "differencePercentagePoints": 3.7632116897779344,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ALL",
+      "differencePercentagePoints": 9.453381059786036,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FANG",
+      "differencePercentagePoints": 8.396612052049901,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EXR",
+      "differencePercentagePoints": 13.970521287570193,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FTV",
+      "differencePercentagePoints": 19.665522996717243,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AWK",
+      "differencePercentagePoints": 7.749951965755852,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KHC",
+      "differencePercentagePoints": 15.902006657345124,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HPQ",
+      "differencePercentagePoints": 13.02088711193512,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EIX",
+      "differencePercentagePoints": 13.411565157754623,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AVB",
+      "differencePercentagePoints": 9.792704555163322,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LYB",
+      "differencePercentagePoints": 20.125932092786492,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TROW",
+      "differencePercentagePoints": 16.428243422053157,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GLW",
+      "differencePercentagePoints": 12.434430395082764,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EFX",
+      "differencePercentagePoints": 4.012177886165169,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WY",
+      "differencePercentagePoints": 15.275394386027596,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ZBH",
+      "differencePercentagePoints": 5.5957243576229665,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "XYL",
+      "differencePercentagePoints": 6.195216431880013,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RMD",
+      "differencePercentagePoints": 3.882381465798601,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TSCO",
+      "differencePercentagePoints": 7.072080464984665,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EBAY",
+      "differencePercentagePoints": 8.566608273026223,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CHD",
+      "differencePercentagePoints": 5.4278382942322345,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HIG",
+      "differencePercentagePoints": 6.689217614075671,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ALB",
+      "differencePercentagePoints": 6.968787334626936,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ES",
+      "differencePercentagePoints": 11.639326793372707,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MPWR",
+      "differencePercentagePoints": 4.992972722911793,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CAH",
+      "differencePercentagePoints": 11.833247172028205,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EQR",
+      "differencePercentagePoints": 9.373402213245086,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HPE",
+      "differencePercentagePoints": 8.623566545920857,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DTE",
+      "differencePercentagePoints": 24.03363460083434,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GPC",
+      "differencePercentagePoints": 10.239749733628766,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BR",
+      "differencePercentagePoints": 7.866093650979256,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BAX",
+      "differencePercentagePoints": 6.491862393543046,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AEE",
+      "differencePercentagePoints": 10.223184274743947,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MTB",
+      "differencePercentagePoints": 8.52909749183597,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ETR",
+      "differencePercentagePoints": 10.803836960719837,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WAB",
+      "differencePercentagePoints": 2.0567783355280533,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DOV",
+      "differencePercentagePoints": 6.009805105551358,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RJF",
+      "differencePercentagePoints": 39.671635724621915,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CLX",
+      "differencePercentagePoints": 13.233728790462806,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DRI",
+      "differencePercentagePoints": 10.080729160232504,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LH",
+      "differencePercentagePoints": 19.413112413698897,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LUV",
+      "differencePercentagePoints": 2.684686272684711,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ARE",
+      "differencePercentagePoints": 12.52625355742456,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WBA",
+      "differencePercentagePoints": 11.363282684642117,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PHM",
+      "differencePercentagePoints": 4.412914698820614,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RF",
+      "differencePercentagePoints": 12.445516163835112,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CNP",
+      "differencePercentagePoints": 7.740512694359292,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LVS",
+      "differencePercentagePoints": 0.6632553483842396,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FITB",
+      "differencePercentagePoints": 13.161693460864809,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VTR",
+      "differencePercentagePoints": 10.234174048133838,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PFG",
+      "differencePercentagePoints": 11.705527844600027,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BRO",
+      "differencePercentagePoints": 3.290750643205831,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BG",
+      "differencePercentagePoints": 11.930719950625068,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ATO",
+      "differencePercentagePoints": 7.935124234916479,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FDS",
+      "differencePercentagePoints": 4.139020373044899,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CMS",
+      "differencePercentagePoints": 10.452883139970904,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SWKS",
+      "differencePercentagePoints": 8.300351574399123,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CINF",
+      "differencePercentagePoints": 8.193227722432939,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NTAP",
+      "differencePercentagePoints": 10.936847609775935,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TER",
+      "differencePercentagePoints": 2.4316414376456708,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JBHT",
+      "differencePercentagePoints": 3.7171814576252737,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TPL",
+      "differencePercentagePoints": 4.7171010778077616,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HBAN",
+      "differencePercentagePoints": 13.638462039933575,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "K",
+      "differencePercentagePoints": 17.224268702815927,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GRMN",
+      "differencePercentagePoints": 12.0707022435381,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CBOE",
+      "differencePercentagePoints": 1.2268544310147678,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NTRS",
+      "differencePercentagePoints": 9.258353773357387,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TSN",
+      "differencePercentagePoints": 6.698759634047214,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ESS",
+      "differencePercentagePoints": 9.362052912366481,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EQT",
+      "differencePercentagePoints": 3.788045032999854,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DGX",
+      "differencePercentagePoints": 8.299087056212095,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AVY",
+      "differencePercentagePoints": 7.1210371850370935,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BBY",
+      "differencePercentagePoints": 14.8533294778886,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CF",
+      "differencePercentagePoints": 7.308818614646729,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CAG",
+      "differencePercentagePoints": 13.389333896420098,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LW",
+      "differencePercentagePoints": 4.108897019657887,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "POOL",
+      "differencePercentagePoints": 6.631635313736739,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SWK",
+      "differencePercentagePoints": 9.615510255531845,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DPZ",
+      "differencePercentagePoints": 4.950132094880955,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CFG",
+      "differencePercentagePoints": 13.835441367260493,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LDOS",
+      "differencePercentagePoints": 5.471902728028399,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MOS",
+      "differencePercentagePoints": 5.156270289748122,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EVRG",
+      "differencePercentagePoints": 11.82426986102476,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NDSN",
+      "differencePercentagePoints": 4.137282774637163,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LNT",
+      "differencePercentagePoints": 9.901513498438963,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AES",
+      "differencePercentagePoints": 12.829425324050202,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WSM",
+      "differencePercentagePoints": 10.274251213645114,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "L",
+      "differencePercentagePoints": 1.537595351278731,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CPT",
+      "differencePercentagePoints": 11.858751948760881,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KIM",
+      "differencePercentagePoints": 9.964761083222207,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HRL",
+      "differencePercentagePoints": 9.135814887952042,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HST",
+      "differencePercentagePoints": 6.434665197711221,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PNR",
+      "differencePercentagePoints": 6.0147413413072615,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CHRW",
+      "differencePercentagePoints": 10.80988890925103,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "REG",
+      "differencePercentagePoints": 10.35887153483901,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "APO",
+      "differencePercentagePoints": 11.855028129258338,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KEY",
+      "differencePercentagePoints": 15.128716703921153,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GL",
+      "differencePercentagePoints": 2.401893198002847,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EMN",
+      "differencePercentagePoints": 15.051234161205818,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ALLE",
+      "differencePercentagePoints": 4.189903273834039,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BXP",
+      "differencePercentagePoints": 11.897800220249232,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROL",
+      "differencePercentagePoints": 64.41124301663204,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PNW",
+      "differencePercentagePoints": 13.331404508266187,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FOXA",
+      "differencePercentagePoints": 3.7614480393769245,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AOS",
+      "differencePercentagePoints": 7.821153540457515,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HAS",
+      "differencePercentagePoints": 12.00548157523812,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NRG",
+      "differencePercentagePoints": 11.780011009692693,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CPB",
+      "differencePercentagePoints": 11.08890223170642,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "UHS",
+      "differencePercentagePoints": 1.7187348321163531,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ERIE",
+      "differencePercentagePoints": 12.546510466496198,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KKR",
+      "differencePercentagePoints": 6.200663015928565,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LII",
+      "differencePercentagePoints": 5.636136215030407,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NWSA",
+      "differencePercentagePoints": 4.644264380965235,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TPR",
+      "differencePercentagePoints": 8.82559561440952,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BEN",
+      "differencePercentagePoints": 14.527565567845958,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AIZ",
+      "differencePercentagePoints": 7.36686120222404,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FRT",
+      "differencePercentagePoints": 9.599132021030032,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JBL",
+      "differencePercentagePoints": 1.957747312277336,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HUBB",
+      "differencePercentagePoints": 7.339949981290084,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RL",
+      "differencePercentagePoints": 6.219817792891302,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FOX",
+      "differencePercentagePoints": 4.0460223322003275,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BX",
+      "differencePercentagePoints": 14.93562585805921,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NWS",
+      "differencePercentagePoints": 4.470332038203972,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    }
+  ],
+  "identityQuarantine": {
+    "ticker": "IR",
+    "years": [
+      2017,
+      2018,
+      2019
+    ],
+    "sourceUrl": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2020/Trane-Technologies-Completes-Reverse-Morris-Trust-Transaction-and-Begins-Trading-Today-on-NYSE/default.aspx"
+  },
+  "baseVersion": "9c777259a931d77b"
+}

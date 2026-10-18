@@ -39,7 +39,7 @@ Open http://127.0.0.1:5173. Keep the development server running, as explicitly r
 | NYU Damodaran | 1958-2025, 68 complete years | S&P annual returns including dividends; not licensed official S&P TRI levels |
 | Nasdaq through FRED | 1972-2025, 54 complete years | Nasdaq Composite price return excluding dividends; 1971 starts in February |
 | FNSPID and fja05680 historical membership | 1996-2022 signal years | Historical year-end members intersected with exact adjusted-close year-end endpoints |
-| Darkmatternet Kaggle dataset and historical members | 2023-2025; 442/458/477 available members | Uploader declares CC0. Close ratios have undocumented dividend/adjustment treatment |
+| Darkmatternet Kaggle dataset and historical members | 2023-2025; 473/486/477 available members | Uploader declares CC0. Close ratios have undocumented dividend/adjustment treatment |
 | Separate current-year sample | 2026 through 2026-10-15 | Available close ratios only; explicitly YTD, not a final annual result |
 
 FNSPID is attributed to Dong, Fan and Peng (2024), under its CC BY-NC 4.0 terms for non-commercial research. The membership reconstruction is MIT licensed. Source links, uploader license declarations and hashes accompany published snapshots. License copies are in `docs/licenses/`.
@@ -67,6 +67,8 @@ python3 scripts/review_events.py
 npm run update:catalogue
 npm run validate
 ```
+
+The historical supplement and integrity audit are described in [integrity review](docs/INTEGRITY-REVIEW.md). Run `npm run supplement:history` after the original and recent builders, then `npm run update:catalogue`. The audit records every requested year, source conflicts, identity quarantines and missing next-year holding returns.
 
 The recent extension reads `data/raw/base/kaggle-recent.zip` and `kaggle-metadata.json`. Its script records the public Kaggle dataset URL, source hash and uploader license declaration. Raw downloads and private inputs are ignored by Git and excluded from the production website.
 

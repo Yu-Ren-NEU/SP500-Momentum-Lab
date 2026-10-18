@@ -2,7 +2,7 @@
 
 `data/research/top10-history.json` is a dedicated static catalogue for 1958–2026. Rebuild with `python3 scripts/build_top10_history.py`.
 
-Coverage now includes 300 sample ranking rows across 1996–2025, plus ten 2026 YTD sample rows as of the actual source endpoint 2026-10-15. These are incomplete available-sample rankings, not certified historical S&P top tens. The 2023–2025 source has 442/458/477 historical year-end members with complete endpoints. Its close adjustment and dividend convention is undocumented. A current survivor-price dataset is intersected with actual historical members, never used as a substitute for the historic universe.
+Coverage now includes 300 sample ranking rows across 1996–2025, plus ten 2026 YTD sample rows as of the actual source endpoint 2026-10-15. These are incomplete available-sample rankings, not certified historical S&P top tens. The 2023–2025 source has 473/486/477 historical year-end members with complete endpoints. Its close adjustment and dividend convention is undocumented. A current survivor-price dataset is intersected with actual historical members, never used as a substitute for the historic universe.
 
 The 2026 close-ratio sample has 492 eligible symbols. It is stored separately from complete-year records and may extend a requested current-year strategy with an explicit YTD cutoff. Sample dates, source hash, excluded securities and reported evidence stay explicit. Some YTD screens report materially different numbers; no attempt is made to average or silently reconcile them.
 
@@ -13,3 +13,5 @@ Historical observations for 1980, 1982 and 1991 are partial author-reported top-
 Reproduce the recent extension with `python3 scripts/extend_recent.py` after downloading the public dataset ZIP and metadata into `data/raw/base/kaggle-recent.zip` and `kaggle-metadata.json`. Source URL is recorded in the script; uploader declares CC0. No raw daily prices are published. Both year-end trading dates are required; absolute adjacent daily changes above 50% quarantine that symbol-year. Smaller splices and identity errors may remain.
 
 Monthly fetching and year rollover remain future work. No scheduled refresh is active; reviewed annual archives must not be replaced without an audited revision.
+
+The latest integrity pass adds a separate historical donor, replaces the known-spliced 2020 source year consistently, fills missing 2021/2022/2023/2024 endpoints, and quarantines unresolved cross-source differences and reused IR identities. Use the latest manifest for the active version; earlier hashes above describe preserved historical snapshots. `public/data/integrity.json` and `docs/HOLDING-GAPS.csv` expose remaining gaps.

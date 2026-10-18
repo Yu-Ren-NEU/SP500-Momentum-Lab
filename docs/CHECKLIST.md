@@ -43,3 +43,13 @@ Order requested on 2026-10-18: complete and verify local functionality before de
 - [ ] Document optional custom domains
 
 No paid financial database subscription is available. Do not purchase access or switch development to cloud execution without authorization. The presence of an exploratory sample does not satisfy the full historical-data objective.
+
+## Integrity follow-up
+
+- [x] Additional CC0 historical donor and source metadata retained
+- [x] Consistent replacement donor for the known-spliced 2020 sample year
+- [x] Missing 2021/2022/2023/2024 endpoints supplemented
+- [x] Reused IR identity and unresolved source conflicts excluded
+- [x] Explicit 1958-2026 coverage audit and selected-holding gap CSV
+- [x] Reject stale integrity reports during publication validation
+- [ ] Resolve remaining QRVO 2020 return and complete historical ranking universes

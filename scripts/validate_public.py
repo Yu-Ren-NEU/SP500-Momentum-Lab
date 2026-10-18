@@ -81,6 +81,15 @@ if __name__=='__main__':
     bases=list((ROOT/'public/data/base-versions').glob('*.json'))
     if (ROOT/'public/data/stocks-base.json').exists():bases.append(ROOT/'public/data/stocks-base.json')
     for path in bases:validate_base(json.loads(path.read_text()))
+    integrity=ROOT/'public/data/integrity.json'
+    if integrity.exists():
+        report=json.loads(integrity.read_text());base=json.loads((ROOT/'public/data/stocks-base.json').read_text())
+        if report['baseVersion']!=base['version']:raise ValueError('Integrity audit is stale; rebuild the catalogue')
+        if report['fullHistoricalCoverageVerified'] or report['verifiedFullUniverseYears']!=0:raise ValueError('Unreviewed completeness claim')
+        for row in report['years']:
+            if row['fullUniverseVerified']:raise ValueError('Unreviewed year-level completeness claim')
+            coverage=base['coverage'].get(str(row['year']))
+            if coverage and (row['observedMembers']!=coverage['available'] or row['sourceMemberCount']!=coverage['members']):raise ValueError('Integrity coverage mismatch')
     ytds=list((ROOT/'public/data/ytd-versions').glob('*.json'))
     if (ROOT/'public/data/stocks-ytd.json').exists():ytds.append(ROOT/'public/data/stocks-ytd.json')
     for path in ytds:validate_ytd(json.loads(path.read_text()))

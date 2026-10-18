@@ -1,0 +1,4397 @@
+{
+  "schemaVersion": 1,
+  "baseVersion": "9c777259a931d77b",
+  "ytdVersion": "1d120d2a706541c1",
+  "fullHistoricalCoverageVerified": false,
+  "verifiedFullUniverseYears": 0,
+  "annualSampleYears": 30,
+  "currentYearAsOf": "2026-10-15",
+  "years": [
+    {
+      "year": 1958,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1959,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1960,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1961,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1962,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1963,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1964,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1965,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1966,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1967,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1968,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1969,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1970,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1971,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1972,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1973,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1974,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1975,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1976,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1977,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1978,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1979,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1980,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1981,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1982,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1983,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1984,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1985,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1986,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1987,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1988,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1989,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1990,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1991,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1992,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1993,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1994,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1995,
+      "status": "missing",
+      "fullUniverseVerified": false,
+      "observedMembers": 0,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    },
+    {
+      "year": 1996,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 203,
+      "sourceMemberCount": 488,
+      "missingMemberCount": 285,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "TJX",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "INTC",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "NKE",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "MSFT",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "HP",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "CVS",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "IBM",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "AN",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "CSCO",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "FL",
+          "available": true,
+          "holdingYear": 1997,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 217,
+      "sourceMemberCount": 488,
+      "missingMemberCount": 271,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NAV",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "WEN",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "CINF",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "UIS",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "NC",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "FITB",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "LLY",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "USB",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "OMC",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "BLL",
+          "available": true,
+          "holdingYear": 1998,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 226,
+      "sourceMemberCount": 493,
+      "missingMemberCount": 267,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "AAPL",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "CSCO",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "UIS",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "GPS",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "LOW",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "MSFT",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "COF",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "HD",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "WMT",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "F",
+          "available": true,
+          "holdingYear": 1999,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 242,
+      "sourceMemberCount": 492,
+      "missingMemberCount": 250,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "QCOM",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "ORCL",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "NTAP",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "TER",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "AMAT",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "ADI",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "GLW",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "ADBE",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "KLAC",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "CTXS",
+          "available": true,
+          "holdingYear": 2000,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 249,
+      "sourceMemberCount": 492,
+      "missingMemberCount": 243,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "EOG",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "EHC",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "CAH",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "LUV",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "EXC",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "PPL",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "CNP",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "OKE",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "TMO",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "APA",
+          "available": true,
+          "holdingYear": 2001,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 258,
+      "sourceMemberCount": 496,
+      "missingMemberCount": 238,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "ODP",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "JCP",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "BBY",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "AZO",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "HRB",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "DLX",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "LOW",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "CAR",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "WOR",
+          "available": true,
+          "holdingYear": 2002,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 267,
+      "sourceMemberCount": 494,
+      "missingMemberCount": 227,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "BSX",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "BLL",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "NEM",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "HAL",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "ZBH",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "BIG",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "ITT",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "ANTM",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "PFG",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "ECL",
+          "available": true,
+          "holdingYear": 2003,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 272,
+      "sourceMemberCount": 494,
+      "missingMemberCount": 222,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "GLW",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AES",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "SANM",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "X",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "FCX",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "AMD",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "HUM",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "ATI",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "LPX",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "BBY",
+          "available": true,
+          "holdingYear": 2004,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 275,
+      "sourceMemberCount": 495,
+      "missingMemberCount": 220,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "ADSK",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AAPL",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "VLO",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "NUE",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "GT",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "CMI",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "BIIB",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "EBAY",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "NCR",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "RIG",
+          "available": true,
+          "holdingYear": 2005,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 285,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 212,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "VLO",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AAPL",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "EOG",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "HUM",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "ODP",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "NOV",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "ATI",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "GLW",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "RIG",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "MCK",
+          "available": true,
+          "holdingYear": 2006,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 297,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 200,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "ATI",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "TEX",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "BIG",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "NUE",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "CMCSA",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "CSCO",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "GS",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "T",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "BXP",
+          "available": true,
+          "holdingYear": 2007,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 310,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 187,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NOV",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AMZN",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "AAPL",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "GME",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "CNX",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "CMI",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "HES",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "DE",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "FCX",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "RRC",
+          "available": true,
+          "holdingYear": 2008,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 315,
+      "sourceMemberCount": 498,
+      "missingMemberCount": 183,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "HRB",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AMGN",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "WMT",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "HAS",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "AZO",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "PSA",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "GILD",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "GIS",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "MCD",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "PHM",
+          "available": true,
+          "holdingYear": 2009,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 338,
+      "sourceMemberCount": 499,
+      "missingMemberCount": 161,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "THC",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AMD",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "F",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "GNW",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "MU",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "WDC",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "FCX",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "EXPE",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "PXD",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "BKNG",
+          "available": true,
+          "holdingYear": 2010,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 349,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 148,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NFLX",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "FFIV",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "CMI",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "AIG",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "HBAN",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "ZION",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "LB",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "AKAM",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "BKNG",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "PXD",
+          "available": true,
+          "holdingYear": 2011,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 357,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 140,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "COG",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "ISRG",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "MA",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "BIIB",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "HUM",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "OKE",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "CMG",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "PRGO",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "ROST",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "VFC",
+          "available": true,
+          "holdingYear": 2012,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 369,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 128,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "PHM",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "WHR",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "EXPE",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "BAC",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "MPC",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "LEN",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "LYB",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "GILD",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "DXC",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "EMN",
+          "available": true,
+          "holdingYear": 2013,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 372,
+      "sourceMemberCount": 497,
+      "missingMemberCount": 125,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NFLX",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "BBY",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "MU",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "DAL",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "PBI",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "ETFC",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "BSX",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "GNW",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "FB",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "GILD",
+          "available": true,
+          "holdingYear": 2014,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 382,
+      "sourceMemberCount": 499,
+      "missingMemberCount": 117,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "LUV",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "EA",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "EW",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "AVGO",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "MNK",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "DAL",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "RCL",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "KR",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "MU",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "MAR",
+          "available": true,
+          "holdingYear": 2015,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 389,
+      "sourceMemberCount": 502,
+      "missingMemberCount": 113,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NFLX",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "AMZN",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "ATVI",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "VLO",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "VMC",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "VRSN",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "HRL",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "FSLR",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "EXPE",
+          "available": true,
+          "holdingYear": 2016,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 432,
+      "sourceMemberCount": 506,
+      "missingMemberCount": 74,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "OKE",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "FCX",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "NEM",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "AMAT",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "PWR",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "CMA",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "MLM",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "CMI",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "ZION",
+          "available": true,
+          "holdingYear": 2017,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 444,
+      "sourceMemberCount": 505,
+      "missingMemberCount": 61,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NRG",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "ALGN",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "VRTX",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "BA",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "DHI",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "MU",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "PYPL",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "PHM",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "CNC",
+          "available": true,
+          "holdingYear": 2018,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 457,
+      "sourceMemberCount": 505,
+      "missingMemberCount": 48,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "AMD",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "ABMD",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "FTNT",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "AAP",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "TRIP",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "CMG",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "KEYS",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "ORLY",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "BSX",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "HCA",
+          "available": true,
+          "holdingYear": 2019,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 469,
+      "sourceMemberCount": 505,
+      "missingMemberCount": 36,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "AMD",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "LRCX",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "KLAC",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "TGT",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "CMG",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "QRVO",
+          "available": false,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "CPRT",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "AMAT",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "AAPL",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "LDOS",
+          "available": true,
+          "holdingYear": 2020,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 416,
+      "sourceMemberCount": 505,
+      "missingMemberCount": 89,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "TSLA",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "PYPL",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "ALB",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "AMD",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "FCX",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "CDNS",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "NOW",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "ALGN",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "IDXX",
+          "available": true,
+          "holdingYear": 2021,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 466,
+      "sourceMemberCount": 505,
+      "missingMemberCount": 39,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "DVN",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "MRO",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "MRNA",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "FTNT",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "F",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "BBWI",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "FANG",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "NUE",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "IT",
+          "available": true,
+          "holdingYear": 2022,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 484,
+      "sourceMemberCount": 503,
+      "missingMemberCount": 19,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "OXY",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "HES",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "XOM",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "MPC",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "SLB",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "APA",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "VLO",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "HAL",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "FSLR",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "COP",
+          "available": true,
+          "holdingYear": 2023,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 473,
+      "sourceMemberCount": 503,
+      "missingMemberCount": 30,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "META",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "RCL",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "BLDR",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "UBER",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "CCL",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "PHM",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "AMD",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "PANW",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "AVGO",
+          "available": true,
+          "holdingYear": 2024,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 486,
+      "sourceMemberCount": 503,
+      "missingMemberCount": 17,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "PLTR",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 2,
+          "ticker": "VST",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 3,
+          "ticker": "NVDA",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 4,
+          "ticker": "UAL",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 5,
+          "ticker": "AXON",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 6,
+          "ticker": "TPL",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 7,
+          "ticker": "AVGO",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 8,
+          "ticker": "TRGP",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 9,
+          "ticker": "HWM",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        },
+        {
+          "rank": 10,
+          "ticker": "CEG",
+          "available": true,
+          "holdingYear": 2025,
+          "period": "calendar-year"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "status": "available-annual-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 477,
+      "sourceMemberCount": 503,
+      "missingMemberCount": 26,
+      "nextYearTop10Holdings": [
+        {
+          "rank": 1,
+          "ticker": "WDC",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 2,
+          "ticker": "MU",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 3,
+          "ticker": "STX",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 4,
+          "ticker": "HOOD",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 5,
+          "ticker": "NEM",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 6,
+          "ticker": "LRCX",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 7,
+          "ticker": "PLTR",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 8,
+          "ticker": "FIX",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 9,
+          "ticker": "APP",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        },
+        {
+          "rank": 10,
+          "ticker": "CVNA",
+          "available": true,
+          "holdingYear": 2026,
+          "period": "ytd"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "status": "available-ytd-sample",
+      "fullUniverseVerified": false,
+      "observedMembers": 499,
+      "sourceMemberCount": null,
+      "missingMemberCount": null,
+      "nextYearTop10Holdings": []
+    }
+  ],
+  "holdingGaps": [
+    {
+      "signalYear": 2019,
+      "holdingYear": 2020,
+      "rank": 6,
+      "ticker": "QRVO",
+      "reason": "No validated holding return; not zero-filled"
+    }
+  ],
+  "crossSourceConflicts": [
+    {
+      "year": 2023,
+      "ticker": "CTAS",
+      "differencePercentagePoints": 1.0417672658279864
+    },
+    {
+      "year": 2023,
+      "ticker": "FAST",
+      "differencePercentagePoints": 2.816577065205217
+    },
+    {
+      "year": 2023,
+      "ticker": "ETR",
+      "differencePercentagePoints": 3.053429855581802
+    },
+    {
+      "year": 2024,
+      "ticker": "CTAS",
+      "differencePercentagePoints": 0.52166307634125
+    },
+    {
+      "year": 2024,
+      "ticker": "FAST",
+      "differencePercentagePoints": 1.898483756841296
+    },
+    {
+      "year": 2024,
+      "ticker": "TSCO",
+      "differencePercentagePoints": 1.568690519624072
+    },
+    {
+      "year": 2024,
+      "ticker": "ETR",
+      "differencePercentagePoints": 6.099146013810608
+    },
+    {
+      "year": 2024,
+      "ticker": "CBOE",
+      "differencePercentagePoints": 1.312479982787762
+    }
+  ],
+  "resolvedSourceDisagreements": [
+    {
+      "year": 2020,
+      "ticker": "MSFT",
+      "differencePercentagePoints": 4.424088855821151,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LLY",
+      "differencePercentagePoints": 6.193798248388127,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JPM",
+      "differencePercentagePoints": 8.517021264466361,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "XOM",
+      "differencePercentagePoints": 10.269038667889841,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JNJ",
+      "differencePercentagePoints": 9.970668932618887,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "V",
+      "differencePercentagePoints": 2.8444818259475646,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AVGO",
+      "differencePercentagePoints": 15.2512902097933,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CVX",
+      "differencePercentagePoints": 11.483029967826997,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MRK",
+      "differencePercentagePoints": 13.47511681723037,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ABBV",
+      "differencePercentagePoints": 19.441444424776,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PEP",
+      "differencePercentagePoints": 10.401216795541846,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COST",
+      "differencePercentagePoints": 9.771340392317862,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KO",
+      "differencePercentagePoints": 10.409961788995325,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WMT",
+      "differencePercentagePoints": 7.537466208364907,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PFE",
+      "differencePercentagePoints": 17.601735720508373,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ACN",
+      "differencePercentagePoints": 6.585683773944218,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CMCSA",
+      "differencePercentagePoints": 9.586850663916312,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LIN",
+      "differencePercentagePoints": 7.383000314305943,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ABT",
+      "differencePercentagePoints": 7.8408014144532245,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ORCL",
+      "differencePercentagePoints": 6.746879851382714,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DHR",
+      "differencePercentagePoints": 18.448769760223072,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WFC",
+      "differencePercentagePoints": 5.920093329471554,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TXN",
+      "differencePercentagePoints": 13.840536298891703,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COP",
+      "differencePercentagePoints": 8.94984240011426,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CAT",
+      "differencePercentagePoints": 9.494704934277065,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AMGN",
+      "differencePercentagePoints": 10.719742721073489,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "INTC",
+      "differencePercentagePoints": 8.242613919987352,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "UNP",
+      "differencePercentagePoints": 8.623527825239119,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LOW",
+      "differencePercentagePoints": 8.019141936794005,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "IBM",
+      "differencePercentagePoints": 20.43832309176532,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "UPS",
+      "differencePercentagePoints": 14.852716103962994,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "QCOM",
+      "differencePercentagePoints": 12.907420469259613,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AMAT",
+      "differencePercentagePoints": 5.038085558327721,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NKE",
+      "differencePercentagePoints": 4.881843622317317,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PLD",
+      "differencePercentagePoints": 9.297365654638835,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MS",
+      "differencePercentagePoints": 15.524131447386115,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GS",
+      "differencePercentagePoints": 9.691493185133249,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DE",
+      "differencePercentagePoints": 7.421082482391128,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ADP",
+      "differencePercentagePoints": 7.944175451766011,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LMT",
+      "differencePercentagePoints": 8.520708696254143,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TJX",
+      "differencePercentagePoints": 5.266694754933576,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "T",
+      "differencePercentagePoints": 34.91406844540348,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GILD",
+      "differencePercentagePoints": 12.676367421580792,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AXP",
+      "differencePercentagePoints": 4.6193067445274405,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SYK",
+      "differencePercentagePoints": 4.474072670739049,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ETN",
+      "differencePercentagePoints": 9.193381898841535,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LRCX",
+      "differencePercentagePoints": 5.736822747029824,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ADI",
+      "differencePercentagePoints": 8.476859056009879,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ZTS",
+      "differencePercentagePoints": 3.0483086979871343,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CI",
+      "differencePercentagePoints": 5.193622033707356,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AMT",
+      "differencePercentagePoints": 9.267387065989574,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "C",
+      "differencePercentagePoints": 11.018254687953387,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PGR",
+      "differencePercentagePoints": 14.035768901355494,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TMUS",
+      "differencePercentagePoints": 0.7474373442421856,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EOG",
+      "differencePercentagePoints": 11.391864390414796,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CME",
+      "differencePercentagePoints": 13.310771811804544,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MU",
+      "differencePercentagePoints": 2.181755069942759,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DUK",
+      "differencePercentagePoints": 14.909557992631129,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AON",
+      "differencePercentagePoints": 3.0350360126586318,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KLAC",
+      "differencePercentagePoints": 6.465316717011227,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "APD",
+      "differencePercentagePoints": 9.147008985159033,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NOC",
+      "differencePercentagePoints": 5.016895308373748,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CL",
+      "differencePercentagePoints": 10.884068021171922,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HUM",
+      "differencePercentagePoints": 2.6495493691703675,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FDX",
+      "differencePercentagePoints": 10.52332419835702,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TGT",
+      "differencePercentagePoints": 10.211677190695333,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HCA",
+      "differencePercentagePoints": 3.6948211237997297,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EMR",
+      "differencePercentagePoints": 9.521652174565654,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROP",
+      "differencePercentagePoints": 2.3671770066337805,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PSX",
+      "differencePercentagePoints": 9.55173636906681,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PH",
+      "differencePercentagePoints": 7.127785175386525,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "USB",
+      "differencePercentagePoints": 11.209875098781307,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AJG",
+      "differencePercentagePoints": 5.646479344352806,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NSC",
+      "differencePercentagePoints": 8.370094152740837,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VLO",
+      "differencePercentagePoints": 9.392844171667047,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "F",
+      "differencePercentagePoints": 12.302508779615495,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MSI",
+      "differencePercentagePoints": 5.06574863502629,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GM",
+      "differencePercentagePoints": 1.732741576266661,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TT",
+      "differencePercentagePoints": 38.022675650695284,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ECL",
+      "differencePercentagePoints": 4.597863486584153,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ADM",
+      "differencePercentagePoints": 9.785844053939762,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MNST",
+      "differencePercentagePoints": 72.76160855010828,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KMB",
+      "differencePercentagePoints": 11.555292471108125,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PSA",
+      "differencePercentagePoints": 15.943795775137037,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CCI",
+      "differencePercentagePoints": 15.592332848506274,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MSCI",
+      "differencePercentagePoints": 6.0566440341220495,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CTAS",
+      "differencePercentagePoints": 5.217470331491847,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AIG",
+      "differencePercentagePoints": 7.39490278699555,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HES",
+      "differencePercentagePoints": 3.805013054991324,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NUE",
+      "differencePercentagePoints": 6.057631636283145,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROST",
+      "differencePercentagePoints": 3.630902401719349,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AFL",
+      "differencePercentagePoints": 7.856497312100307,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AEP",
+      "differencePercentagePoints": 11.429323413792215,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "D",
+      "differencePercentagePoints": 13.527122033643357,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JCI",
+      "differencePercentagePoints": 8.924553442095151,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GIS",
+      "differencePercentagePoints": 11.686840810942334,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EXC",
+      "differencePercentagePoints": 35.939830324608394,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COF",
+      "differencePercentagePoints": 6.596690443120279,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PAYX",
+      "differencePercentagePoints": 10.40613228795484,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TFC",
+      "differencePercentagePoints": 12.755345239570948,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DOW",
+      "differencePercentagePoints": 17.234104071800605,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TRV",
+      "differencePercentagePoints": 8.099718923391052,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ODFL",
+      "differencePercentagePoints": 1.9943535952147373,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DHI",
+      "differencePercentagePoints": 5.034170301122165,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CTSH",
+      "differencePercentagePoints": 7.250353983738256,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AME",
+      "differencePercentagePoints": 3.0063962455452398,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BKR",
+      "differencePercentagePoints": 9.230675679054666,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SYY",
+      "differencePercentagePoints": 7.035331933072464,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "A",
+      "differencePercentagePoints": 3.183961198056129,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CTVA",
+      "differencePercentagePoints": 5.503643646392242,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EL",
+      "differencePercentagePoints": 4.6747747585518695,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HAL",
+      "differencePercentagePoints": 4.551641345164404,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROK",
+      "differencePercentagePoints": 7.341324601949983,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PRU",
+      "differencePercentagePoints": 14.414882853914612,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DD",
+      "differencePercentagePoints": 7.828814761056835,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KMI",
+      "differencePercentagePoints": 15.264790193854394,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VRSK",
+      "differencePercentagePoints": 3.057998142212437,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LHX",
+      "differencePercentagePoints": 7.106852621389392,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FIS",
+      "differencePercentagePoints": 7.640161395552802,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CMI",
+      "differencePercentagePoints": 12.253537253633716,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FAST",
+      "differencePercentagePoints": 17.08290481399728,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GPN",
+      "differencePercentagePoints": 3.1574654411473,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GWW",
+      "differencePercentagePoints": 5.602300477736422,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BK",
+      "differencePercentagePoints": 9.803049758854032,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "XEL",
+      "differencePercentagePoints": 10.42340260042357,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DVN",
+      "differencePercentagePoints": 14.136374685088803,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EA",
+      "differencePercentagePoints": 2.401826422575848,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NEM",
+      "differencePercentagePoints": 17.24862083370131,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ED",
+      "differencePercentagePoints": 10.911363483482905,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "URI",
+      "differencePercentagePoints": 1.93921376299393,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VICI",
+      "differencePercentagePoints": 16.94144837002176,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PEG",
+      "differencePercentagePoints": 11.758168573527627,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RSG",
+      "differencePercentagePoints": 5.780065643231946,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LEN",
+      "differencePercentagePoints": 6.374916991958646,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PWR",
+      "differencePercentagePoints": 1.383143375326057,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WST",
+      "differencePercentagePoints": 1.4922537157732174,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "COR",
+      "differencePercentagePoints": 32.222264015625555,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "OKE",
+      "differencePercentagePoints": 12.749709894828442,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VMC",
+      "differencePercentagePoints": 3.7632116897779344,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ALL",
+      "differencePercentagePoints": 9.453381059786036,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FANG",
+      "differencePercentagePoints": 8.396612052049901,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EXR",
+      "differencePercentagePoints": 13.970521287570193,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FTV",
+      "differencePercentagePoints": 19.665522996717243,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AWK",
+      "differencePercentagePoints": 7.749951965755852,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KHC",
+      "differencePercentagePoints": 15.902006657345124,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HPQ",
+      "differencePercentagePoints": 13.02088711193512,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EIX",
+      "differencePercentagePoints": 13.411565157754623,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AVB",
+      "differencePercentagePoints": 9.792704555163322,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LYB",
+      "differencePercentagePoints": 20.125932092786492,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TROW",
+      "differencePercentagePoints": 16.428243422053157,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GLW",
+      "differencePercentagePoints": 12.434430395082764,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EFX",
+      "differencePercentagePoints": 4.012177886165169,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WY",
+      "differencePercentagePoints": 15.275394386027596,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ZBH",
+      "differencePercentagePoints": 5.5957243576229665,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "XYL",
+      "differencePercentagePoints": 6.195216431880013,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RMD",
+      "differencePercentagePoints": 3.882381465798601,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TSCO",
+      "differencePercentagePoints": 7.072080464984665,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EBAY",
+      "differencePercentagePoints": 8.566608273026223,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CHD",
+      "differencePercentagePoints": 5.4278382942322345,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HIG",
+      "differencePercentagePoints": 6.689217614075671,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ALB",
+      "differencePercentagePoints": 6.968787334626936,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ES",
+      "differencePercentagePoints": 11.639326793372707,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MPWR",
+      "differencePercentagePoints": 4.992972722911793,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CAH",
+      "differencePercentagePoints": 11.833247172028205,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EQR",
+      "differencePercentagePoints": 9.373402213245086,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HPE",
+      "differencePercentagePoints": 8.623566545920857,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DTE",
+      "differencePercentagePoints": 24.03363460083434,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GPC",
+      "differencePercentagePoints": 10.239749733628766,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BR",
+      "differencePercentagePoints": 7.866093650979256,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BAX",
+      "differencePercentagePoints": 6.491862393543046,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AEE",
+      "differencePercentagePoints": 10.223184274743947,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MTB",
+      "differencePercentagePoints": 8.52909749183597,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ETR",
+      "differencePercentagePoints": 10.803836960719837,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WAB",
+      "differencePercentagePoints": 2.0567783355280533,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DOV",
+      "differencePercentagePoints": 6.009805105551358,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RJF",
+      "differencePercentagePoints": 39.671635724621915,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CLX",
+      "differencePercentagePoints": 13.233728790462806,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DRI",
+      "differencePercentagePoints": 10.080729160232504,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LH",
+      "differencePercentagePoints": 19.413112413698897,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LUV",
+      "differencePercentagePoints": 2.684686272684711,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ARE",
+      "differencePercentagePoints": 12.52625355742456,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WBA",
+      "differencePercentagePoints": 11.363282684642117,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PHM",
+      "differencePercentagePoints": 4.412914698820614,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RF",
+      "differencePercentagePoints": 12.445516163835112,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CNP",
+      "differencePercentagePoints": 7.740512694359292,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LVS",
+      "differencePercentagePoints": 0.6632553483842396,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FITB",
+      "differencePercentagePoints": 13.161693460864809,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "VTR",
+      "differencePercentagePoints": 10.234174048133838,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PFG",
+      "differencePercentagePoints": 11.705527844600027,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BRO",
+      "differencePercentagePoints": 3.290750643205831,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BG",
+      "differencePercentagePoints": 11.930719950625068,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ATO",
+      "differencePercentagePoints": 7.935124234916479,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FDS",
+      "differencePercentagePoints": 4.139020373044899,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CMS",
+      "differencePercentagePoints": 10.452883139970904,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SWKS",
+      "differencePercentagePoints": 8.300351574399123,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CINF",
+      "differencePercentagePoints": 8.193227722432939,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NTAP",
+      "differencePercentagePoints": 10.936847609775935,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TER",
+      "differencePercentagePoints": 2.4316414376456708,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JBHT",
+      "differencePercentagePoints": 3.7171814576252737,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TPL",
+      "differencePercentagePoints": 4.7171010778077616,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HBAN",
+      "differencePercentagePoints": 13.638462039933575,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "K",
+      "differencePercentagePoints": 17.224268702815927,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GRMN",
+      "differencePercentagePoints": 12.0707022435381,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CBOE",
+      "differencePercentagePoints": 1.2268544310147678,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NTRS",
+      "differencePercentagePoints": 9.258353773357387,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TSN",
+      "differencePercentagePoints": 6.698759634047214,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ESS",
+      "differencePercentagePoints": 9.362052912366481,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EQT",
+      "differencePercentagePoints": 3.788045032999854,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DGX",
+      "differencePercentagePoints": 8.299087056212095,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AVY",
+      "differencePercentagePoints": 7.1210371850370935,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BBY",
+      "differencePercentagePoints": 14.8533294778886,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CF",
+      "differencePercentagePoints": 7.308818614646729,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CAG",
+      "differencePercentagePoints": 13.389333896420098,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LW",
+      "differencePercentagePoints": 4.108897019657887,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "POOL",
+      "differencePercentagePoints": 6.631635313736739,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "SWK",
+      "differencePercentagePoints": 9.615510255531845,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "DPZ",
+      "differencePercentagePoints": 4.950132094880955,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CFG",
+      "differencePercentagePoints": 13.835441367260493,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LDOS",
+      "differencePercentagePoints": 5.471902728028399,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "MOS",
+      "differencePercentagePoints": 5.156270289748122,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EVRG",
+      "differencePercentagePoints": 11.82426986102476,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NDSN",
+      "differencePercentagePoints": 4.137282774637163,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LNT",
+      "differencePercentagePoints": 9.901513498438963,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AES",
+      "differencePercentagePoints": 12.829425324050202,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "WSM",
+      "differencePercentagePoints": 10.274251213645114,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "L",
+      "differencePercentagePoints": 1.537595351278731,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CPT",
+      "differencePercentagePoints": 11.858751948760881,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KIM",
+      "differencePercentagePoints": 9.964761083222207,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HRL",
+      "differencePercentagePoints": 9.135814887952042,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HST",
+      "differencePercentagePoints": 6.434665197711221,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PNR",
+      "differencePercentagePoints": 6.0147413413072615,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CHRW",
+      "differencePercentagePoints": 10.80988890925103,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "REG",
+      "differencePercentagePoints": 10.35887153483901,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "APO",
+      "differencePercentagePoints": 11.855028129258338,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KEY",
+      "differencePercentagePoints": 15.128716703921153,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "GL",
+      "differencePercentagePoints": 2.401893198002847,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "EMN",
+      "differencePercentagePoints": 15.051234161205818,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ALLE",
+      "differencePercentagePoints": 4.189903273834039,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BXP",
+      "differencePercentagePoints": 11.897800220249232,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ROL",
+      "differencePercentagePoints": 64.41124301663204,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "PNW",
+      "differencePercentagePoints": 13.331404508266187,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FOXA",
+      "differencePercentagePoints": 3.7614480393769245,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AOS",
+      "differencePercentagePoints": 7.821153540457515,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HAS",
+      "differencePercentagePoints": 12.00548157523812,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NRG",
+      "differencePercentagePoints": 11.780011009692693,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "CPB",
+      "differencePercentagePoints": 11.08890223170642,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "UHS",
+      "differencePercentagePoints": 1.7187348321163531,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "ERIE",
+      "differencePercentagePoints": 12.546510466496198,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "KKR",
+      "differencePercentagePoints": 6.200663015928565,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "LII",
+      "differencePercentagePoints": 5.636136215030407,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NWSA",
+      "differencePercentagePoints": 4.644264380965235,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "TPR",
+      "differencePercentagePoints": 8.82559561440952,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BEN",
+      "differencePercentagePoints": 14.527565567845958,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "AIZ",
+      "differencePercentagePoints": 7.36686120222404,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FRT",
+      "differencePercentagePoints": 9.599132021030032,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "JBL",
+      "differencePercentagePoints": 1.957747312277336,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "HUBB",
+      "differencePercentagePoints": 7.339949981290084,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "RL",
+      "differencePercentagePoints": 6.219817792891302,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "FOX",
+      "differencePercentagePoints": 4.0460223322003275,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "BX",
+      "differencePercentagePoints": 14.93562585805921,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    },
+    {
+      "year": 2020,
+      "ticker": "NWS",
+      "differencePercentagePoints": 4.470332038203972,
+      "resolution": "Use one consistent secondary donor for the known-spliced 2020 year; not a certified total-return series"
+    }
+  ],
+  "identityQuarantines": [
+    {
+      "ticker": "IR",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "sourceUrl": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2020/Trane-Technologies-Completes-Reverse-Morris-Trust-Transaction-and-Begins-Trading-Today-on-NYSE/default.aspx"
+    }
+  ],
+  "limitations": [
+    "An available-sample ranking is not a verified full-universe top ten.",
+    "Successful arithmetic does not verify prices, dividends, identity or delisting outcomes.",
+    "Missing years and holdings remain explicit; no completeness claim is made."
+  ]
+}

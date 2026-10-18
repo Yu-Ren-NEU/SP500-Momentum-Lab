@@ -368,7 +368,7 @@ export default function App() {
           </div>
           {latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); p.set("base", latestBaseVersion); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
           {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。两组指数基准暂截至 ${data.completeThrough}，不补造本年指数回报。` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. Both index benchmarks currently end in ${data.completeThrough}; no current-year index return is inferred.`}</p>}
-          {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{(base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 2023—2025 复权及分红口径待核实" : " · 2023–2025 adjustment/dividend treatment unverified")}</p>}
+          {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{(base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 补充价格数据的复权及分红口径待核实" : " · Supplementary price adjustment/dividend treatment unverified")}</p>}
           {error && (
             <p role="alert" className="error">
               {t.parameterError}
@@ -526,6 +526,7 @@ export default function App() {
               </p>
             )}
             <p>{t.missingNote}</p>
+            <p>{lang === "zh" ? "完整历史母集尚未核验。" : "Full historical-universe completeness has not been verified."} <a href="/data/integrity.json" download>{lang === "zh" ? "下载逐年完整性审计 ↗" : "Download year-by-year integrity audit ↗"}</a></p>
             <div className="source-list">
               <a href={data.sources.nyu.url} target="_blank" rel="noreferrer">
                 S&P 500 / NYU Damodaran ↗

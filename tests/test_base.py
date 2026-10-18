@@ -22,8 +22,10 @@ class PublishedBaseTests(unittest.TestCase):
         import json
         from validate_public import validate_base
         d=json.loads((ROOT/'public/data/stocks-base.json').read_text());self.assertTrue(validate_base(d))
-        self.assertIn('2020',d['quarantined']['GE']);self.assertNotIn('fnspid:GE',{r['id']for r in d['rankings']['2020']['rows']})
-        self.assertNotIn('fnspid:TSLA',{r['id']for r in d['returns']['2020']})
+        old=json.loads((ROOT/'public/data/base-versions/9bf6ebd73f3563a4.json').read_text())
+        self.assertIn('2020',old['quarantined']['GE']);self.assertNotIn('fnspid:GE',{r['id']for r in old['rankings']['2020']['rows']})
+        self.assertNotIn('fnspid:TSLA',{r['id']for r in old['returns']['2020']})
+        self.assertTrue(all(r['source']=='chickenrobot-close-ratio-adjustment-unverified' for r in d['returns']['2020']))
         self.assertEqual(d['rankings']['2016']['rows'][0]['ticker'],'NVDA')
     def test_raw_or_private_records_are_blocked(self):
         import json
@@ -59,5 +61,28 @@ class YtdSnapshotTests(unittest.TestCase):
         row=next(r for r in d['returns']['2010'] if r['id']=='fnspid:THC')
         self.assertAlmostEqual(row['totalReturn'],26.76000022888184/21.559999465942383-1)
         self.assertNotIn('2010',d['quarantined'].get('THC',{}))
-        self.assertIn('2020',d['quarantined']['GE'])
+        self.assertIn('2019',d['quarantined']['IR'])
+class IntegrityAuditTests(unittest.TestCase):
+    def test_all_years_explicit_and_counts_reconcile(self):
+        import json
+        report=json.loads((ROOT/'public/data/integrity.json').read_text())
+        data=json.loads((ROOT/'public/data/stocks-base.json').read_text())
+        self.assertEqual(report['baseVersion'],data['version'])
+        self.assertEqual([r['year'] for r in report['years']],list(range(1958,2027)))
+        self.assertFalse(report['fullHistoricalCoverageVerified'])
+        self.assertEqual(report['verifiedFullUniverseYears'],0)
+        for coverage in data['coverage'].values():
+            self.assertEqual(coverage['available']+len(coverage['missing']),coverage['members'])
+        for conflict in report['crossSourceConflicts']:
+            year=str(conflict['year']);ticker=conflict['ticker']
+            self.assertFalse(any(r['ticker']==ticker for r in data['rankings'][year]['rows']))
+        self.assertFalse(any(r['ticker']=='IR' for r in data['rankings']['2019']['rows']))
+    def test_hess_endpoint_supplement_and_builders_firstsource(self):
+        import json
+        data=json.loads((ROOT/'public/data/stocks-base.json').read_text())
+        hess=next(r for r in data['returns']['2023'] if r['ticker']=='HES')
+        self.assertEqual(hess['source'],'chickenrobot-close-ratio-adjustment-unverified')
+        # Independent issuer graph rounds cumulative wealth to cents.
+        self.assertLess(abs(hess['totalReturn']-(384.72/373.83-1)),.0003)
+        self.assertIn('BLDR',[r['ticker'] for r in data['rankings']['2023']['rows'][:10]])
 if __name__=='__main__':unittest.main()

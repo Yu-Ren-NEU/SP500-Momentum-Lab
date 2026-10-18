@@ -52,6 +52,8 @@ def build():
               'years': years}
     target = ROOT / 'data/research/top10-history.json'
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    from audit_integrity import build as audit
+    audit()
     print('Built 69 annual catalogue records; sample years:', sum(y['status'] == 'available-sample' for y in years.values()))
 
 if __name__ == '__main__':

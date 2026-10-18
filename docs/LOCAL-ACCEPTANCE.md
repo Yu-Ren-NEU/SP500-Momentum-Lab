@@ -23,3 +23,11 @@ A request beginning in 1996 starts investing in 1997 because the 1995 signal is 
 Top 10 still stops before a missing 2020 IR holding return; Top 3/5 can encounter missing former members such as HES. Gaps are not bridged. YTD stock returns use their source cutoff and fractional-year CAGR; current-year index references are unavailable and remain at their last complete year.
 
 No GitHub Actions or Cloudflare deployment acceptance is claimed. Keep the local development server running for the user.
+
+## Historical supplement and integrity audit
+
+The latest pass completes 49 checks: 17 engine tests, 21 Python data/import/publication checks and 11 component tests. Production build succeeds. The historical supplement was rerun and produced the same financial snapshot hash, 9c777259a931d77b.
+
+Real-browser inspection confirms Top 5 annual positions and results through 2025 after filling missing HES, BLDR and other endpoints. Coverage counts reconcile with missing-member lists. Active cross-source conflicts and IR identity blocks are absent from accepted rankings. A stale audit hash is rejected by publication validation. The year-by-year audit is downloadable from the folded sources section.
+
+The complete historic universe remains unverified. QRVO's 2020 holding return is still missing; dated blank rows in another dataset were rejected. No true full-universe historical performance claim is made.

@@ -54,7 +54,7 @@ export const copy = {
       "标普采用 NYU 含股息年度序列；纳指为价格回报、不含股息，完整年度始于 1972 年。各曲线从自身有效起点投入同额本金，区间不同时勿直接比较终值。",
     exploratory: "网络静态样本 · 非完整标普排名",
     exploreNote:
-      "按当年历史成员与可得价格样本交叉计算；可能遗漏退市、收购和更名证券，1996—2022 使用调整收盘价近似；2023—2025 使用收盘价比值，复权及分红口径尚未核实，不应视为完整总回报。",
+      "按当年历史成员与可得价格样本交叉计算；可能遗漏退市、收购和更名证券，原始数据使用调整收盘价近似；2020 使用统一的替代数据源，另补充 2021、2023—2025 缺口。补充来源的复权及分红口径未完整核实。",
     complete: "已复核数据",
     missingNote: "缺失回报不补零，也不自动换成其他股票。",
     strategyRange: "策略数据仅覆盖",
@@ -131,7 +131,7 @@ export const copy = {
       "S&P 500 uses NYU annual returns including dividends. Nasdaq is a price index excluding dividends; full calendar years begin in 1972. Each curve starts with the same capital at its own available starting date. Ending values are not directly comparable across different periods.",
     exploratory: "Online static sample · incomplete S&P universe",
     exploreNote:
-      "Historical membership is intersected with available price records. Delisted, acquired or renamed securities may be missing. 1996–2022 uses adjusted-close proxies. 2023–2025 uses close ratios with unverified dividend and adjustment conventions, not certified total returns.",
+      "Historical membership is intersected with available price records. Delisted, acquired or renamed securities may be missing. The original data uses adjusted-close proxies. A consistent alternate source replaces 2020 and fills missing 2021/2023–2025 observations. Supplementary dividend and adjustment conventions remain unverified.",
     complete: "Reviewed data",
     missingNote:
       "Missing returns are never filled with zeros or replacement stocks.",

@@ -67,6 +67,8 @@ def build():
                 change=p1/p0-1
                 if abs(change)>.5 and not (ticker=='THC' and d1=='2010-12-10' and .54 < change < .56):
                     invalid.setdefault(d1[:4],[]).append(d1+': adjusted-close change '+str(round(change*100,2))+'%; unverified discontinuity')
+            if ticker=='IR':
+                for year in ('2017','2018','2019'):invalid.setdefault(year,[]).append('identity: old Ingersoll-Rand plc versus Gardner Denver/new IR; historical mapping unresolved')
             if invalid:quarantined[ticker]=invalid
             closing[ticker]=values
     rankings={};coverage={};annual={}
