@@ -126,12 +126,10 @@ test("Top 7 replaces Top 1 rather than adding more curves", async () => {
   expect(document.querySelector(".legend")?.textContent).toContain("Top 7");
   expect(document.querySelector(".legend")?.textContent).not.toContain("Top 1");
   expect(new URLSearchParams(location.search).get("n")).toBe("7");
-  expect(new URLSearchParams(location.search).get("data")).toBe(
-    publicData.version,
-  );
+  expect(new URLSearchParams(location.search).get("data")).toBeNull();
 });
 test("missing version refuses silent replacement", async () => {
-  history.replaceState(null, "", "/?data=0123456789abcdef");
+  history.replaceState(null, "", "/?snapshot=1&data=0123456789abcdef");
   vi.mocked(fetch).mockResolvedValue({ ok: false, status: 404 } as Response);
   render(<App />);
   await screen.findByRole("heading", { name: "无法加载数据" });
@@ -194,13 +192,30 @@ test("end year includes the current year and discloses unavailable YTD reference
 test("pinned old stock snapshot has a visible latest-data link", async () => {
   const old = JSON.parse(readFileSync("public/data/base-versions/9bf6ebd73f3563a4.json","utf8"));
   const latest = JSON.parse(readFileSync("public/data/base-latest.json","utf8"));
-  history.replaceState(null,"","/?start=1996&end=2012&base=9bf6ebd73f3563a4");
+  history.replaceState(null,"","/?snapshot=1&start=1996&end=2012&base=9bf6ebd73f3563a4");
   vi.mocked(fetch).mockImplementation(async (input) => {
     const path=String(input);
     return {ok:true,json:async()=>path.includes("base-latest")?latest:path.includes("base-versions")?old:publicData} as Response;
   });
   await mount();
   const link=screen.getByRole("link",{name:"加载最新数据 ↗"});
-  expect(link.getAttribute("href")).toContain("base="+latest.version);
+  expect(link.getAttribute("href")).not.toContain("base=");
+  expect(link.getAttribute("href")).not.toContain("snapshot=");
   expect(link.getAttribute("href")).toContain("start=1996");
+});
+
+
+test("legacy stock URL loads the latest sample and continues beyond 2010", async () => {
+  const base = JSON.parse(readFileSync("public/data/stocks-base.json", "utf8"));
+  const ytd = JSON.parse(readFileSync("public/data/stocks-ytd.json", "utf8"));
+  history.replaceState(null, "", "/?start=1996&end=2026&initial=1&n=1&weights=1&data=f113947b02cf5930&lang=en&base=9bf6ebd73f3563a4&ytd=1d120d2a706541c1");
+  vi.mocked(fetch).mockImplementation(async (input) => {
+    const path = String(input);
+    return {ok:true,json:async()=>path.endsWith("stocks-base.json")?base:path.endsWith("stocks-ytd.json")?ytd:publicData} as Response;
+  });
+  await mount();
+  expect(vi.mocked(fetch).mock.calls.some(([path]) => String(path).includes("base-versions"))).toBe(false);
+  expect(new URLSearchParams(location.search).get("base")).toBeNull();
+  expect(document.querySelector(".summary-line")?.textContent).toContain("2026");
+  expect(document.body.textContent).toContain("2025");
 });

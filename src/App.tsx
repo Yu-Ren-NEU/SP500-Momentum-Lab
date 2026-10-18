@@ -51,9 +51,13 @@ export default function App() {
   useEffect(() => {
     const ctrl = new AbortController(),
       p = new URLSearchParams(location.search),
-      v = p.get("data"),
-      b = p.get("base"),
-      ytdVersion = p.get("ytd");
+      v = p.get("snapshot") === "1" ? p.get("data") : null,
+      b = p.get("snapshot") === "1" ? p.get("base") : null,
+      ytdVersion = p.get("snapshot") === "1" ? p.get("ytd") : null;
+    if (p.get("snapshot") !== "1") {
+      for (const key of ["data", "base", "ytd"]) p.delete(key);
+      history.replaceState(null, "", "?" + p.toString() + location.hash);
+    }
     if ((v && !/^[a-f0-9]{16}$/.test(v)) || (b && !/^[a-f0-9]{16}$/.test(b)) || (ytdVersion && !/^[a-f0-9]{16}$/.test(ytdVersion))) {
       setLoadError(true);
       return;
@@ -133,10 +137,12 @@ export default function App() {
     sp = results[1],
     nas = results[2];
   function url(c: Config) {
-    const p = new URLSearchParams(configSearch(c, data?.version));
+    const snapshot = new URLSearchParams(location.search).get("snapshot") === "1";
+    const p = new URLSearchParams(configSearch(c, snapshot ? data?.version : undefined));
+    if (snapshot) p.set("snapshot", "1");
     p.set("lang", lang);
-    if (!privateData && base?.version) p.set("base", base.version);
-    if (c.end === new Date().getUTCFullYear() && ytd?.version) p.set("ytd", ytd.version);
+    if (snapshot && !privateData && base?.version) p.set("base", base.version);
+    if (snapshot && c.end === new Date().getUTCFullYear() && ytd?.version) p.set("ytd", ytd.version);
     return location.origin + location.pathname + "?" + p.toString();
   }
   function updateOptions(next: typeof draft, allocation?: string[]) {
@@ -366,7 +372,7 @@ export default function App() {
             <button type="button" onClick={() => updateOptions(draft, Array.from({length: Number(draft.n)}, () => String(100 / Number(draft.n))))}>{lang === "zh" ? "恢复等权" : "Equal weights"}</button>
             <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
           </div>
-          {latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); p.set("base", latestBaseVersion); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
+          {latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
           {config?.end === new Date().getUTCFullYear() && <p className="minor">{lang === "zh" ? `本年为 YTD；个股数据截至 ${ytd?.asOf ?? "暂不可得"}。两组指数基准暂截至 ${data.completeThrough}，不补造本年指数回报。` : `Current year is YTD; stock cutoff: ${ytd?.asOf ?? "unavailable"}. Both index benchmarks currently end in ${data.completeThrough}; no current-year index return is inferred.`}</p>}
           {sampled && <p className="minor">{t.baseCoverage}: {base?.startYear}—{base?.endYear} · {t.exploratory}{(base?.endYear ?? 0) >= 2023 && (lang === "zh" ? " · 补充价格数据的复权及分红口径待核实" : " · Supplementary price adjustment/dividend treatment unverified")}</p>}
           {error && (

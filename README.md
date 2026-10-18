@@ -54,7 +54,7 @@ Observed adjustment splices in GE, TSLA, AAPL and ETN motivated conservative scr
 
 The exploratory curve stops at the first missing holding return. Strict reviewed imports reject the entire requested period when a holding return is missing. Neither mode jumps over a gap. A starting investment year of 1996 requires a 1995 signal, which is currently missing, so the sample's earliest investment year is 1997.
 
-URLs pin index and stock snapshot versions. A link containing the original stock hash continues to use that original data; use the visible latest-data link to opt into a new snapshot. The share button is removed, but address parameters still preserve configuration, language, weights and selected snapshot versions.
+Ordinary URLs load the latest data and preserve configuration, language and weights. Legacy version hashes are removed automatically to avoid stale charts. For deliberate historical reproduction, add `snapshot=1` together with the `data`, `base` and optional `ytd` version hashes. Explicit snapshot mode never silently substitutes a missing annual snapshot. The share button is removed.
 
 ## Update and reproduce
 
