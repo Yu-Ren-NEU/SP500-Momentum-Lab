@@ -25,7 +25,7 @@ Open http://127.0.0.1:5173. Keep the development server running, as explicitly r
 - Initial capital defaults to USD 1. Top N defaults to 1 and accepts 1 through 10.
 - Changes update results immediately. The first row contains dates and capital; the second contains Top N and an editable rank-weight table. Weights default to equal allocation and must sum to 100%.
 - At each year boundary, invest the entire portfolio balance in the previous year's top N stocks at the chosen rank weights. Hold for a year, then rebalance and reinvest all proceeds.
-- Only the selected strategy and the two index references are shown. Click a legend item to hide or restore its curve.
+- Fixed equal-weight Top 1 and Top 3 curves remain available alongside a separate Customize curve and the two index references. Top N and rank weights affect only Customize; new configurations default to Top 1 at 100%. The annual table and metrics follow Customize. Its dotted line may overlap a fixed curve when allocations match. Click any legend item to hide or restore that curve independently.
 - Annual details show positions, weights, returns, portfolio value, index returns and excess performance. Expand a year to inspect the preceding year's sample ranking, coverage and missing symbols.
 - The default range starts in 2012 and ends at the last complete sample year. Explicit URL parameters preserve the requested configuration.
 - The current year is selectable and uses a separate stock YTD snapshot with its cutoff displayed. Available index references currently end in 2025; no current-year index return is fabricated.

@@ -21,6 +21,8 @@ echarts.use([
 ]);
 export const lineColors = {
   strategy: "#aacb94",
+  top3: "#b49ada",
+  custom: "#e5989b",
   sp500: "#88a9c6",
   nasdaq: "#d9b477",
 };
@@ -179,7 +181,9 @@ export default function GrowthChart({
         .filter((r) => !r.error)
         .map((r) => {
           const color =
-            r.key === "sp500"
+            r.key === "top3-equal" ? (dark ? lineColors.top3 : "#7358a1")
+            : r.key === "custom" ? (dark ? lineColors.custom : "#a84b58")
+            : r.key === "sp500"
               ? dark
                 ? lineColors.sp500
                 : "#42698e"
@@ -205,14 +209,14 @@ export default function GrowthChart({
             ),
             lineStyle: {
               color,
-              width: r.key.startsWith("top") ? 3 : 1.8,
-              type: r.key === "nasdaq" ? "dashed" : "solid",
+              width: r.key === "custom" ? 2.5 : r.key.startsWith("top") ? 3 : 1.8,
+              type: r.key === "custom" ? "dotted" : r.key === "nasdaq" ? "dashed" : "solid",
               shadowColor: r.key.startsWith("top") ? color : "transparent",
               shadowBlur: 0,
             },
             itemStyle: { color },
             emphasis: { focus: "series", lineStyle: { width: 3.5 } },
-            z: r.key.startsWith("top") ? 3 : 2,
+            z: r.key === "custom" ? 4 : r.key.startsWith("top") ? 3 : 2,
           };
         }),
     };

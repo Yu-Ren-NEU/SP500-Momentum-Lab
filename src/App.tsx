@@ -138,16 +138,17 @@ export default function App() {
   const stocks = privateData ?? base;
   const results = useMemo(() => {
     if (!data || !config) return [];
-    const selected: Result =
-      !privateData && base?.quality === "exploratory"
-        ? strategyWithYtd(base, config, ytd)
-        : strategy(stocks, config);
-    return [
-      selected,
-      benchmark("sp500", data, config, indexYtd),
-      benchmark("nasdaq", data, config, indexYtd),
-    ];
-  }, [data, config, stocks, base, privateData, ytd, indexYtd]);
+    const calculate = (c: Config): Result => !privateData && base?.quality === "exploratory"
+      ? strategyWithYtd(base, c, ytd) : strategy(stocks, c);
+    const selected = {...calculate(config), key:"custom", label:`Customize · Top ${config.n}`};
+    const preset = (n: number): Result => ({
+      ...calculate({...config,n,weights:Array.from({length:n},()=>1/n)}),
+      key:`top${n}-equal`, label:`Top ${n} · ${lang === "zh" ? "等权" : "Equal weight"}`,
+    });
+    return [selected, benchmark("sp500", data, config, indexYtd),
+      benchmark("nasdaq", data, config, indexYtd), preset(1), preset(3)];
+  }, [data, config, stocks, base, privateData, ytd, indexYtd, lang]);
+  const chartResults = results.length ? [results[3],results[4],results[0],results[1],results[2]] : [];
   const selected = results[0],
     sp = results[1],
     nas = results[2];
@@ -365,6 +366,7 @@ export default function App() {
 
 
           </form>
+          <p className="minor">Customize · {lang === "zh" ? "以下 Top N 与权重仅影响自定义曲线，固定等权曲线不变。" : "Top N and weights below affect only Customize; fixed equal-weight curves stay unchanged."}</p>
           <div className="weight-controls" role="group" aria-label={lang === "zh" ? "按排名分配权重" : "Weights by prior-year rank"}>
             <label>
               {t.n}
@@ -400,12 +402,14 @@ export default function App() {
           )}
           <div className="plot-meta">
             <div className="legend">
-              {results.map((r) => (
+              {chartResults.map((r) => (
                 <button type="button" key={r.key} disabled={!!r.error} aria-pressed={!hiddenLines.includes(r.key)} className={r.error ? "unavailable" : ""} onClick={() => setHiddenLines((keys) => keys.includes(r.key) ? keys.filter((key) => key !== r.key) : [...keys, r.key])}>
                   <i
                     style={{
                       background:
-                        r.key === "sp500"
+                        r.key === "top3-equal" ? (theme === "dark" ? lineColors.top3 : "#7358a1")
+                        : r.key === "custom" ? (theme === "dark" ? lineColors.custom : "#a84b58")
+                        : r.key === "sp500"
                           ? theme === "dark"
                             ? lineColors.sp500
                             : "#42698e"
@@ -427,7 +431,7 @@ export default function App() {
           </div>
           {config && (
             <GrowthChart
-              results={results.filter((r) => !hiddenLines.includes(r.key))}
+              results={chartResults.filter((r) => !hiddenLines.includes(r.key))}
               config={config}
               lang={lang}
               theme={theme}
@@ -436,7 +440,7 @@ export default function App() {
           <div className="summary-line">
             <div>
               <span>
-                TOP {config?.n ?? 1} / {t.final}
+                Customize · Top {config?.n ?? 1} / {t.final}
               </span>
               <strong>{formatMoney(selected?.final ?? null, lang)}</strong>
             </div>
@@ -483,7 +487,7 @@ export default function App() {
               <span>01 / </span>
               {t.annual}
             </h2>
-            <span className="minor">TOP {config?.n ?? 1}</span>
+            <span className="minor">Customize · Top {config?.n ?? 1}</span>
           </div>
           <ul className="strategy-rules">
             <li>{lang === "zh" ? `每年末，在当年末属于标普 500 的可用历史样本中，按价格涨幅选出前 ${config?.n ?? 1} 名。` : `At each year-end, rank available historical S&P 500 year-end members by price return and select the top ${config?.n ?? 1}.`}</li>

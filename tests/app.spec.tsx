@@ -10,8 +10,8 @@ import userEvent from "@testing-library/user-event";
 import { readFileSync } from "node:fs";
 import App from "../src/App";
 vi.mock("../src/GrowthChart", () => ({
-  default: () => <div role="img" aria-label="Test chart" />,
-  lineColors: { strategy: "green", sp500: "blue", nasdaq: "gold" },
+  default: ({results}: {results:{key:string;final:number|null}[]}) => <div role="img" aria-label="Test chart" data-series={JSON.stringify(results.map(r=>({key:r.key,final:r.final})))} />,
+  lineColors: { strategy: "green", top3:"purple", custom:"pink", sp500: "blue", nasdaq: "gold" },
   seriesLabel: (r: { key: string; label: string }, lang: string) =>
     r.key === "sp500"
       ? lang === "en"
@@ -80,12 +80,13 @@ async function mount() {
   await screen.findByRole("combobox", { name: "Top N" });
   return userEvent.setup();
 }
-test("only selected strategy plus two benchmarks; no forced Top 3/5/10", async () => {
+test("fixed equal-weight Top 1 and Top 3 plus Customize and benchmarks", async () => {
   await mount();
   const legend = document.querySelector(".legend")!;
   expect(legend.textContent).toContain("Top 1");
-  expect(legend.textContent).not.toMatch(/Top (3|5|10)/);
-  expect(legend.children.length).toBe(3);
+  expect(legend.textContent).toContain("Top 3");
+  expect(legend.textContent).toContain("Customize · Top 1");
+  expect(legend.children.length).toBe(5);
   expect(screen.getByRole("table", { name: "按上一年排名设置投资权重" })).toBeTruthy();
   expect(screen.getByRole("table", { name: "年度明细" })).toBeTruthy();
 });
@@ -117,14 +118,16 @@ test("invalid import never changes active data", async () => {
   await user.upload(screen.getByLabelText("选择本机历史数据 JSON"), file);
   expect(document.querySelector(".status-line")?.textContent).toMatch(/导入失败/);
 });
-test("Top 7 replaces Top 1 rather than adding more curves", async () => {
+test("custom Top 7 preserves the fixed Top 1 and Top 3 curves", async () => {
   const user = await mount();
   await user.selectOptions(
     screen.getByRole("combobox", { name: "Top N" }),
     "7",
   );
   expect(document.querySelector(".legend")?.textContent).toContain("Top 7");
-  expect(document.querySelector(".legend")?.textContent).not.toContain("Top 1");
+  expect(document.querySelector(".legend")?.textContent).toContain("Top 1");
+  expect(document.querySelector(".legend")?.textContent).toContain("Top 3");
+  expect(document.querySelector(".legend")?.children.length).toBe(5);
   expect(new URLSearchParams(location.search).get("n")).toBe("7");
   expect(new URLSearchParams(location.search).get("data")).toBeNull();
 });
@@ -242,4 +245,28 @@ test("price-only base overrides the legacy sample and rules are separate bullets
   expect(bullets[3].textContent).toContain("不计现金分红");
   expect(document.querySelector(".summary-line")?.textContent).toContain("2001");
   expect(screen.queryByText(/当前为旧版或导入数据/)).toBeNull();
+});
+
+
+test("custom weights leave fixed equal-weight results unchanged and each line toggles independently", async () => {
+  const user = await mount();
+  const text = JSON.stringify(fixture());
+  const file = new File([text], "synthetic.json", {type:"application/json"});
+  Object.defineProperty(file,"text",{value:async()=>text});
+  await user.upload(screen.getByLabelText("选择本机历史数据 JSON"),file);
+  await user.selectOptions(screen.getByRole("combobox",{name:"Top N"}),"2");
+  const series = () => JSON.parse(screen.getByRole("img").getAttribute("data-series")!) as {key:string;final:number}[];
+  const before = series();
+  const a=screen.getByRole("spinbutton",{name:"第1名权重"}), b=screen.getByRole("spinbutton",{name:"第2名权重"});
+  await user.clear(a); await user.type(a,"70");
+  await user.clear(b); await user.type(b,"30");
+  expect(series().find(r=>r.key==="top1-equal")).toEqual(before.find(r=>r.key==="top1-equal"));
+  expect(series().find(r=>r.key==="top3-equal")).toEqual(before.find(r=>r.key==="top3-equal"));
+  expect(series().find(r=>r.key==="custom")?.final).not.toBe(before.find(r=>r.key==="custom")?.final);
+  const fixed=screen.getByRole("button",{name:"Top 3 · 等权",exact:true});
+  await user.click(fixed);
+  expect(series().some(r=>r.key==="top3-equal")).toBe(false);
+  expect(series().some(r=>r.key==="custom")).toBe(true);
+  await user.click(fixed);
+  expect(series().some(r=>r.key==="top3-equal")).toBe(true);
 });
