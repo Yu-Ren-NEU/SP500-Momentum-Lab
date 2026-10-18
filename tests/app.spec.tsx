@@ -80,13 +80,13 @@ async function mount() {
   await screen.findByRole("combobox", { name: "Top N" });
   return userEvent.setup();
 }
-test("fixed equal-weight Top 1 and Top 3 plus Customize and benchmarks", async () => {
+test("fixed equal-weight curves and benchmarks without a default custom curve", async () => {
   await mount();
   const legend = document.querySelector(".legend")!;
   expect(legend.textContent).toContain("Top 1");
   expect(legend.textContent).toContain("Top 3");
-  expect(legend.textContent).toContain("Customize · Top 1");
-  expect(legend.children.length).toBe(5);
+  expect(legend.textContent).not.toContain("自定义");
+  expect(legend.children.length).toBe(4);
   expect(screen.getByRole("table", { name: "按上一年排名设置投资权重" })).toBeTruthy();
   expect(screen.getByRole("table", { name: "年度明细" })).toBeTruthy();
 });
@@ -124,6 +124,8 @@ test("custom Top 7 preserves the fixed Top 1 and Top 3 curves", async () => {
     screen.getByRole("combobox", { name: "Top N" }),
     "7",
   );
+  expect(document.querySelector(".legend")?.textContent).not.toContain("Top 7");
+  await user.click(screen.getByRole("button",{name:/添加曲线/}));
   expect(document.querySelector(".legend")?.textContent).toContain("Top 7");
   expect(document.querySelector(".legend")?.textContent).toContain("Top 1");
   expect(document.querySelector(".legend")?.textContent).toContain("Top 3");
@@ -256,17 +258,34 @@ test("custom weights leave fixed equal-weight results unchanged and each line to
   await user.upload(screen.getByLabelText("选择本机历史数据 JSON"),file);
   await user.selectOptions(screen.getByRole("combobox",{name:"Top N"}),"2");
   const series = () => JSON.parse(screen.getByRole("img").getAttribute("data-series")!) as {key:string;final:number}[];
+  await user.click(screen.getByRole("button",{name:/添加曲线/}));
   const before = series();
   const a=screen.getByRole("spinbutton",{name:"第1名权重"}), b=screen.getByRole("spinbutton",{name:"第2名权重"});
   await user.clear(a); await user.type(a,"70");
   await user.clear(b); await user.type(b,"30");
   expect(series().find(r=>r.key==="top1-equal")).toEqual(before.find(r=>r.key==="top1-equal"));
   expect(series().find(r=>r.key==="top3-equal")).toEqual(before.find(r=>r.key==="top3-equal"));
-  expect(series().find(r=>r.key==="custom")?.final).not.toBe(before.find(r=>r.key==="custom")?.final);
+  expect(series().find(r=>r.key==="custom-1")).toEqual(before.find(r=>r.key==="custom-1"));
+  await user.click(screen.getByRole("button",{name:/添加曲线/}));
+  expect(series().find(r=>r.key==="custom-2")?.final).not.toBe(before.find(r=>r.key==="custom-1")?.final);
   const fixed=screen.getByRole("button",{name:"Top 3 · 等权",exact:true});
   await user.click(fixed);
   expect(series().some(r=>r.key==="top3-equal")).toBe(false);
-  expect(series().some(r=>r.key==="custom")).toBe(true);
+  expect(series().some(r=>r.key==="custom-1")).toBe(true);
   await user.click(fixed);
   expect(series().some(r=>r.key==="top3-equal")).toBe(true);
+});
+
+
+test("at most five added curves and deleting a hidden curve frees a slot", async () => {
+  const user = await mount();
+  const add=()=>screen.getByRole("button",{name:/添加曲线/});
+  for(let i=0;i<5;i++) await user.click(add());
+  expect((add() as HTMLButtonElement).disabled).toBe(true);
+  expect(document.querySelector(".legend")?.children.length).toBe(9);
+  await user.click(screen.getByRole("button",{name:/^删除 自定义 2/}));
+  expect((add() as HTMLButtonElement).disabled).toBe(false);
+  expect(document.querySelector(".legend")?.children.length).toBe(8);
+  await user.click(add());
+  expect(document.querySelector(".legend")?.children.length).toBe(9);
 });

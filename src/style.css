@@ -616,3 +616,7 @@ footer {
   line-height: 1.85;
 }
 .strategy-rules li + li { margin-top: .7em; }
+
+.legend-entry { display: inline-flex; align-items: center; gap: 3px; }
+.legend .delete-curve { padding: 3px 5px; color: var(--muted); font-size: 16px; }
+.legend .delete-curve:hover { color: #e5989b; }

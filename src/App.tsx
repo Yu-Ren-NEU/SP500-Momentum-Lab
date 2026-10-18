@@ -37,6 +37,7 @@ export default function App() {
   const [latestBaseVersion, setLatestBaseVersion] = useState<string>();
   const [weightDraft, setWeightDraft] = useState<string[]>(["100"]);
   const [hiddenLines, setHiddenLines] = useState<string[]>([]);
+  const [addedCurves, setAddedCurves] = useState<{id:number;n:number;weights:number[]}[]>([]);
   const [config, setConfig] = useState<Config>(),
     [draft, setDraft] = useState({
       start: "2012",
@@ -146,12 +147,24 @@ export default function App() {
       key:`top${n}-equal`, label:`Top ${n} · ${lang === "zh" ? "等权" : "Equal weight"}`,
     });
     return [selected, benchmark("sp500", data, config, indexYtd),
-      benchmark("nasdaq", data, config, indexYtd), preset(1), preset(3)];
-  }, [data, config, stocks, base, privateData, ytd, indexYtd, lang]);
-  const chartResults = results.length ? [results[3],results[4],results[0],results[1],results[2]] : [];
+      benchmark("nasdaq", data, config, indexYtd), preset(1), preset(3),
+      ...addedCurves.map(curve => ({...calculate({...config,n:curve.n,weights:curve.weights}),
+        key:`custom-${curve.id}`,label:`${lang === "zh" ? "自定义" : "Custom"} ${curve.id} · Top ${curve.n} (${curve.weights.map(w=>Number((w*100).toFixed(2))).join("/")}%)`}))];
+  }, [data, config, stocks, base, privateData, ytd, indexYtd, lang, addedCurves]);
+  const chartResults = results.length ? [results[3],results[4],...results.slice(5),results[1],results[2]] : [];
   const selected = results[0],
     sp = results[1],
     nas = results[2];
+  function addCurve() {
+    if (!config || error || addedCurves.length >= 5) return;
+    const id = [1,2,3,4,5].find(id=>!addedCurves.some(curve=>curve.id===id))!;
+    setAddedCurves(curves=>[...curves,{id,n:config.n,weights:[...(config.weights ?? Array.from({length:config.n},()=>1/config.n))]}]);
+    setHiddenLines(keys=>keys.filter(key=>key!==`custom-${id}`));
+  }
+  function deleteCurve(key:string) {
+    setAddedCurves(curves=>curves.filter(curve=>`custom-${curve.id}`!==key));
+    setHiddenLines(keys=>keys.filter(value=>value!==key));
+  }
   function url(c: Config) {
     const snapshot = new URLSearchParams(location.search).get("snapshot") === "1";
     const p = new URLSearchParams(configSearch(c, snapshot ? data?.version : undefined));
@@ -366,7 +379,7 @@ export default function App() {
 
 
           </form>
-          <p className="minor">Customize · {lang === "zh" ? "以下 Top N 与权重仅影响自定义曲线，固定等权曲线不变。" : "Top N and weights below affect only Customize; fixed equal-weight curves stay unchanged."}</p>
+          <p className="minor">{lang === "zh" ? "设置 Top N 与权重后点击添加曲线，最多保留 5 条；已添加曲线的权重不随之后的编辑变化。" : "Set Top N and weights, then add a curve (up to 5). Added allocations stay fixed when you edit the controls."}</p>
           <div className="weight-controls" role="group" aria-label={lang === "zh" ? "按排名分配权重" : "Weights by prior-year rank"}>
             <label>
               {t.n}
@@ -389,6 +402,7 @@ export default function App() {
               </table>
             </div>
             <button type="button" onClick={() => updateOptions(draft, Array.from({length: Number(draft.n)}, () => String(100 / Number(draft.n))))}>{lang === "zh" ? "恢复等权" : "Equal weights"}</button>
+            <button type="button" onClick={addCurve} disabled={!!error || !config || addedCurves.length>=5}>{lang === "zh" ? "添加曲线" : "Add curve"} ({addedCurves.length}/5)</button>
             <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
           </div>
           {!priceOnly && latestBaseVersion && base?.version !== latestBaseVersion && <p className="minor">{lang === "zh" ? "当前链接固定了旧数据快照。" : "This URL pins an older data snapshot."} <a href={(() => { const p = new URLSearchParams(location.search); for (const key of ["snapshot", "data", "base", "ytd"]) p.delete(key); return "?"+p.toString(); })()}>{lang === "zh" ? "加载最新数据 ↗" : "Load latest data ↗"}</a></p>}
@@ -403,12 +417,12 @@ export default function App() {
           <div className="plot-meta">
             <div className="legend">
               {chartResults.map((r) => (
-                <button type="button" key={r.key} disabled={!!r.error} aria-pressed={!hiddenLines.includes(r.key)} className={r.error ? "unavailable" : ""} onClick={() => setHiddenLines((keys) => keys.includes(r.key) ? keys.filter((key) => key !== r.key) : [...keys, r.key])}>
+                <span className="legend-entry" key={r.key}><button type="button" disabled={!!r.error} aria-pressed={!hiddenLines.includes(r.key)} className={r.error ? "unavailable" : ""} onClick={() => setHiddenLines((keys) => keys.includes(r.key) ? keys.filter((key) => key !== r.key) : [...keys, r.key])}>
                   <i
                     style={{
                       background:
                         r.key === "top3-equal" ? (theme === "dark" ? lineColors.top3 : "#7358a1")
-                        : r.key === "custom" ? (theme === "dark" ? lineColors.custom : "#a84b58")
+                        : r.key.startsWith("custom-") ? (theme === "dark" ? ["#e5989b","#66c2b5","#e4b875","#84b9e8","#d28bc2"][Number(r.key.slice(7))-1] : ["#a84b58","#227a70","#916317","#326ca0","#914b83"][Number(r.key.slice(7))-1])
                         : r.key === "sp500"
                           ? theme === "dark"
                             ? lineColors.sp500
@@ -424,7 +438,7 @@ export default function App() {
                   />
                   {seriesLabel(r, lang)}
                   {r.error ? " · —" : ""}
-                </button>
+                </button>{r.key.startsWith("custom-") && <button className="delete-curve" type="button" aria-label={`${lang === "zh" ? "删除" : "Delete"} ${r.label}`} onClick={()=>deleteCurve(r.key)}>×</button>}</span>
               ))}
             </div>
             <span className="scale-label">USD / {t.linear}</span>
@@ -440,7 +454,7 @@ export default function App() {
           <div className="summary-line">
             <div>
               <span>
-                Customize · Top {config?.n ?? 1} / {t.final}
+                {lang === "zh" ? "当前设置" : "Preview"} · Top {config?.n ?? 1} / {t.final}
               </span>
               <strong>{formatMoney(selected?.final ?? null, lang)}</strong>
             </div>
@@ -487,7 +501,7 @@ export default function App() {
               <span>01 / </span>
               {t.annual}
             </h2>
-            <span className="minor">Customize · Top {config?.n ?? 1}</span>
+            <span className="minor">{lang === "zh" ? "当前设置" : "Preview"} · Top {config?.n ?? 1}</span>
           </div>
           <ul className="strategy-rules">
             <li>{lang === "zh" ? `每年末，在当年末属于标普 500 的可用历史样本中，按价格涨幅选出前 ${config?.n ?? 1} 名。` : `At each year-end, rank available historical S&P 500 year-end members by price return and select the top ${config?.n ?? 1}.`}</li>

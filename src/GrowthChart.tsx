@@ -182,7 +182,7 @@ export default function GrowthChart({
         .map((r) => {
           const color =
             r.key === "top3-equal" ? (dark ? lineColors.top3 : "#7358a1")
-            : r.key === "custom" ? (dark ? lineColors.custom : "#a84b58")
+            : r.key.startsWith("custom-") ? (dark ? ["#e5989b","#66c2b5","#e4b875","#84b9e8","#d28bc2"][Number(r.key.slice(7))-1] : ["#a84b58","#227a70","#916317","#326ca0","#914b83"][Number(r.key.slice(7))-1])
             : r.key === "sp500"
               ? dark
                 ? lineColors.sp500
@@ -209,14 +209,14 @@ export default function GrowthChart({
             ),
             lineStyle: {
               color,
-              width: r.key === "custom" ? 2.5 : r.key.startsWith("top") ? 3 : 1.8,
-              type: r.key === "custom" ? "dotted" : r.key === "nasdaq" ? "dashed" : "solid",
+              width: r.key.startsWith("custom-") ? 2.5 : r.key.startsWith("top") ? 3 : 1.8,
+              type: r.key.startsWith("custom-") ? "dotted" : r.key === "nasdaq" ? "dashed" : "solid",
               shadowColor: r.key.startsWith("top") ? color : "transparent",
               shadowBlur: 0,
             },
             itemStyle: { color },
             emphasis: { focus: "series", lineStyle: { width: 3.5 } },
-            z: r.key === "custom" ? 4 : r.key.startsWith("top") ? 3 : 2,
+            z: r.key.startsWith("custom-") ? 4 : r.key.startsWith("top") ? 3 : 2,
           };
         }),
     };
