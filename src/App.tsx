@@ -319,12 +319,16 @@ export default function App() {
             <p className="disclaimer">{t.disclaimer}</p>
             <div className="utility">
               <button
+                className="theme-toggle"
                 onClick={switchTheme}
                 aria-label={
                   lang === "zh" ? "切换明暗主题" : "Toggle color theme"
                 }
               >
-                {theme === "dark" ? "◐" : "◑"}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d={theme === "dark" ? "M12 4a8 8 0 0 0 0 16V4Z" : "M12 4a8 8 0 0 1 0 16V4Z"} fill="currentColor" stroke="none" />
+                </svg>
               </button>
               <button onClick={switchLang}>
                 {lang === "zh" ? "EN" : "中文"}
