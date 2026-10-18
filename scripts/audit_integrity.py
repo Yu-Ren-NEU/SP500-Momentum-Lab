@@ -22,9 +22,9 @@ def build():
         for position,row in enumerate(rank['rows'][:10] if rank else [],1):
             complete=row['id'] in available
             holdings.append({'rank':position,'ticker':row['ticker'],'available':complete,'holdingYear':next_year,
-                             'period':'ytd' if next_year==ytd.get('year') else 'calendar-year'})
+                             'period':'ytd' if next_year==ytd.get('year') and str(next_year) not in base['returns'] else 'calendar-year'})
             if not complete:gaps.append({'signalYear':year,'holdingYear':next_year,'rank':position,'ticker':row['ticker'],'reason':'No validated holding return; not zero-filled'})
-        is_ytd=year==ytd.get('year')
+        is_ytd=year==ytd.get('year') and year==dt.datetime.now(dt.timezone.utc).year
         years.append({'year':year,'status':'available-ytd-sample' if is_ytd else 'available-annual-sample' if rank else 'missing',
                       'fullUniverseVerified':False,'observedMembers':len(ytd.get('returns',[])) if is_ytd else coverage.get('available',0),'sourceMemberCount':coverage.get('members'),
                       'missingMemberCount':len(coverage.get('missing',[])) if coverage else None,'nextYearTop10Holdings':holdings})

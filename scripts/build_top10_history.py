@@ -40,8 +40,9 @@ def build():
     current_path = ROOT / 'data/research/current-year-sample.json'
     if current_path.exists():
         current = json.loads(current_path.read_text())
-        years[str(current['year'])].update(current)
-        years[str(current['year'])]['eligibleForVerifiedBacktest'] = False
+        if current['year'] == dt.datetime.now(dt.timezone.utc).year:
+            years[str(current['year'])].update(current)
+            years[str(current['year'])]['eligibleForVerifiedBacktest'] = False
     evidence_path = ROOT / 'data/research/reported-evidence.json'
     if evidence_path.exists():
         for observation in json.loads(evidence_path.read_text())['observations']:

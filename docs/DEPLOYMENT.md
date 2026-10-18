@@ -44,3 +44,14 @@ check the Actions page if updates stop. A failing run uses normal GitHub notific
 - `DEPLOY_BASE_PATH=/SP500-Momentum-Lab/ npm run check` checks the project-path build.
 - `python3 scripts/check_release.py --summary` reports public data coverage/cutoffs.
 - No raw source cache, authentication token, or local-only research file is committed.
+
+## Verified on 2026-10-18
+
+- Public URL: https://yu-ren-neu.github.io/SP500-Momentum-Lab/ (HTTP 200).
+- Initial deployment: https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab/actions/runs/39139217921 (success).
+- Live monthly refresh: https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab/actions/runs/39139225624 (success).
+- Follow-up deployment triggered by the refresh: https://github.com/Yu-Ren-NEU/SP500-Momentum-Lab/actions/runs/39139274964 (success).
+- Stock sample cutoff advanced from 2026-10-15 to 2026-10-16; 30 completed annual samples remained frozen.
+- Public browser checks covered loaded charts, Chinese labels, URL configuration,
+  immediate end-year recalculation and adding a custom comparison curve.
+- Local price-only and index-YTD endpoints return HTTP 404 on the public site.
