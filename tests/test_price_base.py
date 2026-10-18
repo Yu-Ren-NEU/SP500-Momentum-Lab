@@ -20,3 +20,15 @@ class PriceBaseTests(unittest.TestCase):
         self.assertEqual(period_start({2024:100,2025:200},2025,'price','price',None),(100,None))
         self.assertEqual(period_start({2024:100,2025:200},2025,'price','dividend-adjusted',None),(None,None))
         self.assertEqual(period_start({2025:200},2025,'price',None,('2024-02-13',40)),(None,None))
+
+    def test_reviewed_issuer_endpoints_require_exact_dates_and_provenance(self):
+        from build_price_base import reviewed_row
+        review={'id':'synthetic:issuer','ticker':'SYNTH','year':2023,'basis':'split_adjusted_price_return',
+                'from':'2022-12-30','to':'2023-12-29','startClose':100,'endClose':110,
+                'sources':['https://example.org/issuer/2022','https://example.org/issuer/2023'],
+                'evidence':'Synthetic endpoint verification fixture'}
+        ends={2022:'2022-12-30',2023:'2023-12-29'}
+        self.assertAlmostEqual(reviewed_row(review,ends)['totalReturn'],.1)
+        with self.assertRaises(ValueError):reviewed_row({**review,'to':'2023-12-28'},ends)
+        with self.assertRaises(ValueError):reviewed_row({**review,'sources':[]},ends)
+        with self.assertRaises(ValueError):reviewed_row({**review,'basis':'total_return'},ends)

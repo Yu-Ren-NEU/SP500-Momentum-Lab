@@ -129,3 +129,14 @@ engine compatibility; `basis=split_adjusted_price_return` identifies its actual
 price-only meaning. No cash dividend or distribution is added to those values.
 The S&P reference intentionally remains dividend-inclusive; Nasdaq remains a price
 reference, with the distinction explicitly stated in the rule bullets.
+
+Reviewed issuer endpoint repairs can be retained in the ignored local file
+`data/raw/price-reviews.json`. The price builder checks exact market-calendar
+endpoints, a price-only basis, positive finite prices and two provenance links
+before replacing that security-year return. These repairs are included in the
+local integrity report and applied on every rebuild. The HES 2023 holding gap was
+repaired from the issuer's year-end closing-price disclosures in its 2023/2024
+proxy statements, allowing the selected Top 1–10 paths from 2012 through the
+current cutoff to continue. This closes a holding-path gap, not historical
+full-universe coverage. Issuer PDFs that returned HTTP 403 are not claimed as
+downloaded; the review records the actual web verification method.

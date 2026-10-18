@@ -44,6 +44,15 @@ def period_start(values,year,source,previous_source,listing):
         return listing[1], listing[0]
     return None, None
 
+def reviewed_row(review,ends):
+    year=review['year']
+    if (review['basis']!='split_adjusted_price_return' or review['from']!=ends.get(year-1)
+            or review['to']!=ends.get(year) or len(review.get('sources',[]))<2 or not review.get('evidence')):
+        raise ValueError('Reviewed endpoints or provenance invalid')
+    return {'id':review['id'],'ticker':review['ticker'],'name':review['ticker'],
+            'totalReturn':annual_return(review['startClose'],review['endClose']),
+            'source':'reviewed-issuer-year-end-price-disclosures-local'}
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--retry-failed',action='store_true')
@@ -119,6 +128,8 @@ def main():
                 if ipo:listing[symbol]=ipo
             if completed%100==0:print(f'Processed {completed}/{len(symbols)} symbols',flush=True)
     atomic_json(failure_path,failures)
+    review_path=ROOT/'data/raw/price-reviews.json'
+    reviews=json.loads(review_path.read_text())['reviews'] if review_path.exists() else []
     annual={};rankings={};coverage={};partial={};holding_gaps=[]
     for year in range(1996,YEAR+1):
         rows=[]
@@ -133,6 +144,10 @@ def main():
             ticker={'FB':'META' if year>=2022 else 'FB','BRK-B':'BRK.B','BF-B':'BF.B'}.get(symbol,symbol)
             rows.append({'id':'fnspid:'+symbol,'ticker':ticker,'name':names.get(symbol,ticker),
                          'totalReturn':annual_return(before,values[year]),'source':source})
+        for review in reviews:
+            if review['year']==year:
+                corrected=reviewed_row(review,ends)
+                rows=[r for r in rows if r['id']!=corrected['id']]+[corrected]
         annual[str(year)]=rows
         if year==YEAR:continue
         cohort=cohorts[year]
@@ -142,6 +157,11 @@ def main():
         coverage[str(year)]={'members':len(cohort),'available':len(ordered),'missing':sorted(cohort-{r['ticker'] for r in ordered})}
     sources=[{'name':'FNSPID raw Close (split-adjusted, dividends excluded)','url':'https://huggingface.co/datasets/Zihan1004/FNSPID','license':'CC BY-NC 4.0; non-commercial derived research','licenseUrl':'https://github.com/Zdong104/FNSPID_Financial_News_Dataset/blob/main/LICENSE','sha256':digest(RAW/'fnspid-prices.zip')},
         {'name':'Yahoo Finance Close, local research only','url':'https://finance.yahoo.com/','license':'Redistribution permission unestablished; excluded from public builds','licenseUrl':'https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html','sha256':hashlib.sha256(''.join(sorted(p.name+digest(p) for p in CACHE.glob('*.json'))).encode()).hexdigest()}]
+    for review in reviews:
+        for url in review['sources']:
+            if not any(source['url']==url for source in sources):
+                sources.append({'name':'Reviewed issuer year-end price disclosure','url':url,
+                    'license':'Local research evidence; not included in public builds','licenseUrl':url,'sha256':digest(review_path)})
     base=merge({},dict(schemaVersion=1,quality='exploratory',redistribution='local-only',licenseEvidence='Local research only; price donor redistribution review pending',rankings=rankings,returns={k:v for k,v in annual.items() if int(k)<YEAR},coverage=coverage,sources=sources))
     base.update(basis='split_adjusted_price_return',partialListingPeriods=partial,quarantined={},limitations=['Incomplete historical member sample; no complete-universe claim','Corporate distributions and delisting proceeds are excluded or missing; missing holdings stop the curve','Ticker identity mapping remains provisional'],updatedAt=dt.datetime.now(dt.timezone.utc).isoformat())
     ytd={'schemaVersion':1,'kind':'stocks-ytd','year':YEAR,'asOf':CUTOFF,'returns':annual[str(YEAR)],'basis':'split_adjusted_price_return'}
@@ -149,7 +169,7 @@ def main():
     for y,rank in rankings.items():
         nxt=annual.get(str(int(y)+1),[]);ids={r['id']for r in nxt}
         holding_gaps.extend({'signalYear':int(y),'holdingYear':int(y)+1,'rank':i+1,'ticker':r['ticker']} for i,r in enumerate(rank['rows'][:10]) if r['id'] not in ids)
-    audit={'basis':base['basis'],'baseVersion':base['version'],'failedDownloads':failures,'partialListingPeriods':partial,'holdingGaps':holding_gaps,'yearCoverage':coverage,'fullUniverseVerified':False,'newListingEvidence':{'SNDK':'https://www.sec.gov/Archives/edgar/data/2023554/000202355425000034/sndk-20250627.htm'}}
+    audit={'basis':base['basis'],'baseVersion':base['version'],'failedDownloads':failures,'partialListingPeriods':partial,'holdingGaps':holding_gaps,'yearCoverage':coverage,'reviewedEndpointRepairs':reviews,'fullUniverseVerified':False,'newListingEvidence':{'SNDK':'https://www.sec.gov/Archives/edgar/data/2023554/000202355425000034/sndk-20250627.htm'}}
     for year, rank in rankings.items():
         assert rank['count'] == len(rank['rows']) == coverage[year]['available']
         assert rank['rows'] == sorted(rank['rows'],key=lambda r:(-r['totalReturn'],r['id']))
