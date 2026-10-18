@@ -487,7 +487,7 @@ export default function App() {
                 ))}
               </select>
             </label>
-            <div className="weights-scroll">
+            <div className="weights-scroll" role="region" tabIndex={0} aria-label={lang === "zh" ? "排名权重，可左右滑动查看" : "Rank weights, scroll horizontally"}>
               <table className="weights-table">
                 <caption className="sr-only">{lang === "zh" ? "按上一年排名设置投资权重" : "Allocation by prior-year rank"}</caption>
                 <thead><tr><th scope="col">{lang === "zh" ? "排名" : "Rank"}</th>{weightDraft.map((_, i) => <th scope="col" key={i}>#{i + 1}</th>)}</tr></thead>
@@ -517,7 +517,8 @@ export default function App() {
             <li>{lang === "zh" ? "历史样本仍不完整；缺少持仓收益时停止曲线，不补零、不跳年。退市、收购及分拆等事件未核实的年份不视为完整回报。" : "Historical coverage remains incomplete. Missing holding returns stop the curve; years are never skipped or zero-filled. Unverified delistings, acquisitions and spin-offs are not treated as complete returns."}</li>
           </ul>
           </div>
-          <div className="table-scroll">
+          <div className="table-scroll" role="region" tabIndex={0} aria-label={lang === "zh" ? "年度明细，可左右滑动查看" : "Annual details, scroll horizontally"}>
+            <p className="mobile-scroll-hint">{lang === "zh" ? "左右滑动查看全部列 →" : "Swipe sideways to view all columns →"}</p>
             <table className="annual-table">
               <caption className="sr-only">{t.annual}</caption>
               <thead>

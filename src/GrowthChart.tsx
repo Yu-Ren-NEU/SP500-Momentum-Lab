@@ -47,6 +47,7 @@ export default function GrowthChart({
   const host = useRef<HTMLDivElement>(null),
     instance = useRef<echarts.ECharts | null>(null);
   const [failed, setFailed] = useState(false);
+  const [narrow, setNarrow] = useState(false);
   const t = copy[lang];
   useEffect(() => {
     if (!host.current) return;
@@ -55,7 +56,9 @@ export default function GrowthChart({
         renderer: "canvas",
       });
       instance.current = chart;
-      const observer = new ResizeObserver(() => chart.resize());
+      const resize = () => { setNarrow((host.current?.clientWidth ?? 0) < 480); chart.resize(); };
+      resize();
+      const observer = new ResizeObserver(resize);
       observer.observe(host.current);
       return () => {
         observer.disconnect();
@@ -87,7 +90,7 @@ export default function GrowthChart({
             ? "资金增长折线图，详细金额见下方年度表。"
             : "Capital growth line chart. Exact values are available in the annual table below.",
       },
-      grid: { left: 12, right: 24, top: 36, bottom: 64, containLabel: true },
+      grid: { left: narrow ? 0 : 12, right: narrow ? 8 : 24, top: narrow ? 20 : 36, bottom: narrow ? 76 : 64, containLabel: true },
       tooltip: {
         trigger: "axis",
         confine: true,
@@ -153,13 +156,14 @@ export default function GrowthChart({
           filterMode: "none",
           zoomOnMouseWheel: "ctrl",
           moveOnMouseWheel: false,
-          moveOnMouseMove: true,
+          moveOnMouseMove: !narrow,
+          preventDefaultMouseMove: !narrow,
         },
         {
           type: "slider",
           xAxisIndex: 0,
           bottom: 4,
-          height: 20,
+          height: narrow ? 28 : 20,
           borderColor: grid,
           backgroundColor: "transparent",
           fillerColor: dark ? "rgba(170,203,148,.08)" : "rgba(62,108,55,.08)",
@@ -221,7 +225,7 @@ export default function GrowthChart({
         }),
     };
     chart.setOption(option, { notMerge: true });
-  }, [results, config, lang, theme]);
+  }, [results, config, lang, theme, narrow]);
   return (
     <>
       <div className="chart-actions">
