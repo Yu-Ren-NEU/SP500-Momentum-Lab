@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "kind": "benchmarks-ytd",
+  "year": 2026,
+  "asOf": "2026-10-16",
+  "publication": "reported-summary",
+  "redistribution": "attributed-factual-summary-not-raw-feed",
+  "benchmarks": {
+    "sp500": {
+      "return": 0.1291,
+      "from": "2025-12-31",
+      "to": "2026-10-16",
+      "basis": "total_return"
+    },
+    "nasdaq": {
+      "return": 0.125,
+      "from": "2025-12-31",
+      "to": "2026-10-16",
+      "basis": "price_return"
+    }
+  },
+  "sources": {
+    "sp500": {
+      "url": "https://www.slickcharts.com/sp500/returns/ytd",
+      "retrievedAt": "2026-10-18",
+      "precisionPercentagePoints": 0.01,
+      "evidence": "2026 total return 12.91%; page explicitly states market close on 2026-10-16."
+    },
+    "nasdaq": {
+      "url": "https://apnews.com/article/c27809783ae3230b44c26e5ee4bea056",
+      "retrievedAt": "2026-10-18",
+      "precisionPercentagePoints": 0.1,
+      "evidence": "AP market summary for 2026-10-16 reports Nasdaq Composite up 12.5% for the year."
+    }
+  },
+  "limitations": [
+    "Two attributed reported YTD facts, not a licensed raw index feed or historical quote database.",
+    "Nasdaq YTD is rounded to one decimal percentage point by AP; chart values inherit this rounding.",
+    "Reviewed summary is preserved until a newer observation is verified; its date must not be advanced automatically."
+  ],
+  "version": "591186bf02044a1d"
+}

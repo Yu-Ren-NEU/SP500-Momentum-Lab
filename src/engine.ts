@@ -437,6 +437,6 @@ export function strategyWithYtd(data: StockData | undefined, c: Config, ytd?: Yt
 }
 
 export type BenchmarkYtd = {
-  schemaVersion: 1; kind: "benchmarks-ytd"; year: number; asOf: string;
+  schemaVersion: 1; kind: "benchmarks-ytd"; year: number; asOf: string; publication?: "reported-summary";
   benchmarks: Record<"sp500" | "nasdaq", {return:number; from:string; to:string; basis:string}>;
 };

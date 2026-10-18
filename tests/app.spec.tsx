@@ -289,3 +289,22 @@ test("at most five added curves and deleting a hidden curve frees a slot", async
   await user.click(add());
   expect(document.querySelector(".legend")?.children.length).toBe(9);
 });
+
+test("public benchmark summaries extend both index curves when local files are absent", async () => {
+  const indices = JSON.parse(readFileSync("public/data/benchmarks-ytd.json", "utf8"));
+  const base = JSON.parse(readFileSync("public/data/stocks-base.json", "utf8"));
+  const ytd = JSON.parse(readFileSync("public/data/stocks-ytd.json", "utf8"));
+  history.replaceState(null,"","/?start=2012&end=2026&initial=1&n=3&lang=zh");
+  vi.mocked(fetch).mockImplementation(async input => {
+    const path=String(input);
+    if(path.endsWith(".local.json")) return {ok:false,status:404} as Response;
+    return {ok:true,json:async()=>path.endsWith("benchmarks-ytd.json")?indices:path.endsWith("stocks-base.json")?base:path.endsWith("stocks-ytd.json")?ytd:publicData} as Response;
+  });
+  await mount();
+  const curves=JSON.parse(screen.getByRole("img",{name:"Test chart"}).getAttribute("data-series")!);
+  for(const key of ["sp500","nasdaq"]) {
+    const prior=Object.entries(publicData.benchmarks[key]).filter(([year])=>+year>=2012&&+year<=2025).reduce((capital,[,row])=>capital*(1+(row as {return:number}).return),1);
+    expect(curves.find((r:{key:string})=>r.key===key).final).toBeCloseTo(prior*(1+indices.benchmarks[key].return),8);
+  }
+  expect(screen.getByText(/指数为公开报道摘要/)).toBeTruthy();
+});

@@ -40,3 +40,18 @@ Source hashes, conventions and coverage accompany snapshots. Research observatio
 The [Chickenrobot historical snapshot](https://www.kaggle.com/datasets/chickenrobot/historical-stocks-of-companies-of-the-sp-and-500) was downloaded with its uploader CC0 declaration. It supplies exact endpoints missing from the newer survivor dataset, including HES and BLDR. Its columns pack OHLCV, dividends and split fields into strings; zero/empty cells are missing observations, never actual zero prices.
 
 The [Andrew MVD dataset](https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks) was also downloaded. Its QRVO year-end rows contain empty prices, so it does not fill that holding gap. No number was inferred from the row dates alone. The gap was subsequently repaired from FNSPID after checking exact endpoints, matching Close/Adj Close and the daily path; see [integrity review](INTEGRITY-REVIEW.md).
+
+## Public current-year benchmark summaries
+
+`public/data/benchmarks-ytd.json` contains two attributed reported YTD facts,
+not raw Yahoo/FRED quotes. The 2026-10-16 S&P total return is 12.91% from
+[Slickcharts](https://www.slickcharts.com/sp500/returns/ytd). The Nasdaq Composite
+price return is approximately 12.5%, reported to one decimal percentage point
+by [AP](https://apnews.com/article/c27809783ae3230b44c26e5ee4bea056).
+The public loader falls back to this file when local research indices are absent.
+Public chart amounts inherit the source rounding; these are calendar YTD summary
+observations, not precise intraday prices. The JSON records dates, precision,
+source links and review evidence. The monthly stock updater preserves this
+reviewed summary; it does not invent a newer benchmark cutoff. A newer summary
+requires source verification before replacing this file. Local research index
+files remain excluded from deployment.
