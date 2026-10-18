@@ -210,7 +210,7 @@ export default function GrowthChart({
             lineStyle: {
               color,
               width: r.key.startsWith("custom-") ? 2.5 : r.key.startsWith("top") ? 3 : 1.8,
-              type: r.key.startsWith("custom-") ? "dotted" : r.key === "nasdaq" ? "dashed" : "solid",
+              type: r.key.startsWith("custom-") ? "dotted" : (r.key === "sp500" || r.key === "nasdaq") ? "dashed" : "solid",
               shadowColor: r.key.startsWith("top") ? color : "transparent",
               shadowBlur: 0,
             },

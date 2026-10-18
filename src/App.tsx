@@ -151,7 +151,7 @@ export default function App() {
       ...addedCurves.map(curve => ({...calculate({...config,n:curve.n,weights:curve.weights}),
         key:`custom-${curve.id}`,label:`${lang === "zh" ? "自定义" : "Custom"} ${curve.id} · Top ${curve.n} (${curve.weights.map(w=>Number((w*100).toFixed(2))).join("/")}%)`}))];
   }, [data, config, stocks, base, privateData, ytd, indexYtd, lang, addedCurves]);
-  const chartResults = results.length ? [results[3],results[4],...results.slice(5),results[1],results[2]] : [];
+  const chartResults = results.length ? [results[1],results[2],results[3],results[4],...results.slice(5)] : [];
   const selected = results[0],
     sp = results[1],
     nas = results[2];
