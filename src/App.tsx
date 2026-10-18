@@ -325,7 +325,7 @@ export default function App() {
                   lang === "zh" ? "切换明暗主题" : "Toggle color theme"
                 }
               >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
                   <circle cx="12" cy="12" r="8" />
                   <path d={theme === "dark" ? "M12 4a8 8 0 0 0 0 16V4Z" : "M12 4a8 8 0 0 1 0 16V4Z"} fill="currentColor" stroke="none" />
                 </svg>
