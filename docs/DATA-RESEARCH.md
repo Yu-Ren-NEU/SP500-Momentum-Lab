@@ -39,4 +39,4 @@ Source hashes, conventions and coverage accompany snapshots. Research observatio
 
 The [Chickenrobot historical snapshot](https://www.kaggle.com/datasets/chickenrobot/historical-stocks-of-companies-of-the-sp-and-500) was downloaded with its uploader CC0 declaration. It supplies exact endpoints missing from the newer survivor dataset, including HES and BLDR. Its columns pack OHLCV, dividends and split fields into strings; zero/empty cells are missing observations, never actual zero prices.
 
-The [Andrew MVD dataset](https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks) was also downloaded. Its QRVO year-end rows contain empty prices, so it does not fill that holding gap. No number was inferred from the row dates alone. See [integrity review](INTEGRITY-REVIEW.md).
+The [Andrew MVD dataset](https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks) was also downloaded. Its QRVO year-end rows contain empty prices, so it does not fill that holding gap. No number was inferred from the row dates alone. The gap was subsequently repaired from FNSPID after checking exact endpoints, matching Close/Adj Close and the daily path; see [integrity review](INTEGRITY-REVIEW.md).

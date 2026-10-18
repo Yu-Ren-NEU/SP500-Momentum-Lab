@@ -5,7 +5,7 @@
     2026
   ],
   "purpose": "Research catalogue; sample rankings are not full historical S&P 500 rankings.",
-  "baseVersion": "6e5f9f4aea8076a0",
+  "baseVersion": "7f06b1dc8b43d945",
   "updatePolicy": "Current-year YTD requires explicit source cutoff. Freeze only after final trading day and source reconciliation; corrections require a documented revision. Never overwrite history with current membership.",
   "years": {
     "1958": {
@@ -2668,7 +2668,7 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "fnspid + fja05680 historical snapshot",
-      "observedUniverseCount": 416,
+      "observedUniverseCount": 417,
       "rows": [
         {
           "id": "fnspid:TSLA",

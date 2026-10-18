@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "baseVersion": "6e5f9f4aea8076a0",
+  "baseVersion": "7f06b1dc8b43d945",
   "ytdVersion": "c9df3aae1c7511f3",
   "fullHistoricalCoverageVerified": false,
   "verifiedFullUniverseYears": 0,
@@ -2235,7 +2235,7 @@
         {
           "rank": 6,
           "ticker": "QRVO",
-          "available": false,
+          "available": true,
           "holdingYear": 2020,
           "period": "calendar-year"
         },
@@ -2273,9 +2273,9 @@
       "year": 2020,
       "status": "available-annual-sample",
       "fullUniverseVerified": false,
-      "observedMembers": 416,
+      "observedMembers": 417,
       "sourceMemberCount": 505,
-      "missingMemberCount": 89,
+      "missingMemberCount": 88,
       "nextYearTop10Holdings": [
         {
           "rank": 1,
@@ -2759,15 +2759,7 @@
       "nextYearTop10Holdings": []
     }
   ],
-  "holdingGaps": [
-    {
-      "signalYear": 2019,
-      "holdingYear": 2020,
-      "rank": 6,
-      "ticker": "QRVO",
-      "reason": "No validated holding return; not zero-filled"
-    }
-  ],
+  "holdingGaps": [],
   "crossSourceConflicts": [
     {
       "year": 2023,

@@ -1,0 +1,25 @@
+{
+  "baseVersion": "7f06b1dc8b43d945",
+  "repairs": [
+    {
+      "ticker": "QRVO",
+      "year": 2020,
+      "return": 0.43052567728023083,
+      "from": "2019-12-31",
+      "to": "2020-12-31",
+      "startClose": 116.2300033569336,
+      "endClose": 166.27000427246094,
+      "sourceUrl": "https://github.com/Zdong104/FNSPID_Financial_News_Dataset",
+      "sourceSha256": "03da4fce7ebea90d5715ba3501773d410ae663b617027b338ef000a9955dab91",
+      "archiveMember": "full_history/QRVO.csv",
+      "license": "CC BY-NC 4.0; noncommercial research use",
+      "checks": [
+        "Exact year-end endpoints",
+        "At least 250 daily observations",
+        "Close equals Adj Close",
+        "No daily discontinuities above 50%"
+      ],
+      "limitation": "A repaired holding gap does not certify the historical ranking universe."
+    }
+  ]
+}

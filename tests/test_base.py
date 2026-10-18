@@ -25,7 +25,9 @@ class PublishedBaseTests(unittest.TestCase):
         old=json.loads((ROOT/'public/data/base-versions/9bf6ebd73f3563a4.json').read_text())
         self.assertIn('2020',old['quarantined']['GE']);self.assertNotIn('fnspid:GE',{r['id']for r in old['rankings']['2020']['rows']})
         self.assertNotIn('fnspid:TSLA',{r['id']for r in old['returns']['2020']})
-        self.assertTrue(all(r['source']=='chickenrobot-close-ratio-adjustment-unverified' for r in d['returns']['2020']))
+        self.assertTrue(all(r['source']=='chickenrobot-close-ratio-adjustment-unverified' or (r['ticker']=='QRVO' and r['source']=='fnspid-reviewed-equal-close-adjusted-close') for r in d['returns']['2020']))
+        qrvo=next(r for r in d['returns']['2020'] if r['ticker']=='QRVO')
+        self.assertAlmostEqual(qrvo['totalReturn'],166.27000427246094/116.2300033569336-1)
         self.assertEqual(d['rankings']['2016']['rows'][0]['ticker'],'NVDA')
     def test_raw_or_private_records_are_blocked(self):
         import json

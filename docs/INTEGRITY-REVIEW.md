@@ -39,3 +39,31 @@ Run the source builders, then `python3 scripts/supplement_history.py`, `python3 
 - `data/research/supplement-audit.json`: source hash, supplemental observations and comparison decisions.
 
 Complete historical constituent coverage for 1958-1995 remains unavailable. Every year's `fullUniverseVerified` is false. No completeness claim is made merely because a chart can be drawn.
+
+## Public QRVO 2020 repair (2026-10-18)
+
+The public Top 6-10 holding path previously stopped in 2020 because the secondary
+survivor snapshot did not contain QRVO. The original FNSPID archive does contain
+both exact calendar endpoints: 116.2300033569336 on 2019-12-31 and
+166.27000427246094 on 2020-12-31. The derived return is 43.0525677280%.
+Close and Adj Close agree throughout this interval, over 250 daily observations
+are present, and no consecutive daily move exceeds 50%. This narrowly reviewed
+exception does not reuse the known-spliced FNSPID series for other symbols.
+
+Reproduce with `python3 scripts/repair_public_gaps.py` followed by
+`npm run update:catalogue`. The repair is idempotent and the monthly updater
+preserves the frozen annual observation. Source hash, exact archive member,
+license and checks are recorded in `data/research/public-gap-repairs.json`.
+The current sample has no missing selected Top 1-10 holding observations; this
+is distinct from complete membership coverage or consistent dividend treatment.
+
+## Alternative-source screening
+
+A further candidate, Samyakraj Bayar's "S&P 500 Complete Historical Dataset
+(50+ Years)", was located on Kaggle. Its Hugging Face mirror declares MIT,
+but that declaration alone does not establish the original donor rights,
+historical constituent universe or the close-price adjustment convention.
+The original Kaggle metadata endpoint returned HTTP 403 during this review.
+It has not been merged into published returns. Andrew MVD and Chickenrobot
+were already checked; neither supplies the missing QRVO interval. Wider date
+coverage in a dataset title must not be mistaken for historical membership.
