@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "baseVersion": "9c777259a931d77b",
-  "ytdVersion": "1d120d2a706541c1",
+  "baseVersion": "6e5f9f4aea8076a0",
+  "ytdVersion": "c9df3aae1c7511f3",
   "fullHistoricalCoverageVerified": false,
   "verifiedFullUniverseYears": 0,
   "annualSampleYears": 30,
-  "currentYearAsOf": "2026-10-15",
+  "currentYearAsOf": "2026-10-16",
   "years": [
     {
       "year": 1958,

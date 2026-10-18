@@ -5,7 +5,7 @@
     2026
   ],
   "purpose": "Research catalogue; sample rankings are not full historical S&P 500 rankings.",
-  "baseVersion": "9c777259a931d77b",
+  "baseVersion": "6e5f9f4aea8076a0",
   "updatePolicy": "Current-year YTD requires explicit source cutoff. Freeze only after final trading day and source reconciliation; corrections require a documented revision. Never overwrite history with current membership.",
   "years": {
     "1958": {
@@ -3244,7 +3244,7 @@
     "2026": {
       "period": "ytd",
       "status": "available-sample",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-16",
       "eligibleForVerifiedBacktest": false,
       "universe": "not-established",
       "source": null,
@@ -3253,61 +3253,61 @@
         {
           "ticker": "SNDK",
           "name": "Sandisk",
-          "return": 4.8759370097042245,
+          "return": 4.473502494321504,
           "rank": 1
         },
         {
           "ticker": "DELL",
           "name": "Dell Technologies",
-          "return": 2.795045378272558,
+          "return": 2.621242015033102,
           "rank": 2
         },
         {
           "ticker": "MU",
           "name": "Micron Technology",
-          "return": 2.26520114536653,
+          "return": 2.081471800428849,
           "rank": 3
         },
         {
           "ticker": "MPC",
           "name": "Marathon Petroleum",
-          "return": 1.9665918234621675,
+          "return": 1.9737451456006583,
           "rank": 4
-        },
-        {
-          "ticker": "MRVL",
-          "name": "Marvell Technology",
-          "return": 1.8435725341977176,
-          "rank": 5
         },
         {
           "ticker": "VLO",
           "name": "Valero Energy",
-          "return": 1.7681882487587015,
+          "return": 1.7722401910095353,
+          "rank": 5
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "return": 1.685504563592628,
           "rank": 6
         },
         {
           "ticker": "AMD",
           "name": "Advanced Micro Devices",
-          "return": 1.6252800282717939,
+          "return": 1.46894840753848,
           "rank": 7
         },
         {
           "ticker": "INTC",
           "name": "Intel",
-          "return": 1.5845528130858377,
+          "return": 1.4349592075519837,
           "rank": 8
         },
         {
           "ticker": "STX",
           "name": "Seagate Technology",
-          "return": 1.5166618156283778,
+          "return": 1.327951644963549,
           "rank": 9
         },
         {
           "ticker": "HPE",
           "name": "Hewlett Packard Enterprise",
-          "return": 1.470040826900627,
+          "return": 1.3225882815031191,
           "rank": 10
         }
       ],
@@ -3323,7 +3323,7 @@
       ],
       "year": 2026,
       "sourceUrl": "https://www.kaggle.com/datasets/darkmatternet/s-and-p-500-stocks-25-years-of-data-updated-daily",
-      "sourceSha256": "ddd5fe693b3ee31d56e8f77811542159367277a007ca2d7ffd708766e507ebf6",
+      "sourceSha256": "6b08f03040378dd59824673cdc8bd38f268ebdff83e881a3d965c709459db7b3",
       "basis": "close-ratio-adjustment-unverified",
       "note": "Partial year; membership snapshot through 2026-08-18; not a full-universe or total-return ranking."
     }

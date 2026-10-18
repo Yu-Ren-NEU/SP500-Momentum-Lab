@@ -1,32 +1,30 @@
 {
-  "updatedAt": "2026-10-18T15:07:36.689485+00:00",
+  "updatedAt": "2026-10-18T15:10:02.121336+00:00",
   "completeThrough": 2025,
   "sources": {
     "nyu": {
       "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html",
-      "retrievedAt": "2026-10-18T15:07:36.689485+00:00",
+      "retrievedAt": "2026-10-18T15:10:02.121336+00:00",
       "sha256": "127c772f0fea8763391dbf2c1c7d3ecd3a07ca2b23f81ab47af58b529e2b5647",
       "rights": "Attributed non-commercial research use; do not resell",
       "rightsUrl": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/guide.html"
     },
     "nasdaq": {
       "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM",
-      "retrievedAt": "2026-10-18T15:07:36.689485+00:00",
+      "retrievedAt": "2026-10-18T15:10:02.121336+00:00",
       "sha256": "b1c65ade24861ff5dc51bd5bbd4d8b7ed8e68af20a6181b2457c6bfe64289520",
       "rights": "Non-commercial educational/personal use only. Nasdaq copyrighted; no commercial redistribution. Annual derived returns only.",
       "rightsUrl": "https://fred.stlouisfed.org/legal/terms/"
     },
     "wrds": {
       "url": "https://wrds-www.wharton.upenn.edu/classroom/sp500-introduction/over-time/",
-      "retrievedAt": "2026-10-17T17:17:09.154112+00:00",
+      "retrievedAt": "2026-10-18T15:10:02.121336+00:00",
       "sha256": "00fd21806a73fa7d7f21b0681a934ad3695648de11185a5f45fe8e6284b1d22c",
       "rights": "Metadata only; teaching data not distributed",
       "rightsUrl": "https://wrds-www.wharton.upenn.edu/pages/about/what-wrds/"
     }
   },
-  "updateWarnings": {
-    "wrds": "Login or changed layout; kept previous teaching evidence"
-  },
+  "updateWarnings": {},
   "benchmarks": {
     "sp500": {
       "1958": {
