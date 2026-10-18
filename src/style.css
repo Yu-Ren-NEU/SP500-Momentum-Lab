@@ -597,11 +597,11 @@ footer {
 }
 
 .legend button[aria-pressed="false"] { opacity: .4; text-decoration: line-through; }
-.annual-section { display: grid; gap: 32px; align-items: start; margin-top: 120px; }
+.annual-section { display: grid; gap: 32px; align-items: start; margin-top: 64px; }
 .annual-intro p { color: var(--muted); font-size: 13px; line-height: 1.9; max-width: 34ch; }
 .annual-section > .table-scroll { min-width: 0; }
 @media (min-width: 1000px) {
-  .annual-section { grid-template-columns: minmax(220px, .8fr) minmax(0, 2.2fr); gap: 64px; margin-top: 160px; }
+  .annual-section { grid-template-columns: minmax(220px, .8fr) minmax(0, 2.2fr); gap: 64px; margin-top: 96px; }
 }
 
 .weight-controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; padding: 8px 0 20px; font-size: 11px; color: var(--muted); }
@@ -639,7 +639,10 @@ footer {
 
 .controls { max-width: 100%; }
 .controls input, .controls select { min-height: 36px; padding-top: 7px; padding-bottom: 7px; font-size: 12px; }
-.curve-builder { margin-top: 24px; }
+.curve-builder { margin-top: 64px; }
+@media (min-width: 1000px) {
+  .curve-builder { margin-top: 96px; }
+}
 @media (pointer: coarse) {
   .controls input, .controls select { min-height: 44px; }
 }

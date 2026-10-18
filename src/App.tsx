@@ -504,7 +504,6 @@ export default function App() {
           <div className="annual-intro">
           <div className="section-title">
             <h2 id="annual-title">
-              <span>01 / </span>
               {t.annual}
             </h2>
             <span className="minor">{lang === "zh" ? "当前设置" : "Preview"} · Top {config?.n ?? 1}</span>
