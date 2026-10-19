@@ -55,3 +55,26 @@ source links and review evidence. The monthly stock updater preserves this
 reviewed summary; it does not invent a newer benchmark cutoff. A newer summary
 requires source verification before replacing this file. Local research index
 files remain excluded from deployment.
+
+## Reviewed 2025 listing eligibility and environment parity
+
+The previous public build required a prior-December endpoint and incorrectly
+excluded Sandisk's new 2025 listing. `scripts/repair_new_listing.py` applies the
+reviewed eligibility exception from the public CC0-declared Kaggle observations:
+36.00 on 2025-02-13 to 237.3800048828125 on 2025-12-31, or +559.3889%.
+[Nasdaq corporate action ECA2025-38](https://classic.nasdaqtrader.com/TraderNews.aspx?id=ECA2025-38)
+confirms February 13 as the first when-issued trading day (SNDKV); regular-way
+SNDK trading began February 24. The review explicitly includes when-issued trading.
+SNDK is present in the historical 2025 year-end membership snapshot. This is a
+partial listing-period signal, not an assumed full-year investment return.
+Reproduce the targeted repair, then run `npm run update:catalogue`. Scheduled
+updates preserve the corrected frozen 2025 ranking. Other donor adjustment
+uncertainties remain; correcting this eligibility error does not certify them.
+
+Local and production pages now default to the same public snapshots. Local-only
+price data is loaded only with `?research=1` (combine with other URL parameters
+as usual); those files remain excluded from deployment. This prevents identical
+normal URLs from silently choosing different datasets based on local file presence.
+The current-leaders module reports this year's available-sample Top N and each
+stock's YTD return/index, separately from the previous-year signals held by the
+backtest. Its values must never become hindsight inputs for the current year.

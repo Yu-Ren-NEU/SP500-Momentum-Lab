@@ -24,8 +24,11 @@ def validate(data):
 def validate_base(data):
     required={'schemaVersion','quality','redistribution','licenseEvidence','rankings','returns','coverage','sources','version','startYear','endYear'}
     if not required.issubset(data):raise ValueError('Stock base provenance missing')
-    allowed=required|{'updatedAt','aliasNotes','quarantined','limitations','buildStats'}
+    allowed=required|{'updatedAt','aliasNotes','quarantined','limitations','buildStats','partialListingPeriods'}
     if set(data)-allowed:raise ValueError('Unexpected fields in stock base')
+    for key,period in data.get('partialListingPeriods',{}).items():
+        if set(period)!={'from','to','source','note'} or not all(isinstance(v,str) and v for v in period.values()) or period['from']>=period['to'] or not period['source'].startswith('https://'):
+            raise ValueError('Invalid listing period evidence')
     if data['quality']!='exploratory' or data['redistribution']!='permitted':raise ValueError('Private or unclassified stock data cannot be published')
     if not data['licenseEvidence'] or not data['sources']:raise ValueError('Publication permission evidence missing')
     for source in data['sources']:

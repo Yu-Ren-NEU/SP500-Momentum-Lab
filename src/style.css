@@ -699,3 +699,12 @@ footer {
 }
 
 .publication-notice { font-size: 12px; line-height: 1.8; color: var(--muted); margin-bottom: 16px; max-width: 90ch; }
+
+.current-leaders { display: grid; gap: 28px; margin-top: 64px; align-items: start; }
+.current-leaders h2 { margin: 0 0 16px; font-size: 20px; }
+.current-leaders > div { min-width: 0; }
+.current-leaders td:first-child { white-space: normal; }
+.current-leaders .minor { line-height: 1.8; }
+@media (min-width: 800px) {
+  .current-leaders { grid-template-columns: minmax(220px, .8fr) minmax(0, 2.2fr); gap: 64px; margin-top: 96px; }
+}

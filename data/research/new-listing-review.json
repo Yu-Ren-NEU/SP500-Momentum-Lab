@@ -1,0 +1,15 @@
+{
+  "ticker": "SNDK",
+  "year": 2025,
+  "baseVersion": "c0e43615990c9ded",
+  "from": "2025-02-13",
+  "to": "2025-12-31",
+  "startClose": 36.0,
+  "endClose": 237.3800048828125,
+  "return": 5.59388902452257,
+  "listingEvidence": "https://classic.nasdaqtrader.com/TraderNews.aspx?id=ECA2025-38",
+  "priceSource": "https://www.kaggle.com/datasets/darkmatternet/s-and-p-500-stocks-25-years-of-data-updated-daily",
+  "sourceSha256": "ddd5fe693b3ee31d56e8f77811542159367277a007ca2d7ffd708766e507ebf6",
+  "license": "Uploader declares CC0; derived exploratory observations",
+  "note": "Includes when-issued trading; a partial listing period, not a full calendar-year holding return."
+}

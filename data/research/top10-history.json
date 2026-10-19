@@ -5,7 +5,7 @@
     2026
   ],
   "purpose": "Research catalogue; sample rankings are not full historical S&P 500 rankings.",
-  "baseVersion": "7f06b1dc8b43d945",
+  "baseVersion": "c0e43615990c9ded",
   "updatePolicy": "Current-year YTD requires explicit source cutoff. Freeze only after final trading day and source reconciliation; corrections require a documented revision. Never overwrite history with current membership.",
   "years": {
     "1958": {
@@ -3142,15 +3142,23 @@
       "eligibleForVerifiedBacktest": false,
       "universe": "historical-members-available-sample",
       "source": "Kaggle CC0 close ratios intersected with fja05680 year-end members; adjustment unverified",
-      "observedUniverseCount": 477,
+      "observedUniverseCount": 478,
       "rows": [
+        {
+          "id": "fnspid:SNDK",
+          "ticker": "SNDK",
+          "name": "Sandisk",
+          "totalReturn": 5.59388902452257,
+          "source": "kaggle-reviewed-2025-new-listing-close-ratio",
+          "rank": 1
+        },
         {
           "id": "fnspid:WDC",
           "ticker": "WDC",
           "name": "Western Digital",
           "totalReturn": 2.836784835650428,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 1
+          "rank": 2
         },
         {
           "id": "fnspid:MU",
@@ -3158,7 +3166,7 @@
           "name": "Micron Technology",
           "totalReturn": 2.4023928387769127,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 2
+          "rank": 3
         },
         {
           "id": "fnspid:STX",
@@ -3166,7 +3174,7 @@
           "name": "Seagate Technology",
           "totalReturn": 2.252624262841422,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 3
+          "rank": 4
         },
         {
           "id": "fnspid:HOOD",
@@ -3174,7 +3182,7 @@
           "name": "Robinhood Markets",
           "totalReturn": 2.035426826864848,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 4
+          "rank": 5
         },
         {
           "id": "fnspid:NEM",
@@ -3182,7 +3190,7 @@
           "name": "Newmont",
           "totalReturn": 1.728181474392899,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 5
+          "rank": 6
         },
         {
           "id": "fnspid:LRCX",
@@ -3190,7 +3198,7 @@
           "name": "Lam Research",
           "totalReturn": 1.3916331753059978,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 6
+          "rank": 7
         },
         {
           "id": "fnspid:PLTR",
@@ -3198,7 +3206,7 @@
           "name": "Palantir Technologies",
           "totalReturn": 1.350257919544839,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 7
+          "rank": 8
         },
         {
           "id": "fnspid:FIX",
@@ -3206,21 +3214,13 @@
           "name": "Comfort Systems USA",
           "totalReturn": 1.2086381431526663,
           "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 8
+          "rank": 9
         },
         {
           "id": "fnspid:APP",
           "ticker": "APP",
           "name": "AppLovin",
           "totalReturn": 1.0807832358472758,
-          "source": "kaggle-close-ratio-adjustment-unverified",
-          "rank": 9
-        },
-        {
-          "id": "fnspid:CVNA",
-          "ticker": "CVNA",
-          "name": "Carvana",
-          "totalReturn": 1.0752359729545922,
           "source": "kaggle-close-ratio-adjustment-unverified",
           "rank": 10
         }

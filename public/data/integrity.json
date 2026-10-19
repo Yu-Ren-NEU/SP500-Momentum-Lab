@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "baseVersion": "7f06b1dc8b43d945",
+  "baseVersion": "c0e43615990c9ded",
   "ytdVersion": "c9df3aae1c7511f3",
   "fullHistoricalCoverageVerified": false,
   "verifiedFullUniverseYears": 0,
@@ -2673,76 +2673,76 @@
       "year": 2025,
       "status": "available-annual-sample",
       "fullUniverseVerified": false,
-      "observedMembers": 477,
+      "observedMembers": 478,
       "sourceMemberCount": 503,
-      "missingMemberCount": 26,
+      "missingMemberCount": 25,
       "nextYearTop10Holdings": [
         {
           "rank": 1,
-          "ticker": "WDC",
+          "ticker": "SNDK",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 2,
-          "ticker": "MU",
+          "ticker": "WDC",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 3,
-          "ticker": "STX",
+          "ticker": "MU",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 4,
-          "ticker": "HOOD",
+          "ticker": "STX",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 5,
-          "ticker": "NEM",
+          "ticker": "HOOD",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 6,
-          "ticker": "LRCX",
+          "ticker": "NEM",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 7,
-          "ticker": "PLTR",
+          "ticker": "LRCX",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 8,
-          "ticker": "FIX",
+          "ticker": "PLTR",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 9,
-          "ticker": "APP",
+          "ticker": "FIX",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"
         },
         {
           "rank": 10,
-          "ticker": "CVNA",
+          "ticker": "APP",
           "available": true,
           "holdingYear": 2026,
           "period": "ytd"

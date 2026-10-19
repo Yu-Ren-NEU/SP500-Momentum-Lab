@@ -236,7 +236,8 @@ test("start-year choices match stock coverage and migrate unsupported older URLs
   expect(new URLSearchParams(location.search).get("start")).toBe("1997");
 });
 
-test("price-only base overrides the legacy sample and rules are separate bullets", async () => {
+test("explicit research mode loads price-only data and keeps rules separate", async () => {
+  history.replaceState(null,"","/?start=2001&end=2002&initial=1&n=1&research=1");
   const base = {...fixture(),quality:"exploratory",basis:"split_adjusted_price_return",startYear:2000,endYear:2002,version:"0000000000000001"};
   for (const rank of Object.values(base.rankings)) {rank.status="provisional";rank.universe="historical-members-available-sample";}
   vi.mocked(fetch).mockImplementation(async input => ({ok:true,json:async()=>String(input).endsWith("stocks-price.local.json")?base:publicData}) as Response);
@@ -307,4 +308,20 @@ test("public benchmark summaries extend both index curves when local files are a
     expect(curves.find((r:{key:string})=>r.key===key).final).toBeCloseTo(prior*(1+indices.benchmarks[key].return),8);
   }
   expect(screen.getByText(/指数为公开报道摘要/)).toBeTruthy();
+});
+
+test("current leaders follow Top N and default URLs never select local research data", async () => {
+  const indices = JSON.parse(readFileSync("public/data/benchmarks-ytd.json", "utf8"));
+  const base = JSON.parse(readFileSync("public/data/stocks-base.json", "utf8"));
+  const ytd = JSON.parse(readFileSync("public/data/stocks-ytd.json", "utf8"));
+  history.replaceState(null,"","/?start=2012&end=2026&initial=1&n=1&lang=zh");
+  vi.mocked(fetch).mockImplementation(async input => ({ok:true,json:async()=>String(input).endsWith("benchmarks-ytd.json")?indices:String(input).endsWith("stocks-base.json")?base:String(input).endsWith("stocks-ytd.json")?ytd:publicData}) as Response);
+  const user=await mount();
+  const region=screen.getByRole("region",{name:"当前 Top N 收益"});
+  expect(within(region).getAllByRole("row").length).toBe(4);
+  expect(within(region).getByText(/#1 SNDK/)).toBeTruthy();
+  await user.selectOptions(screen.getByRole("combobox",{name:"Top N"}),"3");
+  expect(within(region).getAllByRole("row").length).toBe(6);
+  expect(screen.getByRole("heading",{name:"当前涨幅榜 · Top 3"})).toBeTruthy();
+  expect(vi.mocked(fetch).mock.calls.some(([path])=>String(path).endsWith(".local.json"))).toBe(false);
 });

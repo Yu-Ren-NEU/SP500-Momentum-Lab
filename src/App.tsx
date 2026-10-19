@@ -79,9 +79,9 @@ export default function App() {
       get(b ? `/data/base-versions/${b}.json` : "/data/stocks-base.json", !b),
       get(ytdVersion ? `/data/ytd-versions/${ytdVersion}.json` : "/data/stocks-ytd.json", !ytdVersion).catch(() => undefined),
       get("/data/base-latest.json", true).catch(() => undefined),
-      p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/benchmarks-ytd.local.json", true).catch(() => undefined).then(local => local ?? get("/data/benchmarks-ytd.json", true).catch(() => undefined)),
-      p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/stocks-price.local.json", true).catch(() => undefined),
-      p.get("snapshot") === "1" ? Promise.resolve(undefined) : get("/data/stocks-price-ytd.local.json", true).catch(() => undefined),
+      p.get("snapshot") === "1" ? Promise.resolve(undefined) : (p.get("research") === "1" ? get("/data/benchmarks-ytd.local.json", true).catch(() => undefined) : Promise.resolve(undefined)).then(local => local ?? get("/data/benchmarks-ytd.json", true).catch(() => undefined)),
+      p.get("snapshot") === "1" || p.get("research") !== "1" ? Promise.resolve(undefined) : get("/data/stocks-price.local.json", true).catch(() => undefined),
+      p.get("snapshot") === "1" || p.get("research") !== "1" ? Promise.resolve(undefined) : get("/data/stocks-price-ytd.local.json", true).catch(() => undefined),
     ])
       .then(([d, legacyBase, legacyCurrent, latest, indices, priceBase, priceYtd]) => {
         const priceMode = priceBase?.basis === "split_adjusted_price_return";
@@ -169,6 +169,7 @@ export default function App() {
     const snapshot = new URLSearchParams(location.search).get("snapshot") === "1";
     const p = new URLSearchParams(configSearch(c, snapshot ? data?.version : undefined));
     if (snapshot) p.set("snapshot", "1");
+    if (new URLSearchParams(location.search).get("research") === "1") p.set("research", "1");
     p.set("lang", lang);
     if (snapshot && !privateData && base?.version) p.set("base", base.version);
     if (snapshot && c.end === new Date().getUTCFullYear() && ytd?.version) p.set("ytd", ytd.version);
@@ -499,6 +500,23 @@ export default function App() {
             <button type="button" onClick={addCurve} disabled={!!error || !config || addedCurves.length>=5}>{lang === "zh" ? "添加曲线" : "Add curve"} ({addedCurves.length}/5)</button>
             <span role="status">{lang === "zh" ? "合计" : "Total"} {weightDraft.reduce((sum, w) => sum + Number(w), 0).toFixed(2)}%{error ? (lang === "zh" ? " · 须合计 100%，暂保留上次有效结果" : " · Must total 100%; showing last valid result") : ""}</span>
           </div>
+          </div>
+        </section>
+        <section className="current-leaders" aria-labelledby="current-leaders-title">
+          <div>
+            <h2 id="current-leaders-title">{lang === "zh" ? "当前涨幅榜" : "Current leaders"} · Top {config?.n ?? 1}</h2>
+            <p className="minor">{ytd ? `${ytd.year} YTD · ${lang === "zh" ? "截至" : "As of"} ${ytd.asOf}` : (lang === "zh" ? "本年数据暂不可得" : "Current-year data unavailable")}</p>
+            <p className="minor">{lang === "zh" ? "可用样本排行，随 Top N 选择变化。今年赢家用于观察，下一年才按规则买入，不用于回填今年持仓。" : "Available-sample ranking follows the Top N control. This year's winners are observations for next year's selection, never this year's holdings."}</p>
+            <p className="minor">{lang === "zh" ? "收益指数以年初为 1；新上市股票从已核实的首个交易日计算。" : "Return index starts at 1 at year-end, or the reviewed first trading day for new listings."}</p>
+          </div>
+          <div className="table-scroll" tabIndex={0} role="region" aria-label={lang === "zh" ? "当前 Top N 收益" : "Current Top N returns"}>
+            <table>
+              <thead><tr><th>{lang === "zh" ? "排名 / 标的" : "Rank / Security"}</th><th>YTD</th><th>{lang === "zh" ? "收益指数" : "Return index"}</th></tr></thead>
+              <tbody>
+                {ytd?.year === new Date().getUTCFullYear() && [...ytd.returns].sort((a,b)=>b.totalReturn-a.totalReturn || a.ticker.localeCompare(b.ticker)).slice(0,config?.n ?? 1).map((row,i)=><tr key={row.id}><td>#{i+1} {row.ticker} <span className="minor">{row.name !== row.ticker ? row.name : ""}</span></td><td>{formatPct(row.totalReturn)}</td><td>{(1+row.totalReturn).toFixed(3)}×</td></tr>)}
+                {indexYtd && ([['sp500', lang === "zh" ? "标普 500 · 含股息" : "S&P 500 · total return"],['nasdaq', lang === "zh" ? "纳指综合 · 价格" : "Nasdaq Composite · price"]] as const).map(([key,label])=><tr key={key}><td>{label}<span className="minor"> · {indexYtd.asOf}</span></td><td>{formatPct(indexYtd.benchmarks[key].return)}</td><td>{(1+indexYtd.benchmarks[key].return).toFixed(3)}×</td></tr>)}
+              </tbody>
+            </table>
           </div>
         </section>
         <section className="annual-section" aria-labelledby="annual-title">
