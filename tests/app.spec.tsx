@@ -325,3 +325,13 @@ test("current leaders follow Top N and default URLs never select local research 
   expect(screen.getByRole("heading",{name:"当前涨幅榜 · Top 3"})).toBeTruthy();
   expect(vi.mocked(fetch).mock.calls.some(([path])=>String(path).endsWith(".local.json"))).toBe(false);
 });
+
+test("default end year follows the current year while explicit links remain pinned", async () => {
+  history.replaceState(null,"","/?start=2012&lang=zh");
+  await mount();
+  expect((screen.getByRole("combobox",{name:"结束年份"}) as HTMLSelectElement).value).toBe(String(new Date().getUTCFullYear()));
+  cleanup();
+  history.replaceState(null,"","/?start=2012&end=2025&lang=zh");
+  await mount();
+  expect((screen.getByRole("combobox",{name:"结束年份"}) as HTMLSelectElement).value).toBe("2025");
+});

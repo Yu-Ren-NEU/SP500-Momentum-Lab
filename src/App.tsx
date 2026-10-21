@@ -41,7 +41,7 @@ export default function App() {
   const [config, setConfig] = useState<Config>(),
     [draft, setDraft] = useState({
       start: "2012",
-      end: "2025",
+      end: String(new Date().getUTCFullYear()),
       initial: "1",
       n: "1",
     }),
@@ -106,7 +106,7 @@ export default function App() {
           const c = readConfig(location.search, d.completeThrough);
           if (!p.has("start"))
             c.start = s?.startYear ? Math.max(s.startYear + 1, 2012) : 2012;
-          if (!p.has("end")) c.end = s?.endYear ?? d.completeThrough;
+          if (!p.has("end")) c.end = new Date().getUTCFullYear();
           const firstYear = (s?.startYear ?? 1996) + 1;
           if (c.start < firstYear) {
             c.start = firstYear;
